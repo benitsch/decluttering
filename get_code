@@ -1,0 +1,106 @@
+import pandas as pd
+
+
+# Load dataset
+url = "assets/declutter-gold_DevelopmentSet.csv"
+
+#define column lables
+names = ['id', 'type', 'path_to_file', 'begin_line', 'link_to_comment', 'comment', 'non-information']
+
+#na_filter = false, because pandas read empty string as float (nan)!
+#skiprows = 1, because the first row contains only the labels
+dataframe = pd.read_csv(url, names=names, skiprows = 1, na_filter = False)
+
+def get_java_file_name(v):
+	x = v.split('/')
+	y = x[-1].split('#')
+	javaFileName = y[0]
+	return javaFileName
+
+def get_comment_line(v):
+	x = v.split('/')
+	y = x[-1].split('#')
+	line = y[1][1:]
+	return int(line)
+
+def get_code_from_javadoc_comment(lines, commentStartLine):
+    firstCodeLine = ''
+    if 0 <= commentStartLine < len(lines):
+        comment = lines[commentStartLine].strip()
+        i = 1
+        if not (comment.startswith('/**') and comment.endswith('*/')):
+            while comment != '*/':
+                comment = lines[commentStartLine + i].strip()
+                i += 1
+        firstCodeLine = lines[commentStartLine + i].strip()
+    return firstCodeLine
+
+def get_code_from_line_comment(lines, commentStartLine):
+    firstCodeLine = ''
+    if 0 <= commentStartLine < len(lines):
+        comment = lines[commentStartLine].strip()
+        i = 1
+        isComment = comment.startswith('//')
+        if not isComment:
+            code = comment.split('//')
+            firstCodeLine = code[0].strip()
+        else:
+            while isComment:
+                if 0 <= commentStartLine + i < len(lines):
+                    comment = lines[commentStartLine + i].strip()
+                    isComment = comment.startswith('//')
+                    if isComment:
+                        i += 1
+                else:
+                    isComment = False
+            if 0 <= commentStartLine + i < len(lines):
+                firstCodeLine = lines[commentStartLine + i].strip()
+            else:
+                firstCodeLine = ''
+    return firstCodeLine 
+    
+def get_code_from_block_comment(lines, commentStartLine):
+    firstCodeLine = ''
+    if 0 <= commentStartLine < len(lines):
+        comment = lines[commentStartLine].strip()
+        i = 1
+        startsWithComment = comment.startswith('/*')
+        if not startsWithComment:
+            code = comment.split('/*')
+            firstCodeLine = code[0].strip()
+        else:
+            while comment != '*/':
+                comment = lines[commentStartLine + i].strip()
+                i += 1
+            firstCodeLine = lines[commentStartLine + i].strip()
+    return firstCodeLine
+
+data = dataframe[['type', 'link_to_comment']]
+idxx = 0
+for row in data.itertuples():
+    print(idxx)
+    type = row.type
+    link = row.link_to_comment
+    
+    javaFileName = get_java_file_name(link)
+    line = get_comment_line(link)
+    
+    print('type:', type)
+    print('Java file:', javaFileName)
+    print('Comment start line:', line)
+	
+    f = open("data/" + javaFileName, "r")
+    lines = f.readlines()
+    line = line - 1
+    code = 'undefined type'
+    if type == 'Javadoc':
+        code = get_code_from_javadoc_comment(lines, line)
+    elif type == 'Line':
+        code = get_code_from_line_comment(lines, line)
+    elif type == 'Block':
+        code = get_code_from_block_comment(lines, line)
+    
+    print(code)
+    print()
+    idxx += 1
+
