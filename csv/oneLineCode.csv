@@ -1,0 +1,1064 @@
+id,type,comment,code,non-information
+FR587,Javadoc,@implNote taken from {@link com.sun.javafx.scene.control.behavior.TextAreaBehavior#contextMenuRequested(javafx.scene.input.ContextMenuEvent)},"public static void showContextMenu(TextArea textArea, ContextMenu contextMenu, ContextMenuEvent e) {",yes
+FR974,Line,icon.setToolTipText(printedViewModel.getLocalization());,"TABLE_ICONS.put(SpecialField.PRINTED, icon);",yes
+FR1359,Line,Synchronize changes of the underlying date value with the temporalAccessorValue,"BindingsHelper.bindBidirectional(valueProperty(), temporalAccessorValue,",no
+FR30,Javadoc,Ask if the user really wants to close the given database,private boolean confirmClose(BasePanel panel) {,yes
+FR774,Block,css: information *,"INTEGRITY_INFO(MaterialDesignIcon.INFORMATION),",no
+FR506,Line,"Check if there is a default type with the same name. If so, this is a modification of that type, so remove the default one:",ExternalFileType toRemove = null;,no
+FR192,Line,each entry type,"for (Map.Entry<EntryType, TextField> entry : textFields.entrySet()) {",yes
+FR947,Line,"TODO: Username, domain and identity should be included as in .NET version. TODO: Should check, seems that it is not included in Log4j2.",,no
+FR92,Line,"Already parsed via command line parameter, e.g., ""jabref.jar somefile.bib""",if (isLoaded(dbFile) || !dbFile.exists()) {,no
+FR89,Line,finally add things to the currently opened tab,for (ParserResult pr : toOpenTab) {,yes
+FR418,Line,"To simplify the exporter API we simply do a normal export to a temporary file, and read the contents afterwards:","tmp = Files.createTempFile(""jabrefCb"", "".tmp"");",no
+FR1408,Javadoc,This class monitors a set of files for changes. Upon detecting a change it notifies the registered {@link FileUpdateListener}s. Implementation based on https://stackoverflow.com/questions/16251273/can-i-watch-for-single-file-change-with-watchservice-not-the-whole-directory,"public class DefaultFileUpdateMonitor implements Runnable, FileUpdateMonitor {",no
+FR675,Line,for AutoGroup,"private final RadioButton autoGroupKeywordsOption = new RadioButton(Localization.lang(""Generate groups from keywords in a BibTeX field""));",no
+FR1417,Javadoc,"Creates a new list in which each element is converted using the provided mapping. All changes to the underlying list are propagated to the converted list. In contrast to {@link org.fxmisc.easybind.EasyBind#map(ObservableList, Function)}, the items are converted when the are inserted (and at the initialization) instead of when they are accessed. Thus the initial CPU overhead and memory consumption is higher but the access to list items is quicker.","public static <A, B> MappedList<B, A> mapBacked(ObservableList<A> source, Function<A, B> mapper) {",no
+FR1437,Javadoc,Sets the {@link Consumer} that is invoked after the task has failed with an exception. The consumer always runs on the JavaFX thread.,public BackgroundTask<V> onFailure(Consumer<Exception> onException) {,no
+FR723,Line,"/ TODO: Add undo final UndoableModifySubtree undo = new UndoableModifySubtree(getGroupTreeRoot(), node, ""Remove subgroups""); panel.getUndoManager().addEdit(undo);",group.getGroupNode().removeAllChildren();,no
+FR64,Line,db file exists,if (basePanel.getBibDatabaseContext().getDatabaseFile().isPresent()) {,yes
+FR230,Line,"Another (unlikely?) possibility is that both disk and mem version has been modified in the same way. Check for this, too.","boolean modificationsAgree = (DuplicateCheck.compareEntriesStrictly(memEntry, diskEntry) > 1);",no
+FR138,Line,Should only occur when preferences are set directly via preferences.put and not via setFirstnameMode,return AutoCompleteFirstNameMode.BOTH;,no
+FR1400,Line,"Dir must be a folder, not a file",} else {,yes
+FR1221,Javadoc,This method is called when the user presses OK in the Preferences dialog. This calls the appropriate method in the ViewModel.,void storeSettings();,no
+FR1159,Line,TODO: doesn't work for citations in footnotes/tables,List<String> names = getSortedReferenceMarks(nameAccess);,no
+FR440,Line,Save,save();,yes
+FR1032,Javadoc,Constructor with optional column captions for the two entries,"public MergeEntries(BibEntry entryLeft, BibEntry entryRight, String headingLeft, String headingRight, BibDatabaseMode type) {",no
+FR575,Line,"If content selector values are present, then we want to show the auto complete suggestions immediately on focus",autoCompleter.setShowOnFocus(true);,no
+FR1197,Javadoc,"This is called, when the user drops some PreviewLayouts on another cell in chosenListView to sort them",,no
+FR1416,Javadoc,Helper methods for javafx binding. Some methods are taken from https://bugs.openjdk.java.net/browse/JDK-8134679,public class BindingsHelper {,no
+FR1380,Javadoc,Formats a String to multiple Texts by replacing some parts and adding font characteristics.,"public static List<Text> formatToTexts(String original, TextReplacement... replacements) {",no
+FR406,Javadoc,Copies the given list of {@link LogEvent}s to the clipboard.,public void copyLog(List<LogEventViewModel> messages) {,no
+FR305,Line,All entries had keys.,"JabRefGUI.getMainFrame().getDialogService().notify(Localization.lang(""Copied"") + "" '"" + JabRefDialogService.shortenDialogMessage(keyAndLink) + ""'."");",no
+FR1040,Line,Add radio buttons if the two entries do not have identical fields,if (identicalFields.contains(field)) {,no
+FR147,Javadoc,Delivers possible completions as a list of {@link BibEntry} based on their cite key.,public class BibEntrySuggestionProvider extends SuggestionProvider<BibEntry> implements AutoCompleteSuggestionProvider<BibEntry> {,no
+FR763,Block,css: eye *,"READ_STATUS(MaterialDesignIcon.EYE),",no
+FR900,Javadoc,Method to add a new abbreviation to the abbreviations list property. It also sets the currentAbbreviation property to the new abbreviation.,"public void addAbbreviation(String name, String abbreviation) {",no
+FR32,Javadoc,"Class for handling general actions; cut, copy and paste. The focused component is kept track of by Globals.focusListener, and we call the action stored under the relevant name in its action map.",private class EditAction extends SimpleCommand {,no
+FR1386,Javadoc,"Returns a new ObservableValue that holds the value held by this ObservableValue, or {@code other} when this ObservableValue is empty.",public ObjectBinding<T> orElse(T other) {,no
+FR154,Javadoc,A command that is only executable if a database is open. Deprecated use instead,@Deprecated,no
+FR86,Line,Define focused tab,if (pr.getFile().filter(path -> path.getAbsolutePath().equals(focusedFile)).isPresent()) {,no
+FR345,Javadoc,A single tab displayed in the EntryEditor holding several FieldEditors.,abstract class FieldsEditorTab extends EntryEditorTab {,no
+FR297,Line,"poll with timeout in case the library is not analyzed completely, but contains no more duplicates","dups = this.duplicates.poll(100, TimeUnit.MILLISECONDS);",no
+FR407,Javadoc,Clears the current log,public void clearLog() {,yes
+FR925,Javadoc,Sets a a new key bind to this objects key binding object if the given key event is a valid combination of keys.,public boolean setNewBinding(KeyEvent evt) {,no
+FR1340,Line,Revert the change.,base.setPreamble(oldValue);,yes
+FR291,Line,Fade new page in for smoother transition,"FadeTransition fadeIn = new FadeTransition(Duration.millis(100), imageView);",no
+FR796,Block,css: rss *,"BLOG(MaterialDesignIcon.RSS),",no
+FR1295,Javadoc,Get the search describer for a given search query.,public static SearchDescriber getSearchDescriberFor(SearchQuery searchQuery) {,yes
+FR302,Javadoc,Does the actual operation on a Bibtex entry based on the settings specified in this same dialog. Returns the number of occurrences replaced.,"private int replaceItem(BibEntry entry, NamedCompound compound) {",no
+FR256,Line,should be opened in browser,field = StandardField.URL;,no
+FR932,Javadoc,Returns the HashMap containing all key bindings.,"public SortedMap<KeyBinding, String> getKeyBindings() {",yes
+FR386,Line,Add menu for fetching bibliographic information,ContextMenu fetcherMenu = new ContextMenu();,no
+FR1007,Line,ctrl on win,"LOGGER.debug(""Mode Copy"");",no
+FR849,Javadoc,"Adds the specified node as a child of the current root. The group contained in <b>newGroups </b> must not be of type AllEntriesGroup, since every tree has exactly one AllEntriesGroup (its root). The <b>newGroups </b> are inserted directly, i.e. they are not deepCopy()'d.","private static void addGroups(GroupTreeNode newGroups, CompoundEdit ce) {",no
+FR651,Javadoc,Adds the given entries to this node's group.,public List<FieldChange> addEntriesToGroup(List<BibEntry> entries) {,yes
+FR1184,Line,"No, we canceled (or there is no panel to get the database from, highly unlikely)",return false;,no
+FR692,Line,default,return GroupHierarchyType.INDEPENDENT;,yes
+FR412,Line,Bug report body,"String issueBody = systemInfo + ""\n\n"" + howToReproduce + ""\n\n"" + ""Paste your log details here."";",yes
+FR392,Line,Do nothing by default,},yes
+FR1328,Line,Text after the citation.,if (end < line.length()) {,no
+FR490,Line,The only instance of this class:,private static ExternalFileTypes singleton;,yes
+FR1427,Javadoc,"Placeholder class for a custom generic type safe dragboard to be used in drag and drop, does not depend on serialization Don't use this class directly. Use the instance provided in {@link GUIGlobals#localDragboard}",public class CustomLocalDragboard {,no
+FR1331,Javadoc,Search and import unknown references from associated BIB files.,public void importButtonClicked() {,no
+FR195,Javadoc,A wizard dialog for generating a new sub database from existing TeX AUX file,public class FromAuxDialog extends BaseDialog<Void> {,no
+FR806,Javadoc,Shows a dialog with the warnings from an import or open of a file,"public static void showParserResultWarningDialog(final ParserResult parserResult, final JabRefFrame jabRefFrame,",no
+FR1446,Line,get permutation array,int[] permutation = new int[to - from];,no
+FR623,Line,Set pseudo-classes to indicate if row is root or sub-item ( > 1 deep),"PseudoClass rootPseudoClass = PseudoClass.getPseudoClass(""root"");",no
+FR538,Line,"Don't report this error, since this getting the suffix is a non-critical operation, and this error will be triggered and reported elsewhere.",},no
+FR425,Line,Selected entries,entries = frame.getCurrentBasePanel().getSelectedEntries();,yes
+FR1038,Line,For all fields in joint add a row and possibly radio buttons,int row = 2;,no
+FR1431,Javadoc,Puts A List of {@link PreviewLayout} in the map All previous content is cleared,public void putPreviewLayouts(List<PreviewLayout> previewLayouts) {,no
+FR831,Line,Remove the entry from the import inspection dialog.,entries.remove(entry);,yes
+FR835,Line,"Second, check if the duplicate is of another entry in the import:",other = findInternalDuplicate(entry);,no
+FR830,Line,TODO: Remove old entry. Or... add it to a list of entries to be deleted. We only delete it after Ok is clicked. entriesToDelete.add(other.get());,} else if (result == DuplicateResolverDialog.DuplicateResolverResult.KEEP_RIGHT) {,no
+FR276,Line,Taken from https://stackoverflow.com/questions/23326562/apache-pdfbox-convert-pdf-to-images,"public Image render(int width, int height) {",no
+FR607,Line,Check if this looks like a remote link:,if (REMOTE_LINK_PATTERN.matcher(link).matches()) {,yes
+FR424,Line,Get list of exporters and sort before adding to file dialog,List<Exporter> exporters = Globals.exportFactory.getExporters().stream(),yes
+FR439,Line,Save all properties dependent on the ID. This makes it possible to restore them.,new SharedDatabasePreferences(context.getDatabase().generateSharedDatabaseID()),no
+FR110,Line,Initialize protected terms loader,Globals.protectedTermsLoader = new ProtectedTermsLoader(Globals.prefs.getProtectedTermsPreferences());,yes
+FR127,Block,"Returns MenuItemContainer node associated with this menu item which can contain: 1. label node of type Label for displaying menu item text, 2. right node of type Label for displaying accelerator text,or an arrow if it's a Menu, 3. graphic node for displaying menu item icon, and 4. left node for displaying either radio button or check box.This is basically rewritten impl_styleableGetNode() which should not be used since it's marked as deprecated.",private static Label getAssociatedNode(MenuItem menuItem) {,no
+FR1357,Line,setContentType(CONTENT_TYPE); StyleSheet sheet = ((HTMLEditorKit) getEditorKit()).getStyleSheet(); sheet.addRule(BODY_STYLE); sheet.addRule(ADDITION_STYLE); sheet.addRule(REMOVAL_STYLE); sheet.addRule(CHANGE_STYLE); setEditable(false);,},yes
+FR902,Javadoc,Sets the name and the abbreviation of the {@code currentAbbreviation} property to the values of the {@code abbreviationsName} and {@code abbreviationsAbbreviation} properties.,"private void setCurrentAbbreviationNameAndAbbreviationIfValid(String name, String abbreviation) {",no
+FR1131,Line,"Finally, go through all citation markers, and update those referring to entries in our current list:",int maxAuthorsFirst = style.getIntCitProperty(OOBibStyle.MAX_AUTHORS_FIRST);,no
+FR1296,Line,describe advanced search expression,"textFlow.getChildren().add(TooltipTextUtil.createText(String.format(""%s "", Localization.lang(""This search contains entries in which"")), TooltipTextUtil.TextType.NORMAL));",no
+FR206,Line,if we're going to override some cite keys warn the user about it,} else if (entries.parallelStream().anyMatch(BibEntry::hasCiteKey)) {,no
+FR861,Javadoc,"This method is called after the new database has been added to the GUI, if the isActionNecessary() method returned true. Note: if several such methods need to be called sequentially, it is important that all implementations of this method do not return until the operation is finished.","void performAction(BasePanel panel, ParserResult pr);",no
+FR841,Javadoc,"Searches recursively all files in the specified directory. <br> <br> All files matched by the given {@link UnlinkedPDFFileFilter} are taken into the resulting tree. <br> <br> The result will be a tree structure of nodes of the type {@link CheckBoxTreeItem}. <br> <br> The user objects that are attached to the nodes is the {@link FileNodeWrapper}, which wraps the {@link File}-Object. <br> <br> For ensuring the capability to cancel the work of this recursive method, the first position in the integer array 'state' must be set to 1, to keep the recursion running. When the states value changes, the method will resolve its recursion and return what it has saved so far.","private CheckBoxTreeItem<FileNodeWrapper> searchDirectory(File directory, UnlinkedPDFFileFilter ff) {",no
+FR477,Javadoc,This method attaches a linked file from a URL (if not already linked) to an entry using the key and value pair from the findFullTexts map and then downloads the file into the given targetDirectory,"private void addLinkedFileFromURL(URL url, BibEntry entry, Path targetDirectory) {",no
+FR579,Line,init paste handler for URLEditor to format pasted url link in textArea,textArea.setPasteActionHandler(() -> textArea.setText(new CleanupURLFormatter().format(new TrimWhitespaceFormatter().format(textArea.getText()))));,no
+FR167,Javadoc,Create a new SuggestionProviderString,"public SuggestionProviderString(Callback<T, String> stringConverter) {",yes
+FR1145,Line,Set the new sections name to 'Child_Section',xChildNamed.setName(OOBibBase.BIB_SECTION_NAME);,yes
+FR813,Line,"Ok, done. Then try to gather in all we have found. Since we might have found one or more bibtex results, it's best to gather them in a BibDatabase.",ParserResult bibtexResult = mergeImportResults(imports);,no
+FR414,Line,TODO: can we find out whether the save was actually done or not?,},no
+FR897,Javadoc,This method shall be used to add a new journal abbreviation file to the set of journal abbreviation files. It basically just calls the {@link #openFile(Path)}} method,public void addNewFile() {,no
+FR855,Line,"UndoableAddOrRemoveGroup undo = new UndoableAddOrRemoveGroup(groupsRoot, new GroupTreeNodeViewModel(newGroups), UndoableAddOrRemoveGroup.ADD_NODE); ce.addEdit(undo);",},yes
+FR740,Line,"no new version could be found, only respect the ignored version on automated version checks",if (!newerVersion.isPresent() || (newerVersion.get().equals(toBeIgnored) && !manualExecution)) {,no
+FR213,Line,Compare the deleted entry in memory with the one in the tmpfile. The entry could have been removed in memory.,"double matchWithTmp = DuplicateCheck.compareEntriesStrictly(memEntry, tmpEntry);",no
+FR1157,Line,retrieve bookmark by name,if (!xNamedBookmarks.hasByName(name)) {,yes
+FR1212,Line,Run validation checks,if (!validSettings()) {,yes
+FR1171,Line,Be happy with the first found BibEntry and move on to next key,break;,yes
+FR766,Block,css: open-in-app *,CONNECT_OPEN_OFFICE(MaterialDesignIcon.OPEN_IN_APP),yes
+FR184,Javadoc,Fills the current values to the text fields,public void setValues(AbstractBibtexKeyPattern keyPattern) {,no
+FR159,Javadoc,Create a default suggestion provider based on the toString() method of the generic objects,public static <T> SuggestionProvider<T> create(Collection<T> possibleSuggestions) {,no
+FR1443,Line,The lines above work also if the dir does not exist at all! NULL is accepted by the filechooser as no inital path,,no
+FR752,Block,css: paperclip*,ATTACH_FILE(MaterialDesignIcon.PAPERCLIP),yes
+FR1247,Javadoc,Converts the citations into the RTF format.,protected static ClipboardContent processRtf(List<String> citations) {,no
+FR55,Line,PushToApplication,final PushToApplicationAction pushToApplicationAction = pushToApplicationsManager.getPushToApplicationAction();,yes
+FR585,Javadoc,Returns the default context menu items (except undo/redo),public static List<MenuItem> getDefaultContextMenuItems(TextInputControl textInputControl) {,no
+FR188,Line,use preferences value if no DB is open,mode = Globals.prefs.getDefaultBibDatabaseMode();,no
+FR1307,Javadoc,We have to use supplier for the localized text so that language changes are correctly reflected.,"SearchDisplayMode(Supplier<String> displayName, Supplier<String> toolTipText) {",no
+FR1303,Line,TODO: switch Icon color searchIcon.setIcon(IconTheme.JabRefIcon.ADVANCED_SEARCH.getIcon());,} else {,no
+FR1135,Line,We have overwritten the marker for the start of the reference list. We need to add it again.,cursor.collapseToEnd();,no
+FR201,Line,Create and run cleaner,"CleanupWorker cleaner = new CleanupWorker(panel.getBibDatabaseContext(), preferences.getCleanupPreferences(",yes
+FR507,Line,"If we found it, remove it from the type list:",if (toRemove != null) {,yes
+FR325,Block,Work around for different input methods. https://github.com/FXMisc/RichTextFX/issues/146,private class InputMethodRequestsObject implements InputMethodRequests {,no
+FR1339,Javadoc,"This class represents a change in any field value. The relevant information is the BibEntry, the field name, the old and the new value. Old/new values can be null.",public class UndoablePreambleChange extends AbstractUndoableJabRefEdit {,no
+FR224,Line,Parse the temporary file.,ImportFormatPreferences importFormatPreferences = Globals.prefs.getImportFormatPreferences();,no
+FR287,Line,Show progress indicator,ProgressIndicator progress = new ProgressIndicator();,yes
+FR96,Line,Fail on unsupported Java versions,ensureCorrectJavaVersion();,no
+FR515,Javadoc,Get the string associated with this file type's icon.,public String getIconName() {,no
+FR88,Line,things to be appended to an opened tab should be done after opening all tabs add them to the list,toOpenTab.add(pr);,no
+FR37,Line,setTitle(FRAME_TITLE);,return;,no
+FR194,Line,we do not trim the value at the assignment to enable users to have spaces at the beginning and at the end of the pattern,if (!text.trim().isEmpty()) {,no
+FR1075,Line,jni convenience: easier to iterate over array than calling Hashtable,String pairs[] = null;,no
+FR598,Line,"create menu items, one for each case changer",List<Formatter> caseChangers = new ArrayList<>();,no
+FR815,Line,We import all files and collect their results:,List<ImportFormatReader.UnknownFormatImport> imports = new ArrayList<>();,no
+FR1371,Javadoc,Constructs a {@link ListCell} based on the view model of the row and a bunch of specified converter methods.,"public class ViewModelListCellFactory<T> implements Callback<ListView<T>, ListCell<T>> {",no
+FR699,Line,"TODO: Store undo if (!undo.isEmpty()) { groupSelector.concludeAssignment(UndoableChangeEntriesOfGroup.getUndoableEdit(target, undo), target.getNode(), assignedEntries);",},no
+FR824,Line,"TODO: This means a duplicate string name exists, so it's not a very exceptional situation. We should maybe give a warning...?",},no
+FR126,Javadoc,Dialog shown when closing of application needs to wait for a save operation to finish.,public class WaitForSaveFinishedDialog {,no
+FR1198,Line,TODO: Find a better way to update preview,basePanel.closeBottomPane();,no
+FR107,Line,"We are alone, so we start the server","Globals.REMOTE_LISTENER.openAndStart(new JabRefMessageHandler(), remotePreferences.getPort());",no
+FR1009,Javadoc,"Keep track of changes made to the columns, like reordering or resizing.",public class PersistenceVisualStateTable {,no
+FR935,Line,the encoding of shared database is always UTF-8,encodingDisableProperty.setValue(isShared);,no
+FR261,Line,replace the placeholder if used,"command = command.replace(""%DIR"", absolutePath);",no
+FR1398,Line,"If the file is an ordinary file (i.e. not a resource part of a .jar bundle), we watch it for changes and turn on live reloading","if (!cssUri.toString().contains(""jar"")) {",no
+FR369,Line,Shift on Windows or no modifier,"LOGGER.debug(""Mode LINK"");",no
+FR131,Line,Show tooltips,if (command instanceof SimpleCommand) {,no
+FR910,Javadoc,This class provides a editable text field that is used as table cell. It handles the editing of the name column.,"public class JournalAbbreviationsNameTableEditingCell extends TableCell<AbbreviationViewModel, String> {",no
+FR542,Line,"return the first one we found, anyway.",return Optional.of(suffix);,no
+FR688,Line,"regex is correct, otherwise OK would have been disabled therefore I don't catch anything here",if (keywordGroupRegExp.isSelected()) {,no
+FR671,Javadoc,Returns the int representing the selected hierarchical group context.,private GroupHierarchyType getContext() {,yes
+FR730,Line,"TODO: warn if assignment has undesired side effects (modifies a field != keywords) if (!WarnAssignmentSideEffects.warnAssignmentSideEffects(mNode.getNode().getGroup(), mPanel.frame())) { return; // user aborted operation",,no
+FR280,Line,"(Bidirectional) binding does not work, so use listeners instead","flow.estimatedScrollYProperty().addListener((observable, oldValue, newValue) -> scrollY.setValue(newValue));",no
+FR1034,Javadoc,Main function for building the merge entry JPanel,private void initialize() {,no
+FR1218,Javadoc,A prefsTab is a component displayed in the PreferenceDialog. It needs to extend from Component.,interface PreferencesTab {,no
+FR1269,Javadoc,"The actual operation. This method will not be called on the event dispatch thread, so it should not do GUI operations without utilizing invokeLater().","void pushEntries(BibDatabaseContext database, List<BibEntry> entries, String keyString);",no
+FR852,Line,create a dummy group,try {,no
+FR267,Javadoc,"An Action for launching mass field. Functionality: * Defaults to selected entries, or all entries if none are selected. * Input field name * Either set field, or clear field.",public class MassSetFieldsAction extends SimpleCommand {,no
+FR471,Line,Need to toggle a twice to make sure nothing is selected,root.setSelected(false);,no
+FR1264,Line,"ctrl on win, no modifier on Xubuntu","LOGGER.debug(""Mode Copy"");",no
+FR1134,Line,"If we are supposed to set character format for citations, must run a test before we delete old citation markers. Otherwise, if the specified character format doesn't exist, we end up deleting the markers before the process crashes due to a the missing format, with catastrophic consequences for the user. need to do this only once",mustTestCharFormat = false; // need to do this only once,no
+FR1378,Line,Get center of focused cell,Bounds anchorBounds = row.getBoundsInParent();,no
+FR252,Javadoc,"Opens a new console starting on the given file location If no command is specified in {@link Globals}, the default system console will be executed.",public static void openConsole(File file) throws IOException {,no
+FR211,Line,I think setting root to null is not possible,root.setGroup(DefaultGroupsFactory.getAllEntriesGroup());,no
+FR18,Javadoc,"General info dialog.The MacAdapter calls this method when ""Quit"" is selected from the application menu, Cmd-Q is pressed, or ""Quit"" is selected from the Dock. The function returns a boolean indicating if quitting is ok or not. <p> Non-OSX JabRef calls this when choosing ""Quit"" from the menu <p> SIDE EFFECT: tears down JabRef",public boolean quit() {,no
+FR1299,Line,"fits the standard ""found x entries""-message thus hinders the searchbar to jump around while searching if the frame width is too small",currentResults.setPrefWidth(150);,no
+FR563,Javadoc,View model for a field editor that shows various options backed by a map.,public abstract class MapBasedEditorViewModel<T> extends OptionEditorViewModel<T> {,no
+FR572,Line,Hide horizontal scrollbar and always wrap text,setWrapText(true);,no
+FR155,Javadoc,Delivers possible completions as a list of {@link Author}s.,public class PersonNameSuggestionProvider extends SuggestionProvider<Author> implements AutoCompleteSuggestionProvider<Author> {,no
+FR1195,Javadoc,XML-Syntax-Highlighting for RichTextFX-Codearea created by (c) Carlos Martins (github: @cemartins) License: BSD-2-Clause see https://github.com/FXMisc/RichTextFX/blob/master/LICENSE and: https://github.com/FXMisc/RichTextFX/blob/master/richtextfx-demos/README.md#xml-editor,public StyleSpans<Collection<String>> computeHighlighting(String text) {,no
+FR1211,Javadoc,Inserts the JabRefPreferences-values into the the Properties of the ViewModel,public void setValues() {,no
+FR368,Line,Alt on Windows,"LOGGER.debug(""Mode MOVE"");",no
+FR1243,Line,for each column get either actual width or - if it does not exist - default value,"Map<String,Double> columnWidths = new HashMap<>();",no
+FR25,Javadoc,Opens the import inspection dialog to let the user decide which of the given entries to import.,"private void addImportedEntries(final BasePanel panel, final List<BibEntry> entries) {",no
+FR908,Line,Update journal abbreviation loader,journalAbbreviationLoader.update(abbreviationsPreferences);,yes
+FR810,Line,Generate dialog title,String dialogTitle;,yes
+FR150,Javadoc,Wrapper around one of our actions from {@link Action} to convert them to controlsfx {@link org.controlsfx.control.action.Action}.,class JabRefAction extends org.controlsfx.control.action.Action {,no
+FR1242,Line,Open File Browser,,no
+FR1232,Line,Flipped around,resolveStringsAllProperty.setValue(preferences.getBoolean(JabRefPreferences.RESOLVE_STRINGS_ALL_FIELDS));,no
+FR785,Block,css: file-multiple *,"FILE_MULTIPLE(MaterialDesignIcon.FILE_MULTIPLE),",yes
+FR1078,Line,find office executable relative to this class's class loader,"String sOffice = System.getProperty(""os.name"").startsWith(""Windows"") ? ""soffice.exe"" : ""soffice"";",no
+FR58,Line,Add the entries to the open tab.,BasePanel panel = getCurrentBasePanel();,no
+FR764,Block,css: star-circle *,"RELEVANCE(MaterialDesignIcon.STAR_CIRCLE),",yes
+FR288,Line,Set empty background and create proper rendering in background (for smoother loading),"background = new Rectangle(getDesiredWidth(), getDesiredHeight());",no
+FR1280,Javadoc,Function to initialize parameters. Currently it is expected that commandPathPreferenceKey is set to the path of the application.,protected abstract void initParameters();,no
+FR639,Javadoc,The root of the global groups tree,private final GroupTreeNodeViewModel m_groupsRootHandle;,no
+FR694,Javadoc,Gets invoked if an entry in the current database changes.,private void onDatabaseChanged(ListChangeListener.Change<? extends BibEntry> change) {,yes
+FR1084,Line,wait until office is started,for (int i = 0;; ++i) {,no
+FR1133,Line,Check if we are supposed to set a character format for citations:,boolean mustTestCharFormat = style.isFormatCitations();,no
+FR770,Block,css:arrow-up-bold *,"MOVE_TAB_ARROW(MaterialDesignIcon.ARROW_UP_BOLD),",yes
+FR982,Line,"TODO: reflective access, should be removed","Field privateStringField = TableView.class.getDeclaredField(""contentWidth"");",no
+FR983,Javadoc,Creates a column for DOIs or URLs. The {@code firstField} is preferred to be shown over {@code secondField}.,"private TableColumn<BibEntryTableViewModel, Field> createUrlOrDoiColumn(JabRefIcon icon, Field firstField, Field secondField) {",no
+FR164,Javadoc,Get the comparator to order the suggestions,protected abstract Comparator<T> getComparator();,no
+FR1176,Line,Check if there are empty keys,boolean emptyKeys = false;,yes
+FR937,Line,Repeat for individual file dir - reuse 'text' and 'dir' vars,text = viewModel.userSpecificFileDirectoryProperty().getValue();,no
+FR1263,Line,alt on win,"LOGGER.debug(""Node LINK"");",no
+FR292,Javadoc,Represents the view model for a page in the document viewer.,public abstract class DocumentPageViewModel {,yes
+FR604,Javadoc,Menu to show up on right-click in a text field for converting text formats,class ConversionMenu extends Menu {,no
+FR722,Line,"This is ugly but we have no proper update mechanism in place to propagate the changes, so redraw everything",refresh();,no
+FR558,Line,"TODO: Print error message Localization.lang(""PDF does not exist"");",} else {,no
+FR176,Javadoc,Prints parsing statistics,public String getInformation(boolean includeMissingEntries) {,no
+FR904,Javadoc,Calls the {@link AbbreviationsFileViewModel#writeOrCreate()} method for each file in the journalFiles property which will overwrite the existing files with the content of the abbreviations property of the AbbriviationsFile. Non existing files will be created.,public void saveJournalAbbreviationFiles() {,no
+FR1436,Javadoc,Sets the {@link Consumer} that is invoked after the task is successfully finished. The consumer always runs on the JavaFX thread.,public BackgroundTask<V> onSuccess(Consumer<V> onSuccess) {,no
+FR157,Javadoc,"Copyright (c) 2014, 2016 ControlsFX All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. * Neither the name of ControlsFX, any associated website, nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CONTROLSFX BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",package org.jabref.gui.autocompleter;,no
+FR531,Line,Extract destination URL,try {,no
+FR119,Javadoc,Updates the view to reflect changes to visible components.,private void updateView() {,yes
+FR1342,Javadoc,"This class represents a change in any field value. The relevant information is the BibEntry, the field name, the old and the new value. Old/new values can be null.",public class UndoableFieldChange extends AbstractUndoableJabRefEdit {,no
+FR1277,Javadoc,Abstract class for pushing entries into different editors.,public abstract class AbstractPushToApplication implements PushToApplication {,no
+FR329,Line,put the warning into as exception text -> it will be displayed to the user,,no
+FR152,Javadoc,"This wraps the old Swing commands so that they fit into the new infrastructure. In the long term, this class should be removed.",@Deprecated,no
+FR603,Javadoc,The default context menu with a specific menu item to cleanup URL.,public static Supplier<List<MenuItem>> getCleanupURLMenu(TextArea textArea) {,no
+FR987,Line,"icon is chosen based on field name in cell, so map fields to its names",column.setCellValueFactory(cellData -> EasyBind.monadic(cellData.getValue().getField(firstField)).map(x -> firstField).orElse(EasyBind.monadic(cellData.getValue().getField(secondField)).map(x -> secondField)));,no
+FR1283,Line,Execute command,try {,no
+FR6,Line,Ignored,return Collections.emptyList();,no
+FR482,Javadoc,Returns true if there is an external file type registered for this extension.,public boolean isExternalFileTypeByExt(String extension) {,no
+FR891,Line,"unknown, cannot un/abbreviate anything",return false;,yes
+FR1087,Line,vim:set shiftwidth=4 softtabstop=4 expandtab:,,no
+FR1345,Line,Redo the change.,try {,no
+FR34,Line,"We need to get the tab header, the following is a ugly workaround",Node tabHeaderArea = ((TabPaneSkin) this.tabbedPane.getSkin()),no
+FR191,Line,reset all fields,for (TextField field : textFields.values()) {,yes
+FR1385,Javadoc,Similar to {@link org.fxmisc.easybind.monadic.MonadicObservableValue},public class OptionalObjectProperty<T> extends SimpleObjectProperty<Optional<T>> {,no
+FR586,Javadoc,,"public static void showContextMenu(TextField textField, ContextMenu contextMenu, ContextMenuEvent e) {",no
+FR751,Block,css: clipboard-arrow-left *,EXPORT_TO_CLIPBOARD(MaterialDesignIcon.CLIPBOARD_ARROW_LEFT),yes
+FR246,Javadoc,TODO: Replace by http://docs.oracle.com/javase/7/docs/api/java/awt/Desktop.html http://stackoverflow.com/questions/18004150/desktop-api-is-not-supported-on-the-current-platform,public class JabRefDesktop {,no
+FR2,Javadoc,Executes a callable task that provides a return value after the calculation is done. @param command The task to execute. @return A Future object that provides the returning value.,public <T> Future<T> execute(Callable<T> command) {,yes
+FR1294,Line,Need to run this on the JavaFX thread,"JabRefGUI.getMainFrame().addParserResult(pr, focusPanel)",no
+FR66,Line,set original filename (again),tabbedPane.getTabs().get(i).setText(getBasePanelAt(i).getTabTitle());,no
+FR1288,Line,"If required, check that all entries have BibTeX keys defined:",if (application.requiresBibtexKeys()) {,no
+FR954,Javadoc,"Check if the value returned by getColumnValue() is the same as a simple check of the entry's field(s) would give The reasons for being different are (combinations may also happen): - The entry has a crossref where the field content is obtained from - The field has a string in it (which getColumnValue() resolves) - There are some alias fields. For example, if the entry has a date field but no year field, {@link BibEntry#getResolvedFieldOrAlias(String, BibDatabase)} will return the year value from the date field when queried for year",public boolean isResolved(BibEntry entry) {,no
+FR239,Line,TODO imlement default,},no
+FR934,Line,Use default key bindings,for (KeyBinding keyBinding : KeyBinding.values()) {,yes
+FR1010,Javadoc,Store shown columns and their width in preferences.,private void updateColumnPreferences() {,no
+FR724,Line,"TODO: Add undo final UndoableAddOrRemoveGroup undo = new UndoableAddOrRemoveGroup(groupsRoot, node, UndoableAddOrRemoveGroup.REMOVE_NODE_KEEP_CHILDREN); panel.getUndoManager().addEdit(undo);",GroupTreeNode groupNode = group.getGroupNode();,no
+FR896,Javadoc,Read all saved file paths and read their abbreviations,public void createFileObjects() {,no
+FR93,Line,"On Linux, Java FX fonts look blurry per default. This can be improved by using a non-default rendering setting. See https://github.com/woky/javafx-hates-linux",if (Globals.prefs.getBoolean(JabRefPreferences.FX_FONT_RENDERING_TWEAK)) {,no
+FR1413,Javadoc,Runs the specified {@link Runnable} on the JavaFX application thread and waits for completion.,public static void runAndWaitInJavaFXThread(Runnable action) {,yes
+FR94,Javadoc,JabRef MainClass,public class JabRefMain extends Application {,yes
+FR1064,Javadoc,Bootstraps the component context from a UNO installation.,"public static final XComponentContext bootstrap(String[] argArray, URLClassLoader loader) throws BootstrapException {",no
+FR1322,Block,"if (!Globals.prefs.isKeywordSyncEnabled()) { return; }final BibEntry entry = event.getBibEntry(); // NamedCompount code similar to SpecialFieldUpdateListener NamedCompound nc = new NamedCompound(Localization.lang(""Synchronized special fields based on keywords"")); List<FieldChange> changes = SpecialFieldsUtils.syncSpecialFieldsFromKeywords(entry, Globals.prefs.getKeywordDelimiter()); for (FieldChange change: changes) { nc.addEdit(new UndoableFieldChange(change)); } // Don't insert the compound into the undoManager, // it would be added before the component which undoes the insertion of the entry and creates heavy problems // (which prohibits the undo the deleting multiple entries)",},no
+FR554,Line,Get target folder,Optional<Path> fileDir = databaseContext.getFirstExistingFileDir(filePreferences);,no
+FR362,Line,"Ctrl on Windows, no modifier on Xubuntu","LOGGER.debug(""Mode COPY"");",no
+FR266,Line,default command,"String cmd = ""xdg-open "" + filePath.toAbsolutePath().getParent().toString();",no
+FR1209,Javadoc,Reloads the JabRefPreferences into the UI,private void updateAfterPreferenceChanges() {,no
+FR517,Javadoc,"We define two file type objects as equal if their name, extension, openWith and iconName are equal.",@Override,no
+FR1027,Line,Create buttons,"ButtonType replaceEntries = new ButtonType(Localization.lang(""Merge entries""), ButtonBar.ButtonData.OK_DONE);",yes
+FR1208,Line,Time stamp,,no
+FR1361,Javadoc,"This class can be used to wrap an @see ObservableList inside it. When wrapped, any Listener listening for updates to the wrapped ObservableList (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.",public class UiThreadObservableList<E> implements ObservableList<E> {,no
+FR3,Javadoc,Executes a collection of callable tasks and returns a List of the resulting Future objects after the calculation is done. @param tasks The tasks to execute @return A List of Future objects that provide the returning values.,public <T> List<Future<T>> executeAll(Collection<Callable<T>> tasks) {,yes
+FR906,Javadoc,This will set the {@code currentFile} property to the {@link AbbreviationsFileViewModel} object that was added to the {@code journalFiles} list property lastly. If there are no files in the list property this methode will do nothing as the {@code currentFile} property is already {@code null}.,public void selectLastJournalFile() {,no
+FR903,Javadoc,Method to delete the abbreviation set in the currentAbbreviation property. The currentAbbreviationProperty will be set to the previous or next abbreviation in the abbreviations property if applicable. Else it will be set to {@code null} if there are no abbreviations left.,public void deleteAbbreviation() {,no
+FR1114,Line,We need to sort the reference marks according to their order of appearance:,names = sortedReferenceMarks;,no
+FR1421,Javadoc,Returns a wrapper around the given list that posts changes on the JavaFX thread.,public static <T> ObservableList<T> forUI(ObservableList<T> list) {,no
+FR10,Line,kill the remote thread,stopRemoteThread();,yes
+FR451,Line,"First try xmp import, if empty try pdf import, otherwise create empty entry",if (!xmpEntriesInFile.isEmpty()) {,no
+FR1346,Line,Revert the change.,base.removeString(string.getId());,no
+FR498,Line,"Go through unchanged types. Remove them from the ones that should be stored, and from the list of defaults, since we don't need to mention these in prefs:",for (ExternalFileType type : unchanged) {,no
+FR1210,Javadoc,Checks if all tabs are valid ToDo: After conversion of all tabs use mvvmfx-validator ToDo: should be observable for binding of OK-button in View,,no
+FR380,Line,Next add all the visible tabs (if not already present) at the right position,for (int i = 0; i < visibleTabs.size(); i++) {,no
+FR68,Line,update all tab titles,updateAllTabTitles();,yes
+FR128,Javadoc,Helper class to create and style controls according to an {@link Action}.,public class ActionFactory {,no
+FR1018,Javadoc,Class for fetching and merging bibliographic information,public class FetchAndMergeEntry {,yes
+FR853,Line,paranoia: ensure that there are never two instances of AllEntriesGroup,if (newGroups.getGroup() instanceof AllEntriesGroup) {,no
+FR881,Line,Create button that triggers search,"Button search = new Button(Localization.lang(""Search""));",yes
+FR1377,Line,"Activate context menu if user presses the ""context menu"" key","tableView.addEventHandler(KeyEvent.KEY_RELEASED, event -> {",no
+FR1412,Javadoc,,public static <V> V runInJavaFXThread(Callable<V> callable) {,yes
+FR340,Line,Add the edit field for Bibtex-key.,fields.add(InternalField.KEY_FIELD);,no
+FR1117,Line,Remove all reference marks that don't look like JabRef citations:,List<String> tmp = new ArrayList<>();,no
+FR1139,Line,"Although entries are redefined without use, this also updates linkSourceBase","Map<BibEntry, BibDatabase> entries = findCitedEntries(databases, cited, linkSourceBase);",no
+FR309,Line,"for the remaining entries, intersection has to be used this approach ensures that one empty keyword list leads to an empty set of common keywords",for (BibEntry entry : entries) {,no
+FR1411,Javadoc,A very simple implementation of the {@link TaskExecutor} interface. Every submitted task is invoked in a separate thread.,public class DefaultTaskExecutor implements TaskExecutor {,no
+FR1451,Line,all buttons in base dialogs react on enter,if (event.getCode() == KeyCode.ENTER) {,no
+FR1127,Line,... but not for this entry.,refKeys.get(marker).add(currentKey);,no
+FR504,Line,"If we found it, remove it from the type list:",if (toRemove != null) {,yes
+FR13,Javadoc,The main window of the application.,public class JabRefFrame extends BorderPane {,no
+FR1347,Line,Redo the change.,try {,no
+FR1185,Javadoc,Tools for automatically detecting OpenOffice or LibreOffice installations.,public class DetectOpenOfficeInstallation {,no
+FR285,Line,"Heuristic missed, so try to get page number from first shown page",currentPage.set(,no
+FR286,Line,Assuming the current page is A4 (or has same aspect ratio),setPageWidth(desiredPageDimension.getWidth(Math.sqrt(2)) + delta);,no
+FR1028,Line,Check if there are two entries selected,List<BibEntry> selectedEntries = basePanel.getSelectedEntries();,yes
+FR909,Javadoc,This class controls the user interface of the journal abbreviations dialog. The ui elements and their layout are defined in the fxml file.,public class ManageJournalAbbreviationsView extends BaseDialog<Void> {,no
+FR60,Line,only add tab if DB is not already open,Optional<BasePanel> panel = getBasePanelList().stream(),no
+FR1352,Javadoc,This class represents the change of type for an entry.,public class UndoableChangeType extends AbstractUndoableJabRefEdit {,no
+FR1234,Line,General,,no
+FR14,Javadoc,Sets the title of the main window.,public void setWindowTitle() {,no
+FR187,Line,check mode of currently used DB,if (panel != null) {,no
+FR706,Line,No parent = root -> just add,this.moveTo(target);,no
+FR1453,Line,"write the entries using sw, which is used later to form the email content",BibEntryWriter bibtexEntryWriter = new BibEntryWriter(,no
+FR865,Javadoc,"Opens the given files. If one of it is null or 404, nothing happens","public void openFiles(List<Path> filesToOpen, boolean raisePanel) {",no
+FR355,Line,Ask for consent to send data to Mr. DLib on first time to tab,if (preferences.isMrdlibAccepted()) {,no
+FR449,Line,Only the first of the extensions gotten from FileType is saved into the class using get(0),String extensionString = exporter.getFileType().getExtensions().get(0);,no
+FR642,Javadoc,The path to the edited subtree's root node,private final List<Integer> m_pathToNode;,no
+FR518,Line,Up to version 2.4b the mime type is not included:,"mimeType = """";",no
+FR945,Block,"ApplicationInsights-Java Copyright (c) Microsoft Corporation All rights reserved.MIT License Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the """"Software""""), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",,no
+FR524,Line,"On Windows, store application as empty if the ""Default"" option is selected, or if the application name is empty:",if (defaultApplicationSelectedProperty.getValue() || application.isEmpty()) {,no
+FR469,Javadoc,"Creates a list of all files (leaf nodes in the tree structure), which have been selected.",private List<Path> getFileListFromNode(CheckBoxTreeItem<FileNodeWrapper> node) {,no
+FR758,Block,css: server-plus*,ADD_ROW(MaterialDesignIcon.SERVER_PLUS),yes
+FR919,Javadoc,This method returns the enum constant value,public String getConstant() {,yes
+FR307,Javadoc,Copies the doi url to the clipboard,public class CopyDoiUrlAction extends SimpleCommand {,no
+FR384,Line,Update type label,"TypedBibEntry typedEntry = new TypedBibEntry(entry, databaseContext.getMode());",no
+FR1122,Line,Update key list to match the new sorting:,for (int j = 0; j < cEntries.length; j++) {,no
+FR1388,Javadoc,Runs the given task and returns a Future representing that task.,<V> Future<V> execute(BackgroundTask<V> task);,yes
+FR365,Line,Alt on Windows,"LOGGER.debug(""Mode LINK"");",no
+FR199,Javadoc,Runs the cleanup on the entry and records the change.,"private void doCleanup(CleanupPreset preset, BibEntry entry, NamedCompound ce) {",no
+FR61,Line,"This action can be invoked without an open database, so we have to check if we have one before trying to invoke methods to execute changes in the preferences.",,no
+FR487,Javadoc,"Set up the list of external file types, either from default values, or from values recorded in Preferences.",private void updateExternalFileTypes() {,no
+FR391,Javadoc,Notifies the tab that it got focus and should display the given entry.,public void notifyAboutFocus(BibEntry entry) {,no
+FR78,Line,handled by FX in TextInputControl#paste,break;,no
+FR556,Line,"File doesn't exist, so we can't move it.","dialogService.showErrorDialogAndWait(Localization.lang(""File not found""), Localization.lang(""Could not find file '%0'."", linkedFile.getLink()));",yes
+FR711,Javadoc,"Opens ""Edit Group Dialog"" and changes the given group to the edited one.",public void editGroup(GroupNodeViewModel oldGroup) {,no
+FR1410,Line,"We can't watch files directly, so monitor their parent directory for updates",Path directory = file.toAbsolutePath().getParent();,no
+FR1092,Javadoc,Extract the list of bibtex keys from a reference mark name.,public List<String> parseRefMarkName(String name) {,no
+FR635,Line,leave the expansion state of the tree item as it is,this.draggedItem.setExpanded(this.draggedItem.isExpanded());,no
+FR1449,Line,Display link to expand text,if (!this.getChildren().contains(moreLink)) {,no
+FR226,Line,Start looking at changes.,"BibDatabaseDiff differences = BibDatabaseDiff.compare(referenceDatabase, databaseOnDisk);",no
+FR212,Line,"change root group, even though it'll be AllEntries anyway",root.setGroup(changedGroups.getGroup());,no
+FR519,Line,"When mime type is included, the array length should be 5:",mimeType = val[2];,no
+FR1165,Line,Loop through the available databases,for (BibDatabase loopDatabase : databases) {,yes
+FR839,Line,Replace both entries by merged entry,entries.add(diag.getMergedEntry());,no
+FR1316,Line,if (value==null) and then call nullField has been omitted as updatefield also handles value==null,"List<FieldChange> changes = SpecialFieldsUtils.updateField(specialField, value, be, nullFieldIfValueIsTheSame, Globals.prefs.isKeywordSyncEnabled(), Globals.prefs.getKeywordDelimiter());",no
+FR645,Line,storing a backup of the whole subtree is not required when children are kept,m_subtreeBackup = editType != UndoableAddOrRemoveGroup.REMOVE_NODE_KEEP_CHILDREN ? editedNode.getNode(),no
+FR1249,Javadoc,Inserts each citation into a HTML body and copies it to the clipboard,protected static ClipboardContent processHtml(List<String> citations) {,no
+FR986,Line,Only one linked file -> open directly,"LinkedFileViewModel linkedFileViewModel = new LinkedFileViewModel(linkedFiles.get(0), entry.getEntry(), database, Globals.TASK_EXECUTOR, dialogService, Globals.prefs.getXMPPreferences(), Globals.prefs.getFilePreferences(), externalFileTypes);",no
+FR101,Line,"If not, start GUI","new JabRefGUI(mainStage, argumentProcessor.getParserResults(), argumentProcessor.isBlank());",yes
+FR1305,Line,empty,},yes
+FR91,Line,"After adding the databases, go through each and see if any post open actions need to be done. For instance, checking if we found new entry types that can be imported, or checking if the database contents should be modified due to new features in this version of JabRef. Note that we have to check whether i does not go over getBasePanelCount(). This is because importToOpen might have been used, which adds to loadedDatabases, but not to getBasePanelCount()",,no
+FR1366,Javadoc,New ZIP file chooser.,public ZipFileChooser(FileSystem zipFile) throws IOException {,yes
+FR630,Line,expand node and all children on drag over,dragExpansionHandler.expandGroup(row.getTreeItem());,yes
+FR53,Line,TODO: merge with import,"factory.createMenuItem(StandardActions.MERGE_DATABASE, new OldDatabaseCommandWrapper(Actions.MERGE_DATABASE, this, stateManager)),",no
+FR787,Block,css: code-equal *,"FIND_DUPLICATES(MaterialDesignIcon.CODE_EQUAL),",yes
+FR996,Line,Find entries in clipboard,List<BibEntry> entriesToAdd = Globals.clipboardManager.extractData();,yes
+FR1146,Line,Access the Child_Section's XTextContent interface and insert it into the document,"XTextContent xChildSection = UnoRuntime.queryInterface(XTextContent.class, xChildNamed);",no
+FR26,Javadoc,Set the visibility of the progress bar in the right end of the status line at the bottom of the frame.,public void setProgressBarVisible(final boolean visible) {,no
+FR844,Javadoc,Converts a path relative to a base-path into a class name.,"private static String pathToClass(String basePath, Path path) {",no
+FR1002,Line,"The following is necesary to initiate the drag and drop in javafx, although we don't need the contents It doesn't work without",ClipboardContent content = new ClipboardContent();,no
+FR588,Line,"(maskText(""A"") != ""A"");",boolean maskText = (textInputControl instanceof PasswordField);,no
+FR255,Line,Use the correct viewer even if pdf and ps are mixed up:,"String[] split = file.get().getFileName().toString().split(""\\."");",no
+FR859,Javadoc,"This interface defines potential actions that may need to be taken after opening a BIB file into JabRef. This can for instance be file upgrade actions that should be offered due to new features in JabRef, and may depend on e.g. which JabRef version the file was last written by. This interface is introduced in an attempt to add such functionality in a flexible manner.",public interface GUIPostOpenAction {,no
+FR1231,Line,Warning before overwriting is only relevant if overwriting can happen:,warnBeforeOverwriting.setDisable(dontOverwrite.isSelected());,no
+FR946,Line,TODO: Remove this copy as soon as the one included in AI is compatible with log4j 3,public final class ApplicationInsightsLogEvent extends ApplicationInsightsEvent {,no
+FR1069,Line,insert the connector,"xSet.insert(xImpLoader.activate(""com.sun.star.comp.connections.Connector"", null, null, null));",yes
+FR659,Line,"As there is no concept like an empty node/icon, we return simply the other icon",return JabRefIcons.GROUP_INTERSECTION.getGraphicNode();,no
+FR85,Line,Add all bibDatabases databases to the frame:,boolean first = false;,no
+FR158,Javadoc,This is a simple implementation of a generic suggestion provider callback. The complexity of suggestion generation is O(n) where n is the number of possible suggestions.,"public abstract class SuggestionProvider<T> implements Callback<ISuggestionRequest, Collection<T>> {",no
+FR737,Javadoc,"Returns a newer version excluding any non-stable versions, except if the installed one is unstable too. If no newer version was found, then an empty optional is returned.",private Optional<Version> getNewVersion() throws IOException {,no
+FR738,Javadoc,Prints the connection problem to the status bar and shows a dialog if it was executed manually,"private void showConnectionError(Exception exception, boolean manualExecution) {",no
+FR783,Block,css: file-powerpoint *,"FILE_POWERPOINT(MaterialDesignIcon.FILE_POWERPOINT),",yes
+FR530,Line,Detect Google search URL,"private static final String GOOGLE_SEARCH_EXP = ""^https?://(?:www\\.)?google\\.[\\.a-z]+?/url.*"";",yes
+FR313,Line,update keywords,keywords.removeAll(keywordsToRemove);,yes
+FR749,Block,css: auto-fix*,"AUTO_GROUP(MaterialDesignIcon.AUTO_FIX),",yes
+FR1062,Javadoc,Bootstraps the initial component context from a native UNO installation. See also <code>cppuhelper/defaultBootstrap_InitialComponentContext()</code>.,"public static final XComponentContext defaultBootstrap_InitialComponentContext(String ini_file, Map<String, String> bootstrap_parameters) throws Exception {",no
+FR795,Block,css: twitter *,"TWITTER(MaterialDesignIcon.TWITTER),",yes
+FR627,Line,Drag and drop support,row.setOnDragDetected(event -> {,no
+FR220,Line,"File on disk has changed, thus look for notable changes and notify listeners in case there are such changes","ChangeScanner scanner = new ChangeScanner(database, referenceFile);",no
+FR315,Javadoc,"Append a given value to a given field for all entries in a Collection. This method DOES NOT update any UndoManager, but returns a relevant CompoundEdit that should be registered by the caller.","private static UndoableEdit massAppendField(Collection<BibEntry> entries, Field field, String textToAppend) {",no
+FR130,Line,We have to use reflection to get the associated label,try {,no
+FR939,Line,"... if so, mark base changed. Prevent the Undo button from removing change marking:",if (changed) {,no
+FR84,Line,passed file (we take the first one) should be focused,String focusedFile = bibDatabases.stream(),no
+FR695,Javadoc,"Decides if the content stored in the given {@link Dragboard} can be droped on the given target row. Currently, the following sources are allowed: - another group (will be added as subgroup on drop) - entries if the group implements {@link GroupEntryChanger} (will be assigned to group on drop)",public boolean acceptableDrop(Dragboard dragboard) {,no
+FR228,Line,The string was removed or renamed locally. We guess that it was removed.,"BibtexString bs = new BibtexString(label, disk);",no
+FR354,Javadoc,Returns a consent dialog used to ask permission to send data to Mr. DLib.,private ScrollPane getPrivacyDialog(BibEntry entry) {,no
+FR1039,Line,Left text pane,if (leftString.isPresent()) {,no
+FR464,Javadoc,"Initializes the components, the layout, the data structure and the actions in this dialog.",private void initialize() {,no
+FR385,Line,Add type change menu,"ContextMenu typeMenu = new ChangeEntryTypeMenu().getChangeEntryTypePopupMenu(entry, databaseContext, undoManager);",no
+FR744,Javadoc,"This property is only needed to get proper IDE support in FXML files (e.g. validation that parameter passed to ""icon"" is indeed of type {@link IconTheme.JabRefIcons}).",private ObjectProperty<IconTheme.JabRefIcons> glyph;,no
+FR788,Block,cloud-upload*,"CONNECT_DB(MaterialDesignIcon.CLOUD_UPLOAD),",yes
+FR638,Javadoc,Removal of a node and all of its children.,public static final int REMOVE_NODE_AND_CHILDREN = 2;,yes
+FR734,Javadoc,"This worker checks if there is a new version of JabRef available. If there is it will display a dialog to the user offering him multiple options to proceed (see changelog, go to the download page, ignore this version, and remind later). If the versions check is executed manually and this is the latest version it will also display a dialog to inform the user.",public class VersionWorker {,no
+FR1169,Line,If the crossref entry is not already in the database,if (!resultDatabase.getEntryByKey(crossref).isPresent()) {,yes
+FR1109,Line,Insert it at the current position:,"rebuildBibTextSection(allBases, style);",no
+FR151,Javadoc,especially for the track execute when the action run the same function but from different source.,"public JabRefAction(Action action, Command command, KeyBindingRepository keyBindingRepository, Sources source) {",no
+FR431,Javadoc,"Action for the ""Save"" and ""Save as"" operations called from BasePanel. This class is also used for save operations when closing a database or quitting the applications. The save operation is loaded off of the GUI thread using {@link BackgroundTask}. Callers can query whether the operation was canceled, or whether it was successful.",public class SaveDatabaseAction {,no
+FR600,Javadoc,The default menu that contains functions for changing the case of text and doing several conversions.,public static Supplier<List<MenuItem>> getDefaultMenu(final TextInputControl textInput) {,no
+FR1044,Line,Set headings,for (int i = 0; i < 6; i++) {,yes
+FR1204,Javadoc,"This method should be called after storing the preferences, to collect the properties, which require a restart of JabRef to load",List<String> getRestartWarnings();,no
+FR145,Javadoc,Creates a new auto-completion binding between the given textInputControl and the given suggestion provider.,"private AutoCompletionTextInputBinding(final TextInputControl textInputControl,",yes
+FR597,Line,We accept all kinds of dates (not just in the format specified),return Date.parse(string).map(Date::toTemporalAccessor).orElse(null);,no
+FR1095,Line,"this whole method is part of a background task when autodecting instances, so we need to show dialog in FX thread","Optional<DocumentTitleViewModel> selectedDocument = dialogService.showChoiceDialogAndWait(Localization.lang(""Select document""), Localization.lang(""Found documents:""), Localization.lang(""Use selected document""), viewModel);",no
+FR275,Line,Taken from http://stackoverflow.com/a/9417836/873661,"private static BufferedImage resize(BufferedImage img, int newWidth, int newHeight) {",no
+FR269,Line,We always want that the first item is selected after a change This also automatically selects the first file on the initial load,fileChoice.itemsProperty().addListener(,no
+FR1278,Javadoc,Function to get the command to be executed for pushing keys to be cited,"@SuppressWarnings(""unused"")",no
+FR129,Javadoc,"For some reason the graphic is not set correctly by the {@link ActionUtils} class, so we have to fix this by hand","private static void setGraphic(MenuItem node, Action action) {",no
+FR955,Line,entry type or bibtex key will never be resolved,if (InternalField.TYPE_HEADER.equals(field) || InternalField.OBSOLETE_TYPE_HEADER.equals(field),no
+FR637,Javadoc,"Removal of a single node. Children, if any, are kept.",public static final int REMOVE_NODE_KEEP_CHILDREN = 1;,yes
+FR142,Javadoc,"Copyright (c) 2014, 2015, ControlsFX All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. * Neither the name of ControlsFX, any associated website, nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CONTROLSFX BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",package org.jabref.gui.autocompleter;,no
+FR1425,Line,use property as initial source,updateA.accept(propertyB.getValue());,no
+FR491,Line,Map containing all registered external file types:,private final Set<ExternalFileType> externalFileTypes = new TreeSet<>(Comparator.comparing(ExternalFileType::getName));,yes
+FR616,Javadoc,Workaround taken from https://bitbucket.org/controlsfx/controlsfx/issues/330/making-textfieldssetupclearbuttonfield,private void setupClearButtonField(CustomTextField customTextField) {,no
+FR204,Line,Always overwrite keys by default,return true;,no
+FR105,Line,"We are not alone, there is already a server out there, send command line arguments to other instance",if (remoteClient.sendCommandLineArguments(args)) {,no
+FR99,Line,Process arguments,"ArgumentProcessor argumentProcessor = new ArgumentProcessor(arguments, ArgumentProcessor.Mode.INITIAL_START);",yes
+FR336,Line,"Nothing set, so we use the default values:","while (preferences.get(JabRefPreferences.CUSTOM_TAB_NAME + ""_def"" + i) != null) {",no
+FR856,Line,Run the actual open in a thread to prevent the program locking until the file is loaded.,"BackgroundTask.wrap(() -> openIt(file, dialog.importEntries(), dialog.importStrings(), dialog.importGroups(), dialog.importSelectorWords()))",no
+FR1399,Line,"It could be that somehow the path is null, for example if it got deleted in the meantime",if (directory == null) {,no
+FR534,Line,extract url parameter,"String[] pairs = query.split(""&"");",no
+FR886,Line,Collect all callables to execute in one collection.,for (BibEntry entry : entries) {,no
+FR721,Line,"TODO: Add undo Store undo information. AbstractUndoableEdit undoAddPreviousEntries = null; UndoableModifyGroup undo = new UndoableModifyGroup(GroupSelector.this, groupsRoot, node, newGroup); if (undoAddPreviousEntries == null) { panel.getUndoManager().addEdit(undo); } else { NamedCompound nc = new NamedCompound(""Modify Group""); nc.addEdit(undo); nc.addEdit(undoAddPreviousEntries); nc.end();/ panel.getUndoManager().addEdit(nc); } if (!addChange.isEmpty()) { undoAddPreviousEntries = UndoableChangeEntriesOfGroup.getUndoableEdit(null, addChange); }",,no
+FR1017,Javadoc,"Adds the filename to the top of the menu. If it already is in the menu, it is merely moved to the top.",public void newFile(Path file) {,no
+FR442,Javadoc,"This view model can be used both for ""add exporter"" and ""modify exporter"" functionalities. It takes an optional exporter which is empty for ""add exporter,"" and takes the selected exporter for ""modify exporter.""It returns an optional exporter which empty if an invalid or no exporter is created, and otherwise contains the exporter to be added or that is modified.",,no
+FR1113,Line,"We need to catch this one here because the OpenOfficePanel class is loaded before connection, and therefore cannot directly reference or catch a DisposedException (which is in a OO JAR file).",throw new ConnectionLostException(ex.getMessage());,no
+FR771,Block,css: label-outline *,"OPTIONAL(MaterialDesignIcon.LABEL_OUTLINE),",yes
+FR977,Javadoc,"This resize policy is almost the same as {@link TableView#CONSTRAINED_RESIZE_POLICY} We make sure that the width of all columns sums up to the total width of the table. However, in contrast to {@link TableView#CONSTRAINED_RESIZE_POLICY} we size the columns initially by their preferred width.","public class SmartConstrainedResizePolicy implements Callback<TableView.ResizeFeatures, Boolean> {",no
+FR591,Line,We have to cast the BibEntries from the BibEntrySuggestionProvider to ParsedEntryLink,Collection<BibEntry> bibEntries = (Collection<BibEntry>) super.complete(request);,no
+FR1429,Javadoc,Puts A List of {@link BibEntry} in the map All previous content is cleared,public void putBibEntries(List<BibEntry> entries) {,no
+FR153,Javadoc,"This wraps the old Swing commands so that they fit into the new infrastructure. In the long term, this class should be removed.",@Deprecated,no
+FR35,Line,run in one minute,"}, 60000);",no
+FR1124,Line,"See if there are duplicate citations marks referring to different entries. If so, we need to use uniquefiers:","Map<String, List<String>> refKeys = new HashMap<>();",no
+FR1101,Line,TODO: http://api.openoffice.org/docs/DevelopersGuide/OfficeDev/OfficeDev.xhtml#1_1_3_2_1_2_Frame_Hierarchies,,no
+FR559,Line,"TODO: Print error message Localization.lang(""Error while writing"") + "" '"" + file.toString() + ""': "" + ex;",},no
+FR225,Line,Parse the modified file.,"result = OpenDatabase.loadDatabase(diskdb.toAbsolutePath().toString(), importFormatPreferences, Globals.getFileUpdateMonitor());",no
+FR143,Javadoc,Represents a binding between a text input control and a auto-completion popup This class is a slightly modified version of {@link impl.org.controlsfx.autocompletion.AutoCompletionTextFieldBinding} that works with general text input controls instead of just text fields.,public class AutoCompletionTextInputBinding<T> extends AutoCompletionBinding<T> {,no
+FR576,Javadoc,Creates an instance of {@link LinkedFile} based on the given file. We try to guess the file type and relativize the path against the given file directories. TODO: Move this method to {@link LinkedFile} as soon as {@link CustomExternalFileType} lives in model.,"public static LinkedFile fromFile(Path file, List<Path> fileDirectories, ExternalFileTypes externalFileTypesFile) {",no
+FR160,Javadoc,Create a default suggestion provider based on the toString() method of the generic objects using the provided stringConverter,"public static <T> SuggestionProvider<T> create(Callback<T, String> stringConverter, Collection<T> possibleSuggestions) {",no
+FR837,Line,Remove entry,entries.remove(entry);,yes
+FR991,Javadoc,Repaints the table with the most recent font configuration,public void updateFont() {,no
+FR125,Javadoc,Updates the timestamp of changed entries if the feature is enabled,class UpdateTimestampListener {,no
+FR121,Line,Add the new component,visibleComponents.add(component);,yes
+FR1162,Line,"Setting the character format failed, so we throw an exception that will result in an error message for the user:",throw new UndefinedCharacterFormatException(charStyle);,no
+FR1382,Javadoc,"Implementation of {@link TaskExecutor} that runs every task on the current thread, i.e. in a sequential order. This class is not designed to be used in production but should make code involving asynchronous operations deterministic and testable.",public class CurrentThreadTaskExecutor implements TaskExecutor {,no
+FR258,Line,"No file matched the name, try to open it directly using the given app","openExternalFilePlatformIndependent(type, link);",no
+FR278,Javadoc,"Represents the viewport for a page. Note: the instances of {@link DocumentViewerPage} are reused, i.e., not every page is rendered in a new instance but instead {@link DocumentViewerPage#updateItem(Object)} is called.","private class DocumentViewerPage implements Cell<DocumentPageViewModel, StackPane> {",no
+FR317,Javadoc,"Set a given field to a given value for all entries in a Collection. This method DOES NOT update any UndoManager, but returns a relevant CompoundEdit that should be registered by the caller.","private static UndoableEdit massSetField(Collection<BibEntry> entries, Field field, String textToSet,",no
+FR1110,Line,Go back to the relevant position:,"xViewCursor.gotoRange(position, false);",no
+FR1253,Javadoc,Displays an BibEntry using the given layout format.,public class PreviewViewer extends ScrollPane implements InvalidationListener {,no
+FR72,Line,"Saved, now exit.",return true;,no
+FR1360,Line,Try to get as much information from the temporal accessor,LocalDate date = dateTime.query(TemporalQueries.localDate());,no
+FR322,Line,There is apparently no neat way to get the page number from a PDPage...thus this old-style for loop,for (int i = 0; i < pages.getCount(); i++) {,no
+FR502,Line,Read the prefs information for file types:,String[][] vals = StringUtil,no
+FR1080,Line,start office process,Process p = Runtime.getRuntime().exec(cmdArray);,no
+FR447,Line,Make a list of all PDFs linked from this entry:,List<Path> files = entry.getFiles().stream(),no
+FR1220,Javadoc,"This method is called when the dialog is opened, or if it is made visible after being hidden. This calls the appropriate method in the ViewModel.",void setValues();,no
+FR98,Line,Perform migrations,PreferencesMigrations.runMigrations();,yes
+FR1363,Javadoc,Constructs a {@link TableCell} based on the value of the cell and a bunch of specified converter methods.,"public class ValueTableCellFactory<S, T> implements Callback<TableColumn<S, T>, TableCell<S, T>> {",no
+FR1228,Line,store new patterns globally,prefs.putKeyPattern(keypatterns);,no
+FR660,Javadoc,A backup of the groups before the modification,private final GroupTreeNode m_groupRoot;,no
+FR1445,Javadoc,MappedList implementation based on https://github.com/corda/corda/blob/master/client/jfx/src/main/kotlin/net/corda/client/jfx/utils/MappedList.kt,"public final class MappedList<A, B> extends TransformationList<A, B> {",no
+FR378,Line,"Start of ugly hack: We need to find out, which tabs will be shown and which not and remove and re-add the appropriate tabs to the editor. We don't want to simply remove all and re-add the complete list of visible tabs, because the tabs give an ugly animation the looks like all tabs are shifting in from the right. This hack is required since tabbed.getTabs().setAll(visibleTabs) changes the order of the tabs in the editor",,no
+FR181,Line,make sure the layout is set according to the checkbox,cleanupEnabled.selectedProperty().addListener(new EnablementStatusListener<>(fieldFormatterCleanups.isEnabled()));,no
+FR1005,Line,shift on win or no modifier,"LOGGER.debug(""Mode LINK"");",no
+FR634,Line,expand or collapse the tree item and reset the time,this.dragStarted = System.currentTimeMillis();,yes
+FR71,Line,The user wants to save.,try {,no
+FR257,Line,Open the file:,String filePath = file.get().toString();,no
+FR242,Javadoc,Returns the path to the system's applications folder.,Path getApplicationDirectory();,yes
+FR1311,Javadoc,Opens a shared database.,public class ConnectToSharedDatabaseCommand extends SimpleCommand {,yes
+FR533,Line,no parameters,if (query == null) {,yes
+FR895,Javadoc,This will wrap the built in and ieee abbreviations in pseudo abbreviation files and add them to the list of journal abbreviation files.,void addBuiltInLists() {,no
+FR536,Line,url?,if (decode.matches(URL_EXP)) {,yes
+FR379,Line,"First, remove tabs that we do not want to show",List<EntryEditorTab> toBeRemoved = tabs.stream().filter(tab -> !tab.shouldShow(entry)).collect(Collectors.toList());,yes
+FR626,Line,Prevent right-click to select group,event.consume();,no
+FR773,Block,css: close-circle *,"INTEGRITY_FAIL(Color.RED, MaterialDesignIcon.CLOSE_CIRCLE),",yes
+FR512,Javadoc,"Unknown external file type. This instance represents a file type unknown to JabRef. This can happen, for example, when a database is loaded which contains links to files of a type that has not been defined on this JabRef instance.",public class UnknownExternalFileType implements ExternalFileType {,no
+FR1086,Line,"Wait 500 ms, then try to connect again, but do not wait longer than 5 min (= 600 * 500 ms) total:",if (i == 600) {,no
+FR1372,Javadoc,Returns a text formatter that restricts input to integers,public static TextFormatter<String> getIntegerTextFormatter() {,no
+FR948,Javadoc,"Format a name field for the table, according to user preferences.",public static String formatName(final String nameToFormat) {,yes
+FR779,Block,css: view-list *,"TOGGLE_GROUPS(MaterialDesignIcon.VIEW_LIST),",yes
+FR1126,Line,"Ok, we have seen this exact marker before.",if (!refKeys.get(marker).contains(currentKey)) {,no
+FR887,Line,Execute the callables and wait for the results.,List<Future<Boolean>> futures = JabRefExecutorService.INSTANCE.executeAll(tasks);,no
+FR323,Javadoc,Stores all user dialogs related to {@link BackupManager}.,public class BackupUIManager {,no
+FR1384,Line,Nothing to do here,},yes
+FR478,Line,The minimum number of selected entries to ask the user for confirmation,private static final int WARNING_LIMIT = 5;,no
+FR1189,Javadoc,Exception used to indicate that the plugin attempted to set a character format that is not defined in the current OpenOffice document.,class NoDocumentException extends Exception {,no
+FR1079,Line,"create call with arguments We need a socket, pipe does not work. https://api.libreoffice.org/examples/examples.html",String[] cmdArray = new String[argArray.length + 2];,no
+FR289,Line,"imageView.setImage(new WritableImage(getDesiredWidth(), getDesiredHeight()));",BackgroundTask<Image> generateImage = BackgroundTask,yes
+FR29,Javadoc,"Return a boolean, if the selected entry have url or doi",private boolean isExistURLorDOI(List<BibEntry> selectEntryList) {,no
+FR1362,Javadoc,"This class can be used to wrap a @see StringProperty inside it. When wrapped, any Listener listening for updates to the wrapped StringProperty (for example because of a binding to it) is ensured to be notified on the JavaFX Application Thread. It should be used to implement bindings where updates come in from a background thread but should be reflected in the UI where it is necessary that changes to the UI are performed on the JavaFX Application thread.",public class UiThreadStringProperty extends StringProperty {,no
+FR41,Line,"prefs.putBoolean(JabRefPreferences.WINDOW_MAXIMISED, getExtendedState() == Frame.MAXIMIZED_BOTH);",,yes
+FR1266,Javadoc,Dialog for managing term list files.,public class ManageProtectedTermsDialog extends BaseDialog<Void> {,yes
+FR1282,Line,Check if a path to the command has been specified,if ((commandPath == null) || commandPath.trim().isEmpty()) {,no
+FR1049,Line,Will only happen if field exists,"mergedEntry.setField(field, leftEntry.getField(field).get());",no
+FR942,Line,We need to make a copy as instances of LogEvent are reused by log4j,MutableLogEvent copy = new MutableLogEvent();,no
+FR1447,Line,perform permutation,Object[] permutedPart = new Object[to - from];,yes
+FR1422,Line,"Stream.allMatch() (in contrast to Stream.anyMatch() returns 'true' for empty streams, so this has to be checked explicitly.","return Bindings.createBooleanBinding(() -> !source.isEmpty() && source.stream().allMatch(predicate), source);",yes
+FR318,Line,"If there is no value, do nothing:",if ((!valToMove.isPresent()) || valToMove.get().isEmpty()) {,no
+FR1226,Line,Set the default value:,"Globals.prefs.put(JabRefPreferences.DEFAULT_BIBTEX_KEY_PATTERN, defaultPat.getText());",no
+FR1330,Javadoc,Update the citation list depending on the selected reference.,public void activeReferenceChanged(ReferenceViewModel reference) {,no
+FR1175,Line,Enable actions that depend on Connect:,selectDocument.setDisable(false);,no
+FR1261,Block,"Deleted since it does not work anymore. Needs refactoring.MenuItem previousPreviewLayout = new MenuItem(Localization.lang(""Previous preview layout""));previousPreviewLayout.setAccelerator(keyBindingRepository.getKeyCombination(KeyBinding.PREVIOUS_PREVIEW_LAYOUT));previousPreviewLayout.setOnAction(event -> basePanel.previousPreviewStyle());MenuItem nextPreviewLayout = new MenuItem(Localization.lang(""Next preview layout""));nextPreviewLayout.setAccelerator(keyBindingRepository.getKeyCombination(KeyBinding.NEXT_PREVIEW_LAYOUT));nextPreviewLayout.setOnAction(event -> basePanel.nextPreviewStyle());",,yes
+FR672,Line,for all types,private final TextField nameField = new TextField();,no
+FR1409,Line,"We only handle ""ENTRY_MODIFY"" here, so the context is always a Path","@SuppressWarnings(""unchecked"")",no
+FR250,Javadoc,Opens the given URL using the system browser,public static void openBrowser(String url) throws IOException {,yes
+FR1033,Javadoc,Constructor taking two entries,"public MergeEntries(BibEntry entryLeft, BibEntry entryRight, BibDatabaseMode type) {",yes
+FR82,Line,"We create a decoration pane ourselves for performance reasons (otherwise it has to be injected later, leading to a complete redraw/relayout of the complete scene)",DecorationPane root = new DecorationPane();,no
+FR761,Block,css: eye *,"READ_STATUS_READ(Color.rgb(111, 204, 117, 1), MaterialDesignIcon.EYE),",yes
+FR923,Line,first check if a valid entry is selected,if (selectedKeyBinding.isNull().get()) {,yes
+FR1329,Javadoc,Return a string for displaying a node name (and its number of children if it is a directory).,public String getDisplayText() {,no
+FR1442,Line,"Dir must be a folder, not a file",if (!Files.isDirectory(directory)) {,yes
+FR357,Javadoc,Set-up key bindings specific for the entry editor.,private void setupKeyBindings() {,yes
+FR1059,Javadoc,Bootstraps a servicemanager with the jurt base components registered. See also UNOIDL <code>com.sun.star.lang.ServiceManager</code>.,public static XMultiServiceFactory createSimpleServiceManager() throws Exception {,no
+FR1138,Line,The footnote's anchor gives the correct position in the text:,range = footer.getAnchor();,no
+FR1291,Line,"See if it helps to append "".in"":","lp = new File(commandPath + "".in"");",no
+FR399,Line,Remove annotations for the current entry and reinitialize annotation/cache,cache.remove(entry);,no
+FR133,Line,"For some reason the graphic is not set correctly, so let's fix this",button.graphicProperty().unbind();,no
+FR617,Line,Set-up groups tree,groupTree.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);,no
+FR609,Line,Store the directory for next time:,preferences.setWorkingDir(path);,no
+FR8,Line,those threads will be allowed to finish,this.executorService.shutdown();,no
+FR1309,Javadoc,Fetches possibly saved data and configures the control elements respectively.,private void applyPreferences() {,no
+FR1088,Javadoc,Exception used to indicate that the plugin attempted to set a character format that is not defined in the current OpenOffice document.,class CreationException extends Exception {,no
+FR1236,Line,Autosave,,no
+FR27,Javadoc,Sets the indeterminate status of the progress bar. <p>,public void setProgressBarIndeterminate(final boolean value) {,yes
+FR73,Line,The action was either canceled or unsuccessful.,"dialogService.notify(Localization.lang(""Unable to save library""));",no
+FR1024,Line,"Remove fields which are not in the merged entry, unless they are internal fields",for (Field field : originalFields) {,no
+FR1326,Line,Text before the citation.,if (start > 0) {,no
+FR1021,Line,entry type,EntryType oldType = originalEntry.getType();,yes
+FR90,Line,"Display warnings, if any",int tabNumber = 0;,yes
+FR516,Javadoc,Set the string associated with this file type's icon.,public void setIconName(String name) {,yes
+FR985,Line,Added comparator for Read Status,if (specialField == SpecialField.READ_STATUS) {,yes
+FR917,Javadoc,This constructor should only be called to create a pseudo abbreviation file for built in lists. This means it is a placeholder and it's path will be null meaning it has no place on the filesystem. It's isPseudoFile property will therefore be set to true.,"public AbbreviationsFileViewModel(List<AbbreviationViewModel> abbreviations, String name) {",no
+FR633,Line,"TODO: reflective access, should be removed","Method m = TextFields.class.getDeclaredMethod(""setupClearButtonField"", TextField.class, ObjectProperty.class);",no
+FR505,Line,A new or modified entry type. Construct it from the string array:,ExternalFileType type = CustomExternalFileType.buildFromArgs(val);,no
+FR1108,Line,"To account for numbering and for uniqiefiers, we must refresh the cite markers:",updateSortedReferenceMarks();,no
+FR247,Javadoc,Open a http/pdf/ps viewer for the given link string.,"public static void openExternalViewer(BibDatabaseContext databaseContext, String initialLink, Field initialField)",no
+FR1206,Line,General,,yes
+FR922,Javadoc,Read all keybindings from the keybinding repository and create table keybinding models for them,private void populateTable() {,no
+FR303,Line,Text leading up to s1 Insert s2,"stringBuilder.append(txt, piv, ind);",no
+FR869,Line,Migrations: Warning for migrating the Review into the Comment field,"new MergeReviewIntoCommentAction(),",no
+FR227,Block,"// TODO: Show detailed description of the changes StringBuilder sb = new StringBuilder( ""<html>"" + Localization.lang(""Changes have been made to the following metadata elements"") + "":<p><br>&nbsp;&nbsp;""); sb.append(changes.stream().map(unit -> unit.key).collect(Collectors.joining(""<br>&nbsp;&nbsp;""))); sb.append(""</html>""); infoPane.setText(sb.toString());","return new Label(Localization.lang(""Metadata change""));",no
+FR135,Javadoc,Global String constants for GUI actions,@Deprecated,no
+FR882,Line,Put everything together,VBox container = new VBox();,no
+FR1156,Line,"Check if we should italicize the ""et al."" string in citations:",boolean italicize = style.getBooleanCitProperty(OOBibStyle.ITALIC_ET_AL);,yes
+FR1029,Line,Inform the user to select entries first.,dialogService.showInformationDialogAndWait(,yes
+FR218,Javadoc,"Performs the change. This method is responsible for adding a proper undo edit to the NamedCompound, so the change can be undone.","public abstract void makeChange(BibDatabaseContext database, NamedCompound undoEdit);",no
+FR618,Line,Set-up bindings,BindingsHelper.bindContentBidirectional(,no
+FR104,Line,Try to contact already running JabRef,RemoteClient remoteClient = new RemoteClient(remotePreferences.getPort());,no
+FR782,Block,css: file-excel *,"FILE_EXCEL(MaterialDesignIcon.FILE_EXCEL),",yes
+FR251,Javadoc,Opens the url with the users standard Browser. If that fails a popup will be shown to instruct the user to open the link manually and the link gets copied to the clipboard,public static void openBrowserShowPopup(String url) {,no
+FR1438,Javadoc,"Sets the {@link Runnable} that is invoked after the task is finished, irrespectively if it was successful or failed with an error.",public BackgroundTask<V> onFinished(Runnable onFinished) {,no
+FR1355,Javadoc,Field editor that provides various pre-defined options as a drop-down combobox.,public class TagBar<T> extends HBox {,no
+FR905,Javadoc,This method stores all file paths of the files in the journalFiles property to the global JabRef preferences. Pseudo abbreviation files will not be stored.,private void saveExternalFilesList() {,no
+FR957,Line,"icon.setToolTipText(Localization.lang(""Open"") + "" URL"");","TABLE_ICONS.put(StandardField.URL, icon);",yes
+FR1301,Line,An empty search field should cause the search to be cleared.,if (searchField.getText().isEmpty()) {,no
+FR969,Line,Priority icon used for the menu,"SpecialFieldViewModel priorityViewModel = new SpecialFieldViewModel(SpecialField.PRIORITY, undoManager);",no
+FR768,Block,checkbox-marked-circle-outline *,PLAIN_TEXT_IMPORT_DONE(MaterialDesignIcon.CHECKBOX_MARKED_CIRCLE_OUTLINE),yes
+FR21,Javadoc,Returns the currently viewed BasePanel.,public BasePanel getCurrentBasePanel() {,yes
+FR1180,Line,Generate keys,BibtexKeyPatternPreferences prefs = jabRefPreferences.getBibtexKeyPatternPreferences();,no
+FR1381,Javadoc,This class is similar to {@link GraphicValidationDecoration} but with a different style and font-based icon.,public class IconValidationDecorator extends GraphicValidationDecoration {,no
+FR217,Javadoc,This method returns a JComponent detailing the nature of the change.,public abstract Node description();,no
+FR726,Line,"only remove explicit groups from the entries, keyword groups should not be deleted",if (group.getGroupNode().getGroup() instanceof ExplicitGroup) {,no
+FR1405,Line,Are there children (or children of children...) that are matched? If yes we also need to show this node,return node.children.getSource().stream().anyMatch(this::showNode);,no
+FR656,Line,If there are entries to add,if (!toAdd.isEmpty()) {,yes
+FR976,Line,"node should be generated for each call, as nodes can be added to the scene graph only once",return icon.getGraphicNode();,no
+FR207,Line,The user doesn't want to override cite keys,if (!overwriteKeys) {,no
+FR593,Line,"TODO: Add undo panel.getUndoManager().addEdit(new UndoableFieldChange(entry, editor.getName(), text, nextAbbreviation));",},no
+FR805,Javadoc,Shows a dialog with the warnings from an import or open of a file,"public static void showParserResultWarningDialog(final ParserResult parserResult, final JabRefFrame jabRefFrame) {",no
+FR1298,Javadoc,"The popup has private access in {@link AutoCompletionBinding}, so we use reflection to access it.","@SuppressWarnings(""unchecked"")",no
+FR537,Line,"Try to strip the query string, if any, to get the correct suffix:",URL url = new URL(link);,no
+FR417,Line,"Add chosen export type to last used pref, to become default","Globals.prefs.put(JabRefPreferences.LAST_USED_EXPORT, exporter.getName());",no
+FR1144,Line,Create a new TextSection from the document factory and access it's XNamed interface,XNamed xChildNamed;,no
+FR1354,Javadoc,A tag item in a {@link TagBar}.,public class Tag<T> extends HBox {,no
+FR727,Line,"TODO: Warn if (!WarnAssignmentSideEffects.warnAssignmentSideEffects(node.getNode().getGroup(), panel.frame())) { return; // user aborted operation",,no
+FR718,Line,TODO: Expand parent to make new group visible parent.expand();,,no
+FR304,Javadoc,This class will copy each selected entry's BibTeX key as a hyperlink to its url to the clipboard. In case an entry doesn't have a BibTeX key it will not be copied. In case an entry doesn't have an url this will only copy the BibTeX key.,public class CopyBibTeXKeyAndLinkAction implements BaseAction {,no
+FR521,Line,check whether there is another icon defined for this file type,for (ExternalFileType fileType : ExternalFileTypes.getDefaultExternalFileTypes()) {,no
+FR1290,Line,"this needs to fixed because it gives ""asdf"" when going prefs.get(""lyxpipe"")",File lp = new File(commandPath);,no
+FR404,Javadoc,Concatenates the formatted message of the given {@link LogEvent}s by using the a new line separator.,private String getLogMessagesAsString(List<LogEventViewModel> messages) {,no
+FR1439,Javadoc,Creates a {@link BackgroundTask} that first runs this task and based on the result runs a second task.,"public <T> BackgroundTask<T> then(Function<V, BackgroundTask<T>> nextTaskFactory) {",no
+FR710,Javadoc,"Opens ""New Group Dialog"" and add the resulting group to the specified group",public void addNewSubgroup(GroupNodeViewModel parent) {,no
+FR523,Line,"On all OSes there is a generic application available to handle file opening, so use this one","return """";",no
+FR208,Line,generate the new cite keys for each entry,"final NamedCompound compound = new NamedCompound(Localization.lang(""Autogenerate BibTeX keys""));",no
+FR193,Line,default value,String text = defaultPat.getText();,yes
+FR1214,Javadoc,Customization of appearance parameters.,"public AppearancePrefsTab(DialogService dialogService, JabRefPreferences prefs) {",no
+FR650,Line,"remove node, then insert all children",GroupTreeNode removedNode = cursor,no
+FR163,Javadoc,Remove all current possible suggestions,public void clearSuggestions() {,yes
+FR446,Line,Get entries and check if it makes sense to perform this operation,entries = basePanel.getSelectedEntries();,no
+FR907,Javadoc,"This method first saves all external files to its internal list, then writes all abbreviations to their files and finally updates the abbreviations auto complete. It basically calls {@link #saveExternalFilesList()}, {@link #saveJournalAbbreviationFiles() } and finally {@link JournalAbbreviationLoader#update(JournalAbbreviationPreferences)}.",public void saveEverythingAndUpdateAutoCompleter() {,no
+FR877,Line,do not open the original file,result.getDatabaseContext().clearDatabaseFile();,no
+FR223,Javadoc,"Finds the entry in the list best fitting the specified entry. Even if no entries get a score above zero, an entry is still returned.","private static BibEntry bestFit(BibEntry targetEntry, List<BibEntry> entries) {",no
+FR873,Line,"no more bps to check, we found a matching one",break;,no
+FR185,Line,default pattern,protected final TextField defaultPat = new TextField();,yes
+FR281,Line,We try to find the page that is displayed in the center of the viewport,Optional<DocumentViewerPage> inMiddleOfViewport = Optional.empty();,no
+FR1279,Javadoc,Function to get the command name in case it is different from the application name,protected String getCommandName() {,no
+FR102,Line,Check if we are running an acceptable version of Java,final BuildInfo buildInfo = Globals.BUILD_INFO;,yes
+FR169,Javadoc,{@inheritDoc},@Override,yes
+FR361,Line,Alt on Windows,"LOGGER.debug(""Mode LINK"");",no
+FR682,Line,General information,VBox contextPanel = new VBox(10);,no
+FR1125,Line,"compare normalized markers, since the actual markers can be different",String[] markers = normCitMarkers[i];,no
+FR308,Line,all keywords from first entry have to be added,BibEntry firstEntry = entries.get(0);,no
+FR1312,Line,"must be set here, because in initialize the button is still null",btnConnect.disableProperty().bind(viewModel.formValidation().validProperty().not());,no
+FR1053,Line,everything is ok,return null;,yes
+FR495,Line,See if we can find a type with matching name in the default type list:,ExternalFileType found = null;,no
+FR45,Line,We need to wait with setting the divider since it gets reset a few times during the initial set-up,mainStage.showingProperty().addListener(new ChangeListener<Boolean>() {,no
+FR700,Line,"We calculate the new hit value We could be more intelligent and try to figure out the new number of hits based on the entry change for example, a previously matched entry gets removed -> hits = hits - 1",BackgroundTask,no
+FR497,Line,"It was modified. Remove its entry from the defaults list, since the type hasn't been removed:",defTypes.remove(found);,no
+FR552,Line,Cannot rename remote links,return;,no
+FR664,Line,remember modified children for redo,m_modifiedSubtree.clear();,no
+FR113,Javadoc,If the given component is visible it will be hidden and the other way around.,public void toggle(SidePaneType type) {,yes
+FR570,Javadoc,Interface presents user-described paste behaviour applying to paste method,@FunctionalInterface,no
+FR956,Line,"icon.setToo(Localization.lang(""Open"") + "" PDF"");","TABLE_ICONS.put(StandardField.PDF, icon);",yes
+FR500,Line,First get a list of the default file types as a starting point:,List<ExternalFileType> types = new ArrayList<>(getDefaultExternalFileTypes());,no
+FR215,Line,"The name to change to is already in the database, so we can't comply.","LOGGER.info(""Cannot rename string '"" + mem + ""' to '"" + disk + ""' because the name """,no
+FR480,Javadoc,"Look up the external file type registered with this name, if any.",public Optional<ExternalFileType> getExternalFileTypeByName(String name) {,no
+FR453,Line,"TODO: Add undo/redo ce.addEdit(new UndoableInsertEntry(panel.getDatabase(), entry));",,no
+FR210,Javadoc,The action concerned with generate a new (sub-)database from latex AUX file.,public class NewSubLibraryAction extends SimpleCommand {,no
+FR466,Javadoc,Starts the search of unlinked files according chosen directory and the file type selection. The search will process in a separate thread and a progress indicator will be displayed.,private void startSearch() {,no
+FR547,Javadoc,Gets the filename for the current linked file and compares it to the new suggested filename.,public boolean isGeneratedNameSameAsOriginal() {,no
+FR231,Line,Modified externally.,"fieldChanges.add(new FieldChangeViewModel(field, memEntry, tmpEntry, mem.orElse(null), tmp.get(), disk.get()));",no
+FR1,Javadoc,Responsible for managing of all threads (except GUI threads) in JabRef,public class JabRefExecutorService {,no
+FR40,Line,all the logic is done in openIt. Even raising an existing panel,"getOpenDatabaseAction().openFile(file, true);",no
+FR346,Javadoc,Focuses the given field.,public void requestFocus(Field fieldName) {,yes
+FR568,Javadoc,Set pasteActionHandler variable to passed handler,public void setPasteActionHandler(PasteActionHandler handler) {,yes
+FR707,Javadoc,Gets invoked if the user selects a different group. We need to notify the {@link StateManager} about this change so that the main table gets updated.,private void onSelectedGroupChanged(ObservableList<GroupNodeViewModel> newValue) {,no
+FR822,Line,Merge entries:,for (BibEntry entry : pr.getDatabase().getEntries()) {,no
+FR179,Javadoc,This panel contains the two comboboxes and the Add button,private GridPane getSelectorPanel() {,no
+FR709,Javadoc,Gets invoked if the user changes the active database. We need to get the new group tree and update the view,private void onActiveDatabaseChanged(Optional<BibDatabaseContext> newDatabase) {,no
+FR235,Line,"Use ""-a <application>"" if the app is specified, and just ""open <filename>"" otherwise:","String[] cmd = (application != null) && !application.isEmpty() ? new String[] {""/usr/bin/open"", ""-a"",",no
+FR678,Line,set default values (overwritten if editedGroup != null),keywordGroupSearchField.setText(prefs.get(JabRefPreferences.GROUPS_DEFAULT_FIELD));,no
+FR1168,Line,Check if the cloned entry has a crossref field,clonedEntry.getField(StandardField.CROSSREF).ifPresent(crossref -> {,yes
+FR973,Line,Print icon used for menu,"SpecialFieldViewModel printedViewModel = new SpecialFieldViewModel(SpecialField.PRINTED, undoManager);",no
+FR486,Javadoc,"Return a String array representing this file type. This is used for storage into Preferences, and the same array can be used to construct the file type later, using the String[] constructor.",private String[] getStringArrayRepresentation(ExternalFileType type) {,no
+FR915,Line,must be here,Abbreviation abbreviation = journalAbbreviationRepository.getAbbreviation(text).get();,yes
+FR918,Javadoc,This method will write all abbreviations of this abbreviation file to the file on the file system. It essentially will check if the current file is a built in list and if not it will call {@link AbbreviationWriter#writeOrCreate()}.,public void writeOrCreate() throws IOException {,no
+FR745,Block,"Constructs an {@link Image} for the image representing the given function, in the resource file listing images.@param name The name of the icon, such as ""open"", ""save"", ""saveAs"" etc. @return The {@link Image} for the function.",private static Image getImageFX(String name) {,no
+FR470,Line,Need to toggle a twice to make sure everything is selected,root.setSelected(true);,no
+FR1227,Line,fetch entries from GUI,GlobalBibtexKeyPattern keypatterns = getKeyPatternAsGlobalBibtexKeyPattern();,no
+FR964,Line,"icon.setToolTipText(Localization.lang(""Open %0 file"", fileType.getName()));","TABLE_ICONS.put(fileType.getField(), icon);",yes
+FR601,Javadoc,The default context menu with a specific menu for normalizing person names regarding to BibTex rules.,public static Supplier<List<MenuItem>> getNameMenu(final TextInputControl textInput) {,no
+FR1130,Line,"Update the map of uniquefiers for the benefit of both the following generation of new citation markers, and for the method that builds the bibliography:","uniquefiers.put(key, String.valueOf((char) uniq));",no
+FR871,Line,Check if any of the files are already open:,for (Iterator<Path> iterator = filesToOpen.iterator(); iterator.hasNext();) {,no
+FR812,Javadoc,Automatically imports the files given as arguments.,public void automatedImport(List<String> filenames) {,yes
+FR842,Line,Return null if the directory is not valid.,if ((directory == null) || !directory.exists() || !directory.isDirectory()) {,yes
+FR46,Line,"setBounds(GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds()); WindowLocation pw = new WindowLocation(this, JabRefPreferences.POS_X, JabRefPreferences.POS_Y, JabRefPreferences.SIZE_X, JabRefPreferences.SIZE_Y); pw.displayWindowAtStoredLocation();",,yes
+FR753,Block,css: file-find *,AUTO_FILE_LINK(MaterialDesignIcon.FILE_FIND),no
+FR963,Line,"icon.setToolTipText(Localization.lang(""Open file""));","TABLE_ICONS.put(StandardField.FILE, icon);",yes
+FR42,Line,"Here we store the names of all current files. If there is no current file, we remove any previously stored filename.",if (filenames.isEmpty()) {,no
+FR456,Line,Add to group,"addToGroups(entries, stateManager.getSelectedGroup(database));",yes
+FR640,Javadoc,The subtree that was added or removed,private final GroupTreeNode m_subtreeBackup;,no
+FR1324,Javadoc,Run a recursive search in a background task.,public void searchButtonClicked() {,no
+FR799,Javadoc,Read a typical java property url into a Map. Currently doesn't support escaping of the '=' character - it simply looks for the first '=' to determine where the key ends. Both the key and the value is trimmed for whitespace at the ends.,// FIXME: prefix can be removed?!,no
+FR549,Javadoc,Asks the user for confirmation that he really wants to the delete the file from disk (or just remove the link).,public boolean delete() {,no
+FR1003,Line,Different actions depending on where the user releases the drop in the target row Bottom + top -> import entries Center -> link files to entry,"switch (ControlHelper.getDroppingMouseLocation(row, event)) {",no
+FR75,Line,empty tab without database,if (panel == null) {,yes
+FR448,Javadoc,ExporterViewModel wraps a TemplateExporter from logic and is used in the exporter customization dialog view and ViewModel.,,no
+FR1224,Javadoc,The Preferences panel for key generation.,class BibtexKeyPatternPrefTab extends BibtexKeyPatternPanel implements PreferencesTab {,no
+FR1066,Line,insert the factory of the loader,"xSet.insert(xImpLoader.activate(""com.sun.star.comp.loader.JavaLoader"", null, null, null));",yes
+FR619,Line,We try to to prevent publishing changes in the search field directly to the search task that takes some time for larger group structures.,"final Timer searchTask = FxTimer.create(Duration.ofMillis(400), () -> {",no
+FR680,Line,Build individual layout cards for each group,VBox explicitPanel = createOptionsExplicitGroup();,no
+FR1394,Javadoc,"Installs the style file and provides live reloading. <p> The live reloading has to be turned on by setting the <code>-Djabref.theme.css</code> property. There two possible modes: (1) When only <code>-Djabref.theme.css</code> is specified, then the standard <code>Base.css</code> that is found will be watched and on changes in that file, the style-sheet will be reloaded and changes are immediately visible. (2) When a path to a css file is passed to <code>-Djabref.theme.css</code>, then the given style is loaded in addition to the base css file. Changes in the specified css file lead to an immediate redraw of the interface. <p> When working from an IDE, this usually means that the <code>Base.css</code> is located in the build folder. To use the css-file that is located in the sources directly, the full path can be given as value for the ""VM option"": <code>-Djabref.theme.css=""/path/to/src/Base.css""</code>",public class ThemeLoader {,no
+FR1259,Line,Set entry number in case that is included in the preview layout.,ExporterFactory.entryNumber = 1;,no
+FR134,Line,"For some reason the graphic is not set correctly, so let's fix this ToDO: Find a way to reuse JabRefIconView",button.graphicProperty().unbind();,no
+FR582,Line,Pass other keys to children,},no
+FR941,Line,class is indirectly constructed by log4j,"@SuppressWarnings(""unused"")",no
+FR705,Line,Different actions depending on where the user releases the drop in the target row Bottom + top -> insert source row before / after this row Center -> add as child,switch (mouseLocation) {,no
+FR249,Javadoc,"Opens a file browser of the folder of the given file. If possible, the file is selected",public static void openFolderAndSelectFile(Path fileLink) throws IOException {,no
+FR800,Line,FIXME: prefix can be removed?!,"private static Map<String, String> readIconThemeFile(URL url, String prefix) {",no
+FR1333,Javadoc,"This class represents the removal of an entry. The constructor needs references to the database, the entry, and the map of open entry editors. The latter to be able to close the entry's editor if it is opened after an undo, and the removal is then undone.",public class UndoableRemoveEntry extends AbstractUndoableJabRefEdit {,no
+FR229,Line,"We know that tmpEntry is not equal to diskEntry. Check if it has been modified locally as well, since last tempfile was saved.","boolean isModifiedLocally = (DuplicateCheck.compareEntriesStrictly(memEntry, tmpEntry) <= 1);",no
+FR347,Line,The preferences might be not initialized in tests -> return immediately TODO: Replace this ugly workaround by proper injection propagation,if (Globals.prefs == null) {,no
+FR1035,Javadoc,"@return Merged BibEntry
+",public BibEntry getMergeEntry() {,yes
+FR1297,Javadoc,Focuses the search field if it is not focused.,public void focus() {,yes
+FR388,Javadoc,Decide whether to show this tab for the given entry.,public abstract boolean shouldShow(BibEntry entry);,yes
+FR69,Line,Register undo/redo listener,basePanel.getUndoManager().registerListener(new UndoRedoEventManager());,yes
+FR959,Line,"icon.setToolTipText(Localization.lang(""Open"") + "" ArXiv URL"");","TABLE_ICONS.put(StandardField.EPRINT, icon);",yes
+FR1270,Javadoc,"Reporting etc., this method is called on the event dispatch thread after pushEntries() returns.",void operationCompleted();,no
+FR644,Javadoc,Creates an object that can undo/redo an edit event.,"public UndoableAddOrRemoveGroup(GroupTreeNodeViewModel groupsRoot,",no
+FR978,Line,We have to use reflection since TableUtil is not visible to us,try {,no
+FR1070,Line,insert the acceptor,"xSet.insert(xImpLoader.activate(""com.sun.star.comp.connections.Acceptor"", null, null, null));",yes
+FR1008,Line,TODO: Font & padding customization setFont(GUIGlobals.currentFont);,},no
+FR1120,Line,"We have sorted the citation markers according to their order of appearance, so we simply count up for each marker referring to a new entry:",List<Integer> num = new ArrayList<>(keys.length);,no
+FR818,Line,Specific importer:,"ParserResult pr = importer.get().importDatabase(filename, Globals.prefs.getDefaultEncoding());",yes
+FR1102,Line,Get the office component context:,XComponentContext xContext = org.jabref.gui.openoffice.Bootstrap.bootstrap(loader);,no
+FR643,Javadoc,"The type of the editing (ADD_NODE, REMOVE_NODE_KEEP_CHILDREN, REMOVE_NODE_AND_CHILDREN)",private final int m_editType;,no
+FR1215,Line,Font configuration,HBox fontBox = new HBox();,yes
+FR363,Line,Shift on Windows or no modifier,"LOGGER.debug(""Mode MOVE"");",no
+FR356,Javadoc,"GUI component that allows editing of the fields of a BibEntry (i.e. the one that shows up, when you double click on an entry in the table) <p> It hosts the tabs (required, general, optional) and the buttons to the left. <p> EntryEditor also registers itself to the event bus, receiving events whenever a field of the entry changes, enabling the text fields to update themselves if the change is made from somewhere else.",public class EntryEditor extends BorderPane {,no
+FR994,Line,TODO: Float marked entries model.updateMarkingState(Globals.prefs.getBoolean(JabRefPreferences.FLOAT_MARKED_ENTRIES));,,no
+FR1368,Line,Ignore,"return new ReadOnlyStringWrapper("""");",yes
+FR415,Line,"Find default choice, if any",Exporter defaultChoice = exporters.stream(),yes
+FR1129,Line,This marker appears for more than one unique entry:,int uniq = 'a';,no
+FR1375,Javadoc,Constructs a {@link TreeTableCell} based on the view model of the row and a bunch of specified converter methods.,"public class ViewModelTableRowFactory<S> implements Callback<TableView<S>, TableRow<S>> {",no
+FR111,Line,Override used newline character with the one stored in the preferences The preferences return the system newline character sequence as default,OS.NEWLINE = Globals.prefs.get(JabRefPreferences.NEWLINE);,no
+FR1164,Line,For each cited key,for (String key : cited) {,yes
+FR1083,Line,connection string,"String sConnect = ""uno:socket,host=localhost,port=2083"" + "";urp;StarOffice.ComponentContext"";",yes
+FR1245,Javadoc,"Generates a plain text string out of the preview and copies it additionally to the html to the clipboard (WYSIWYG Editors use the HTML, plain text editors the text)",protected static String processPreview(List<String> citations) {,no
+FR1015,Line,IEEETran,"populateSubMenu(items, ""IEEETran"", IEEETranEntryTypeDefinitions.ALL, entry, undoManager);",yes
+FR122,Line,Sort the visible components by their preferred position,visibleComponents.sort(new PreferredIndexSort());,yes
+FR1223,Javadoc,"This method should be called after storing the preferences, This calls the appropriate method in the ViewModel.",List<String> getRestartWarnings();,no
+FR857,Line,Should this be done _after_ we know it was successfully opened?,"ParserResult parserResult = OpenDatabase.loadDatabase(file.toFile(),",no
+FR253,Line,Find the default directory for this field type:,"List<String> dir = databaseContext.getFileDirectories(field, Globals.prefs.getFilePreferences());",yes
+FR394,Line,Set-up annotation list,annotationList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);,yes
+FR1058,Javadoc,Bootstraps an initial component context with service manager and basic jurt components inserted.,"public static XComponentContext createInitialComponentContext(Map<String, Object> context_entries) throws Exception {",no
+FR649,Line,redo,} else {,no
+FR450,Javadoc,Generate keys for given entries.,private void generateKeys(List<BibEntry> entries) {,yes
+FR732,Javadoc,"This Action keeps a reference to a URL. When activated, it shows the help Dialog unless it is already visible, and shows the URL in it.",public class HelpAction extends SimpleCommand {,no
+FR578,Line,"Only serialize linked files, not the ones that are automatically found",List<LinkedFile> filesToSerialize = files.stream(),no
+FR1428,Javadoc,Puts the value of the concrete class in a map. All previous content stored in the map is removed,"public <T> void putValue(Class<T> type, T value) {",no
+FR1077,Line,create default local component context,"XComponentContext xLocalContext = createInitialComponentContext((Map<String, Object>) null);",yes
+FR698,Line,Update appearance of group,anySelectedEntriesMatched.invalidate();,no
+FR826,Javadoc,Checks if there are duplicates to the given entry in the list of entries to be imported.,private Optional<BibEntry> findInternalDuplicate(BibEntry entry) {,no
+FR655,Line,If there are entries to remove,if (!toRemove.isEmpty()) {,yes
+FR374,Line,General fields from preferences,"for (Map.Entry<String, Set<Field>> tab : entryEditorPreferences.getEntryEditorTabList().entrySet()) {",no
+FR334,Javadoc,Class for creating the information about customizable entry editor tabs.,public final class EntryEditorTabList {,no
+FR488,Line,"Do not make this class final, as it otherwise can't be mocked for tests",public class ExternalFileTypes {,no
+FR1132,Line,Refresh all reference marks with the citation markers we computed:,boolean hadBibSection = getBookmarkRange(OOBibBase.BIB_SECTION_NAME) != null;,no
+FR433,Line,Save the database,"boolean success = saveDatabase(targetPath, false,",yes
+FR1268,Javadoc,"Class that defines interaction with an external application in the form of ""pushing"" selected entries to it.",public interface PushToApplication {,no
+FR1433,Javadoc,"A Hyperlink Click Listener for javafx.WebView to open links on click in the browser Code adapted from: <a href=""https://stackoverflow.com/a/33445383/"">https://stackoverflow.com/a/33445383/</a>","public class OpenHyperlinksInExternalBrowser implements ChangeListener<Worker.State>, EventListener {",no
+FR1402,Javadoc,Constructs a {@link TreeTableCell} based on the view model of the row and a bunch of specified converter methods.,"public class ViewModelTreeTableCellFactory<S> implements Callback<TreeTableColumn<S, S>, TreeTableCell<S, S>> {",no
+FR798,Javadoc,"Looks up the URL for the image representing the given function, in the resource file listing images.",public static URL getIconUrl(String name) {,no
+FR343,Line,Quick hack to disable navigating,"browser.addEventFilter(javafx.scene.input.MouseEvent.ANY, javafx.scene.input.MouseEvent::consume);",no
+FR1142,Line,Use the received map directly,correctEntries = entries;,yes
+FR1257,Line,Register for changes,for (Observable observable : newEntry.getObservables()) {,yes
+FR173,Javadoc,Empty,public SuggestionProviders() {,yes
+FR1393,Javadoc,Disables selection,public class NoSelectionModel<T> extends MultipleSelectionModel<T> {,no
+FR118,Javadoc,Moves the given component down.,public void moveDown(SidePaneComponent comp) {,yes
+FR1310,Line,for the case that the password is already set,prefs.clearPassword();,no
+FR1020,Line,Updated the original entry with the new fields,Set<Field> jointFields = new TreeSet<>(Comparator.comparing(Field::getName));,no
+FR350,Javadoc,GUI for tab displaying article recommendations based on the currently selected BibEntry,public class RelatedArticlesTab extends EntryEditorTab {,no
+FR613,Line,TODO: NULL TODO: Null TODO: NULL,GroupTreeNode newParent = root.getNode().getDescendant(pathToNewParent).get();,yes
+FR1358,Javadoc,"A date picker with configurable datetime format where both date and time can be changed via the text field and the date can additionally be changed via the JavaFX default date picker. Also supports incomplete dates. First recall how the date picker normally works: - The user selects a date in the popup, which sets {@link #valueProperty()} to the selected date. - The converter ({@link #converterProperty()}) is used to transform the date to a string representation and display it in the text field. The idea is now to intercept the process and add an additional step: - The user selects a date in the popup, which sets {@link #valueProperty()} to the selected date. - The date is converted to a {@link TemporalAccessor} (i.e, enriched by a time component) using {@link #addCurrentTime(LocalDate)} - The string converter ({@link #stringConverterProperty()}) is used to transform the temporal accessor to a string representation and display it in the text field. Inspiration taken from https://github.com/edvin/tornadofx-controls/blob/master/src/main/java/tornadofx/control/DateTimePicker.java",public class TemporalAccessorPicker extends DatePicker {,no
+FR156,Javadoc,A simple command that does not track progress of the action.,public abstract class SimpleCommand extends CommandBase {,no
+FR1031,Line,Create a new entry and add it to the undo stack Remove the other two entries and add them to the undo stack (which is not working...),"NamedCompound ce = new NamedCompound(Localization.lang(""Merge entries""));",no
+FR319,Line,"If we are not allowed to overwrite values, check if there is a non-empty value already for this entry for the new field:",Optional<String> valInNewField = entry.getField(newField);,no
+FR219,Line,Holds the version in memory. Check if it has been modified...?,this.inMem = inMem;,no
+FR889,Javadoc,This class provides a view model for abbreviation objects which can also define placeholder objects of abbreviations. This is indicated by using the {@code pseudoAbbreviation} property.,public class AbbreviationViewModel {,no
+FR592,Line,"TODO: Implement jump to entry TODO: Add toolitp for tag: Localization.lang(""Jump to entry"") This feature was removed while converting the linked entries editor to JavaFX Right now there is no nice way to re-implement it as we have no good interface to control the focus of the main table (except directly using the JabRefFrame class as below) parsedEntryLink.getLinkedEntry().ifPresent( e -> frame.getCurrentBasePanel().highlightEntry(e) );",},no
+FR1199,Line,basePanel.getPreviewPanel().updateLayout(preferences.getPreviewPreferences());,},yes
+FR1406,Javadoc,The mouse location within the cell when the dropping gesture occurs.,public enum DroppingMouseLocation {,no
+FR1225,Javadoc,Store changes to table preferences. This method is called when the user clicks Ok.,@Override,no
+FR883,Line,TODO: Rework so that we don't rely on JabRefFrame and not the complete preferences,this.frame = frame;,no
+FR840,Javadoc,Util class for searching files on the file system which are not linked to a provided {@link BibDatabase}.,public class UnlinkedFilesCrawler extends BackgroundTask<CheckBoxTreeItem<FileNodeWrapper>> {,no
+FR341,Line,Entry type unknown -> treat all fields as required,fields.addAll(entry.getFields());,no
+FR272,Line,Switch to currently selected entry if mode is changed to live,,no
+FR20,Javadoc,Returns a list of BasePanel.,public List<BasePanel> getBasePanelList() {,yes
+FR988,Line,We need to wrap the list since otherwise sorting in the table does not work,entriesSorted = new SortedList<>(entriesFiltered);,no
+FR352,Javadoc,Creates a VBox of the related article information to be used in the StackPane displayed in the Related Articles tab,"private ScrollPane getRelatedArticleInfo(List<BibEntry> list, MrDLibFetcher fetcher) {",no
+FR1349,Line,Redo the change.,base.removeString(string.getId());,yes
+FR1091,Javadoc,Refresh all cite markers in the document.,"public List<String> refreshCiteMarkers(List<BibDatabase> databases, OOBibStyle style)",yes
+FR12,Block,"TODOSwingUtilities.invokeLater(() -> {undo.putValue(Action.SHORT_DESCRIPTION, event.getUndoDescription());undo.setEnabled(event.isCanUndo());redo.putValue(Action.SHORT_DESCRIPTION, event.getRedoDescription());redo.setEnabled(event.isCanRedo());});",},no
+FR648,Line,"move all children to newNode, then add newNode",GroupTreeNode newNode = m_subtreeBackup.copySubtree();,no
+FR898,Javadoc,Checks whether the file exists or if a new file should be opened. The file will be added to the set of journal abbreviation files. If the file also exists its abbreviations will be read and written to the abbreviations property.,private void openFile(Path filePath) {,no
+FR979,Line,"TODO: reflective access, should be removed","Class<?> clazz = Class.forName(""javafx.scene.control.TableUtil"");",no
+FR1317,Line,"if user does not change anything with his action, we do not do anything either even no output message",},no
+FR148,Javadoc,Enriches a suggestion provider by a given set of content selector values.,public class ContentSelectorSuggestionProvider implements AutoCompleteSuggestionProvider<String> {,no
+FR1343,Line,Revert the change.,try {,yes
+FR589,Line,Always fill out all the available space,setPrefHeight(Double.POSITIVE_INFINITY);,no
+FR44,Line,Good bye!,tearDownJabRef(filenames);,yes
+FR596,Line,Enrich auto completion by content selector values,try {,no
+FR1153,Line,Name the reference,"XNamed xNamed = UnoRuntime.queryInterface(XNamed.class, bookmark);",yes
+FR943,Javadoc,The log event will be forwarded to the {@link LogMessages} archive.,@Override,no
+FR1193,Line,"ToDo: After conversion of all tabs to mvvm, rework interface and make validSettings bindable Button btnSave = (Button) this.getDialogPane().lookupButton(saveButton); btnSave.disableProperty().bind(viewModel.validSettings().validProperty().not());",},no
+FR33,Line,Frame titles.,"public static final String FRAME_TITLE = ""JabRef"";",yes
+FR1281,Line,"Set to true in case the command could not be executed, e.g., if the file is not found Set to true in case the tunnel to the program (if one is used) does not operate Set to true if the corresponding path is not defined in the preferences",protected boolean couldNotCall;,no
+FR625,Line,Add context menu (only for non-null items),row.contextMenuProperty().bind(,no
+FR1244,Javadoc,"Copies the selected entries and formats them with the selected citation style (or preview), then it is copied to the clipboard. This worker cannot be reused.",public class CitationStyleToClipboardWorker {,no
+FR513,Javadoc,"This class defines a type of external files that can be linked to from JabRef. The class contains enough information to provide an icon, a standard extension and a link to which application handles files of this type.",public class CustomExternalFileType implements ExternalFileType {,no
+FR1273,Line,Error stream has been closed. See if there were any errors:,if (!sb.toString().trim().isEmpty()) {,no
+FR1284,Line,In case it did not work,catch (IOException excep) {,yes
+FR848,Javadoc,"{@link FileFilter} implementation, that allows only files which are not linked in any of the {@link BibEntry}s of the specified {@link BibDatabase}. <br> <br> This {@link FileFilter} sits on top of another {@link FileFilter} -implementation, which it first consults. Only if this major filefilter has accepted a file, this implementation will verify on that file.",public class UnlinkedPDFFileFilter implements FileFilter {,no
+FR653,Line,Sort entries into current members and non-members of the group Current members will be removed Current non-members will be added,List<BibEntry> toRemove = new ArrayList<>(entries.size());,no
+FR137,Javadoc,"For ""ONLY_FULL"", the auto completer returns the full name, e.g. ""Smith, Bob"" For ""ONLY_ABBREVIATED"", the auto completer returns the first name abbreviated, e.g. ""Smith, B."" For ""BOTH"", the auto completer returns both versions.",public enum AutoCompleteFirstNameMode {,no
+FR1093,Javadoc,"Resolve the bibtex key from a citation reference marker name, and look up the index of the key in a list of keys.",,no
+FR1337,Line,Send event to trigger changes,postUndoRedoEvent();,no
+FR894,Javadoc,"This class provides a model for managing journal abbreviation lists. It provides all necessary methods to create, modify or delete journal abbreviations and files. To visualize the model one can bind the properties to ui elements.",public class ManageJournalAbbreviationsViewModel extends AbstractViewModel {,no
+FR114,Javadoc,Makes sure that the given component is visible.,public void show(SidePaneType type) {,yes
+FR814,Line,"TODO: show parserwarnings, if any (not here) for (ImportFormatReader.UnknownFormatImport p : imports) { ParserResultWarningDialog.showParserResultWarningDialog(p.parserResult, frame); }",if (bibtexResult == null) {,no
+FR867,Line,The action concerned with opening an existing database.,public class OpenDatabaseAction extends SimpleCommand {,yes
+FR970,Line,icon.setToolTipText(priorityViewModel.getLocalization());,"TABLE_ICONS.put(SpecialField.PRIORITY, icon);",yes
+FR1046,Line,Check if the type has changed,if (!identicalTypes && !typeRadioButtons.isEmpty() && typeRadioButtons.get(0).isSelected()) {,no
+FR170,Line,"In case no stringConverter was provided, use the default strategy",if (this.stringConverter == null) {,no
+FR1395,Javadoc,Installs the base css file as a stylesheet in the given scene. Changes in the css file lead to a redraw of the scene using the new css file.,"public void installCss(Scene scene, JabRefPreferences preferences) {",no
+FR702,Line,"TODO: Add undo and display message MoveGroupChange undo = new MoveGroupChange(((GroupTreeNodeViewModel)source.getParent()).getNode(), source.getNode().getPositionInParent(), target.getNode(), target.getChildCount());",,no
+FR1407,Line,Except every file,return pathname -> true;,yes
+FR735,Javadoc,The current version of the installed JabRef,private final Version installedVersion;,yes
+FR541,Line,"No occurrence, or at the end Check if there are path separators in the suffix - if so, it is definitely not a proper suffix, so we should give up:",if (strippedLink.substring(strippedLinkIndex + 1).indexOf('/') >= 1) {,yes
+FR24,Javadoc,"This method causes all open BasePanels to set up their tables anew. When called from PrefsDialog3, this updates to the new settings.",public void setupAllTables() {,no
+FR400,Line,Pretend that we just switched to the current file in order to refresh the display,notifyNewSelectedFile(currentFile);,no
+FR370,Line,Pass other keys to parent,},yes
+FR1313,Line,"Must be executed after the initialization of the view, otherwise it doesn't work",Platform.runLater(() -> {,no
+FR1119,Line,Remember the type in case we need to uniquefy.,types[i] = type;,no
+FR410,Line,Steps to reproduce,"String howToReproduce = ""Steps to reproduce:\n\n1. ...\n2. ...\n3. ..."";",yes
+FR87,Line,do not open the original file,pr.getDatabaseContext().clearDatabaseFile();,yes
+FR921,Line,"We have to put Entry Editor Previous before, because otherwise the decrease font size is found first","ENTRY_EDITOR_PREVIOUS_PANEL_2(""Entry editor, previous panel 2"", Localization.lang(""Entry editor, previous panel 2""), ""ctrl+MINUS"", KeyBindingCategory.VIEW),",no
+FR50,Line,Update active search query when switching between databases,stateManager.activeSearchQueryProperty().set(newBasePanel.getCurrentSearchQuery());,no
+FR879,Line,Create help button for currently selected fetcher,StackPane helpButtonContainer = new StackPane();,yes
+FR641,Javadoc,"In case of removing a node but keeping all of its children, the number of children has to be stored.",private final int m_subtreeRootChildCount;,no
+FR316,Javadoc,Move contents from one field to another for a Collection of entries.,"private static UndoableEdit massRenameField(Collection<BibEntry> entries, Field field, Field newField,",no
+FR636,Javadoc,Adding of a single node (group).,public static final int ADD_NODE = 0;,yes
+FR1196,Javadoc,"This is called, when the user drops some PreviewLayouts either in the availableListView or in the empty space of chosenListView",,no
+FR801,Line,TODO: use WEB_SEARCH instead as soon as it is available TODO: use WEB_SEARCH instead as soon as it is available,"LOOKUP_IDENTIFIER(MaterialDesignIcon.MAGNIFY),",no
+FR1383,Javadoc,"Executes the task on the current thread. The code is essentially taken from {@link javafx.concurrent.Task.TaskCallable#call()}, but adapted to run sequentially.",@Override,no
+FR920,Javadoc,"This method returns the default key binding, the key(s) which are assigned",public String getDefaultKeyBinding() {,yes
+FR717,Line,"TODO: Add undo UndoableAddOrRemoveGroup undo = new UndoableAddOrRemoveGroup(parent, new GroupTreeNodeViewModel(newGroupNode), UndoableAddOrRemoveGroup.ADD_NODE); panel.getUndoManager().addEdit(undo);",,no
+FR332,Line,Test if the field is legally set.,"new LatexFieldFormatter(fieldFormatterPreferences).format(newValue, fieldName);",no
+FR321,Line,"Need to run this async, otherwise the dialog does not work",ControlsFxVisualizer visualizer = new ControlsFxVisualizer();,no
+FR1350,Line,Revert the change.,if (nameChange) {,yes
+FR301,Line,and adding merged entries:,if (!result.getToAdd().isEmpty()) {,yes
+FR401,Line,remove newlines && hyphens before linebreaks,"markingContent = markingContent.replaceAll(""-"" + NEWLINE, """");",yes
+FR1440,Javadoc,Creates a {@link BackgroundTask} that first runs this task and based on the result runs a second task.,"public <T> BackgroundTask<T> thenRun(Function<V, T> nextOperation) {",no
+FR858,Javadoc,"This action checks whether any new custom entry types were loaded from this BIB file. If so, an offer to remember these entry types is given.",public class CheckForNewEntryTypesAction implements GUIPostOpenAction {,no
+FR866,Javadoc,,"private void openTheFile(Path file, boolean raisePanel) {",no
+FR373,Line,Other fields,"entryEditorTabs.add(new OtherFieldsTab(databaseContext, panel.getSuggestionProviders(), undoManager,",yes
+FR696,Line,"Register listener The wrapper created by the FXCollections will set a weak listener on the wrapped list. This weak listener gets garbage collected. Hence, we need to maintain a reference to this list.",entriesList = databaseContext.getDatabase().getEntries();,no
+FR476,Javadoc,Try to download fulltext PDF for selected entry(ies) by following URL or DOI link.,public class FindFullTextAction extends SimpleCommand {,no
+FR526,Javadoc,Editor for external file types.,public class CustomizeExternalFileTypesDialog extends BaseDialog<Void> {,yes
+FR679,Line,configure elements,ToggleGroup groupType = new ToggleGroup();,yes
+FR1434,Javadoc,"This class is essentially a wrapper around {@link Task}. We cannot use {@link Task} directly since it runs certain update notifications on the JavaFX thread, and so makes testing harder. We take the opportunity and implement a fluid interface.",public abstract class BackgroundTask<V> {,no
+FR389,Javadoc,Updates the view with the contents of the given entry.,protected abstract void bindToEntry(BibEntry entry);,yes
+FR1085,Line,try to connect to office,Object context = xUrlResolver.resolve(sConnect);,no
+FR808,Line,Switch tab if asked to do so,if (dataBaseNumber >= 0) {,no
+FR993,Line,Store visual state,"new PersistenceVisualStateTable(this, Globals.prefs);",yes
+FR324,Javadoc,This class has an abstract UI role as it listens for an {@link AutosaveEvent} and saves the bib file associated with the given {@link BasePanel}.,public class AutosaveUIManager {,no
+FR454,Line,Set owner/timestamp,"UpdateField.setAutomaticFields(entries, updateFieldPreferences);",no
+FR952,Line,the submenu will behave dependent on what style is currently selected (citation/preview),PreviewPreferences previewPreferences = Globals.prefs.getPreviewPreferences();,no
+FR1137,Line,Find the linking footnote marker:,"XFootnote footer = UnoRuntime.queryInterface(XFootnote.class, range.getText());",no
+FR95,Javadoc,"Tests if we are running an acceptable Java and terminates JabRef when we are sure the version is not supported. This test uses the requirements for the Java version as specified in <code>gradle.build</code>. It is possible to define a minimum version including the built number and to indicate whether Java 9 can be used (which it currently can't). It tries to compare this version number to the version of the currently running JVM. The check is optimistic and will rather return true even if we could not exactly determine the version. <p> Note: Users with a very old version like 1.6 will not profit from this since class versions are incompatible and JabRef won't even start. Currently, JabRef won't start with Java 9 either, but the warning that it cannot be used with this version is helpful anyway to prevent users to update from an old 1.8 directly to version 9. Additionally, we soon might have a JabRef that does start with Java 9 but is not perfectly compatible. Therefore, we should leave the Java 9 check alive.",private static void ensureCorrectJavaVersion() {,no
+FR383,Line,Subscribe to type changes for rebuilding the currently visible tab,"typeSubscription = EasyBind.subscribe(this.entry.typeProperty(), type -> {",yes
+FR1048,Line,May happen during initialization -> just ignore,continue;,no
+FR529,Javadoc,"Look for the last '.' in the link, and return the following characters. This gives the extension for most reasonably named links.",public static Optional<String> getSuffix(final String link) {,no
+FR989,Line,"No selected group, show all entries",return Optional.empty();,no
+FR1037,Line,Headings,"private final List<String> columnHeadings = Arrays.asList(Localization.lang(""Field""),",yes
+FR1150,Line,get XTextContent interface,"XTextContent xTextContent = UnoRuntime.queryInterface(XTextContent.class, bookmark);",yes
+FR901,Javadoc,Method to change the currentAbbrevaition property to a new abbreviation.,"public void editAbbreviation(String name, String abbreviation) {",yes
+FR1036,Javadoc,Update the merged entry,private void updateMergedEntry() {,yes
+FR436,Line,release panel from save status,panel.setSaving(false);,yes
+FR443,Line,Set text of each of the boxes,if (exporter != null) {,yes
+FR838,Line,Do nothing,} else if (answer == DuplicateResolverDialog.DuplicateResolverResult.KEEP_MERGE) {,yes
+FR1335,Javadoc,"This class represents the removal of an entry. The constructor needs references to the database, the entry, and the map of open entry editors. The latter to be able to close the entry's editor if it is opened before the insert is undone.",public class UndoableInsertEntry extends AbstractUndoableJabRefEdit {,no
+FR1292,Javadoc,This method is called to indicate that the settings panel returned from the getSettingsPanel() method has been shown to the user and that the user has indicated that the settings should be stored. This method must store the state of the widgets in the settings panel to Globals.prefs.,public void storeSettings() {,no
+FR165,Javadoc,Check the given possible suggestion is a match (is a valid suggestion),"protected abstract boolean isMatch(T suggestion, ISuggestionRequest request);",yes
+FR949,Line,Read name format options: MK:,final boolean namesNatbib = Globals.prefs.getBoolean(JabRefPreferences.NAMES_NATBIB); //MK:,yes
+FR1090,Javadoc,"This method inserts a cite marker in the text for the given BibEntry, and may refresh the bibliography.","public void insertEntry(List<BibEntry> entries, BibDatabase database,",no
+FR936,Line,FIXME: Move to viewModel until fieldFormatterCleanupsPanel is property implemented,MetaData metaData = panel.getBibDatabaseContext().getMetaData();,no
+FR198,Line,"Since the directory does not exist, we cannot move it to there. So, this option is not checked - regardless of the presets stored in the preferences.",cleanUpMovePDF.setDisable(true);,no
+FR1302,Line,"TODO: reflective access, should be removed","Field privatePopup = AutoCompletionBinding.class.getDeclaredField(""autoCompletionPopup"");",no
+FR851,Line,ensure that there is always only one AllEntriesGroup,if (newGroups.getGroup() instanceof AllEntriesGroup) {,no
+FR1089,Javadoc,Class for manipulating the Bibliography of the currently start document in OpenOffice.,class OOBibBase {,no
+FR100,Line,Check for running JabRef,if (!handleMultipleAppInstances(arguments) || argumentProcessor.shouldShutDown()) {,no
+FR16,Javadoc,"The MacAdapter calls this method when ""About"" is selected from the application menu.",public void about() {,no
+FR546,Javadoc,"TODO: Be a bit smarter and try to infer correct icon, for example using {@link org.jabref.gui.externalfiletype.ExternalFileTypes#getExternalFileTypeByName(String)}",public JabRefIcon getTypeIcon() {,no
+FR348,Line,Restore focus to field (run this async so that editor is already initialized correctly),selectedFieldName.ifPresent(this::requestFocus);,no
+FR294,Javadoc,Get the page number of the current page in the document.,public abstract int getPageNumber();,yes
+FR539,Line,First see if the stripped link gives a reasonable suffix:,String suffix;,no
+FR344,Line,Hide progress indicator if finished (over 70% loaded),"browser.getEngine().getLoadWorker().progressProperty().addListener((observable, oldValue, newValue) -> {",no
+FR1022,Line,fields,for (Field field : jointFields) {,yes
+FR1179,Line,Ask if keys should be generated,"boolean citePressed = dialogService.showConfirmationDialogAndWait(Localization.lang(""Cite""),",yes
+FR244,Line,quote String so explorer handles URL query strings correctly,"String quotePath = ""\"""" + filePath + ""\"""";",no
+FR916,Javadoc,This class provides a model for abbreviation files. It actually doesn't save the files as objects but rather saves their paths. This also allows to specify pseudo files as placeholder objects.,public class AbbreviationsFileViewModel {,no
+FR1154,Line,Set language to [None]:,"xCursorProps.setPropertyValue(""CharLocale"", new Locale(""zxx"", """", """"));",no
+FR581,Line,To align with buttons below which also have 0.5em padding,"info.setStyle(""-fx-padding: 0.5em 0 0.5em 0;"");",no
+FR1304,Line,TODO: switch Icon color searchIcon.setIcon(IconTheme.JabRefIcon.SEARCH.getIcon());,},no
+FR1254,Javadoc,The entry currently shown,private Optional<BibEntry> entry = Optional.empty();,no
+FR1319,Line,"setting a multi value special field - the setted value is displayed, too","String[] allParams = {viewModel.getLocalization(), params[0], params[1]};",no
+FR290,Line,First hide old page and show background instead (recalculate size of background to make sure its correct),background.setWidth(getDesiredWidth());,no
+FR132,Line,"For some reason the graphic is not set correctly, so let's fix this","setGraphic(menu, action);",no
+FR1191,Javadoc,Exception used to indicate that the plugin attempted to set a character format that is not defined in the current OpenOffice document.,class UndefinedCharacterFormatException extends Exception {,no
+FR1390,Javadoc,Submits a one-shot task that becomes enabled after the given delay.,"<V> Future<?> schedule(BackgroundTask<V> task, long delay, TimeUnit unit);",no
+FR757,Block,css: folder *,OPEN(MaterialDesignIcon.FOLDER_OUTLINE),no
+FR475,Javadoc,This Action may only be used in a menu or button. Never in the entry editor. FileListEditor and EntryEditor have other ways to update the file links,public class AutoLinkFilesAction extends SimpleCommand {,no
+FR1057,Javadoc,backwards compatibility stub.,"public static XComponentContext createInitialComponentContext(Hashtable<String, Object> context_entries) throws Exception {",no
+SR1,Line,Swing,requires java.desktop;,yes
+SR5,Line,Preferences and XML,requires java.prefs;,yes
+SR6,Line,Annotations (@PostConstruct),requires java.annotation;,yes
+SR8,Line,Libre Office,requires org.jabref.thirdparty.libreoffice;,yes
+SR10,Javadoc,A mocking class used as a placeholder for the real Oracle JDBC drivers to prevent build errors.,public class DatabaseChangeEvent {,no
+SR11,Line,no data,},no
+SR12,Javadoc,A mocking class used as a placeholder for the real Oracle JDBC drivers to prevent build errors.,public interface DatabaseChangeListener {,no
+SR13,Javadoc,A mocking class used as a placeholder for the real Oracle JDBC drivers to prevent build errors.,public class DatabaseChangeRegistration {,no
+SR14,Line,do nothing,},yes
+SR15,Line,FIXME: Reuse SearchWorker here,"SearchQuery searchQuery = new SearchQuery(""Journal Title 500"", false, false);",no
+SR16,Line,FIXME: Reuse SearchWorker here,"SearchQuery searchQuery = new SearchQuery(""Journal Title 500"", false, false);",no
+SR17,Javadoc,A mocking class used as a placeholder for the real Oracle JDBC drivers to prevent build errors.,public class OracleConnection implements Connection {,no
+SR19,Javadoc,A mocking class used as a placeholder for the real Oracle JDBC drivers to prevent build errors.,public class OracleDriver {,no
+SR21,Javadoc,A mocking class used as a placeholder for the real Oracle JDBC drivers to prevent build errors.,public class OracleStatement {,no
+SR23,Javadoc,This package contains stubs for oracle.jdbc to prevent build errors if the non-distributable oraclejdbdc6.jar is unavailable in the classpath,package oracle.jdbc;,no
+SR24,Line,empty,},yes
+SR25,Javadoc,Annotation to indicate that usage of ApacheCommonsLang3 is explicitly allowed. The intention is to fully switch to Google Guava and only use Apache Commons Lang3 if there is no other possibility,public @interface ApacheCommonsLang3Allowed {,no
+SR26,Line,The rationale,String value();,yes
+SR27,Line,print statistics,System.out.println(new AuxParserResultViewModel(result).getInformation(true));,no
+SR28,Javadoc,Defines the different modes that the BasePanel can operate in,,no
+SR29,Javadoc,Puts content onto the clipboard.,public void setContent(ClipboardContent content) {,yes
+SR30,Javadoc,"Get the String residing on the clipboard. @return any text found on the Clipboard; if none found, return an empty String.",public String getContents() {,yes
+SR31,Javadoc,"Will open a file (like importFile), but will also request JabRef to focus on this database",private static Optional<ParserResult> importToOpenBase(String argument) {,no
+SR32,Javadoc,Run an entry fetcher from the command line.,private Optional<ParserResult> fetch(String fetchCommand) {,no
+SR33,Line,Download web resource to temporary file,try {,yes
+SR34,Line,"* means ""guess the format"":","System.out.println(Localization.lang(""Importing in unknown format"") + "": "" + file);",no
+SR35,Line,Check if we should reset all preferences to default values:,if (cli.isPreferencesReset()) {,no
+SR36,Line,Check if we should import preferences from a file:,if (cli.isPreferencesImport()) {,yes
+SR37,Line,List to put imported/loaded database(s) in.,List<ParserResult> loaded = importAndOpenFiles();,yes
+SR38,Line,enables blanks within the search term: $ stands for a blank,"String searchTerm = data[0].replace(""\\$"", "" "");",no
+SR39,Line,export matches,if (!matches.isEmpty()) {,no
+SR40,Line,"read in the export format, take default format if no format entered",switch (data.length) {,no
+SR41,Line,default exporter: HTML table (with Abstract & BibTeX),"formatName = ""tablerefsabsbib"";",no
+SR42,Line,export new database,Optional<Exporter> exporter = Globals.exportFactory.getExporterByName(formatName);,no
+SR44,Line,"Leftover arguments that have a ""bib"" extension are interpreted as BIB files to open. Other files, and files that could not be opened as bib, we try to import instead.","boolean bibExtension = aLeftOver.toLowerCase(Locale.ENGLISH).endsWith(""bib"");",no
+SR45,Line,"We will try to import this file. Normally we will import it into a new tab, but if this import has been initiated by another instance through the remote listener, we will instead import it into the current library. This will enable easy integration with web browsers that can open a reference file in JabRef.",if (startupMode == Mode.INITIAL_START) {,no
+SR46,Line,"write an output, if something could be resolved",if ((newBase != null) && newBase.hasEntries()) {,no
+SR47,Line,Show just a warning message if encoding did not work for all characters:,if (fileWriter.hasEncodingProblems()) {,yes
+SR48,Line,This signals that the latest import should be stored in BibTeX format to the given file.,if (!loaded.isEmpty()) {,no
+SR49,Line,This signals that the latest import should be stored in the given format to the given file.,ParserResult pr = loaded.get(loaded.size() - 1);,no
+SR50,Line,"Set the global variable for this database's file directory before exporting, so formatters can resolve linked files correctly. (This is an ugly hack!)",File theFile = pr.getFile().get();,no
+SR52,Block,"String clearSearch = ""clearSearch""; mainTable.getInputMap().put(Globals.getKeyPrefs().getKey(KeyBinding.CLEAR_SEARCH), clearSearch); mainTable.getActionMap().put(clearSearch, new AbstractAction() {@Override public void actionPerformed(ActionEvent e) { // need to close these here, b/c this action overshadows the responsible actions when the main table is selected switch (mode) { case SHOWING_NOTHING: frame.getGlobalSearchBar().endSearch(); break; case SHOWING_PREVIEW: getPreviewPanel().close(); break; case SHOWING_EDITOR: case WILL_SHOW_EDITOR: entryEditorClosing(getEntryEditor()); break; default: LOGGER.warn(""unknown BasePanelMode: '"" + mode + ""', doing nothing""); break; } } });mainTable.getActionMap().put(Actions.CUT, new AbstractAction() {@Override public void actionPerformed(ActionEvent e) { try { runCommand(Actions.CUT); } catch (Throwable ex) { LOGGER.warn(""Could not cut"", ex); } } }); mainTable.getActionMap().put(Actions.COPY, new AbstractAction() {@Override public void actionPerformed(ActionEvent e) { try { runCommand(Actions.COPY); } catch (Throwable ex) { LOGGER.warn(""Could not copy"", ex); } } }); mainTable.getActionMap().put(Actions.PASTE, new AbstractAction() {@Override public void actionPerformed(ActionEvent e) { try { runCommand(Actions.PASTE); } catch (Throwable ex) { LOGGER.warn(""Could not paste"", ex); } } });",},no
+SR53,Block,"The search can lead to an unexpected 100% CPU usage which is perceived as a bug, if the search incidentally starts at a directory with lots of stuff below. It is now disabled by default. *",private class SearchAutoCompleteListener {,no
+SR54,Javadoc,"Returns a collection of suggestion providers, which are populated from the current library.",public SuggestionProviders getSuggestionProviders() {,no
+SR55,Javadoc,"*Generates and copies citations based on the selected entries to the clipboard
+ @param outputFormat the desired {@link CitationStyleOutputFormat}",private void copyCitationToClipboard(CitationStyleOutputFormat outputFormat) {,no
+SR56,Javadoc,"Removes the selected entries from the database @param cut If false the user will get asked if he really wants to delete the entries, and it will be localized as ""deleted"". If true the action will be localized as ""cut""",public void delete(boolean cut) {,no
+SR58,Javadoc,"This method is called from JabRefFrame if a database specific action is requested by the user. Runs the command if it is defined, or prints an error message to the standard error stream.",public void runCommand(final Actions command) {,no
+SR59,Javadoc,This method is called from JabRefFrame when the user wants to create a new entry. @param bibEntry The new entry.,public void insertEntry(final BibEntry bibEntry) {,no
+SR60,Javadoc,Set up auto completion for this database,private void setupAutoCompletion() {,yes
+SR61,Javadoc,"Sets the entry editor as the bottom component in the split pane. If an entry editor already was shown, makes sure that the divider doesn't move. Updates the mode to SHOWING_EDITOR. Then shows the given entry.@param entry The entry to edit.",public void showAndEdit(BibEntry entry) {,no
+SR63,Javadoc,"This method selects the given entry, and scrolls it into view in the table. If an entryEditor is shown, it is given focus afterwards.",public void clearAndSelect(final BibEntry bibEntry) {,no
+SR64,Javadoc,"This method is called from an EntryEditor when it should be closed. We relay to the selection listener, which takes care of the rest.",public void entryEditorClosing() {,no
+SR65,Javadoc,Closes the entry editor if it is showing the given entry.,private void ensureNotShowingBottomPanel(BibEntry entry) {,no
+SR66,Javadoc,"Depending on whether a preview or an entry editor is showing, save the current divider location in the correct preference setting.",private void saveDividerLocation(Number position) {,no
+SR68,Javadoc,"Get an array containing the currently selected entries. The array is stable and not changed if the selection changes @return A list containing the selected entries. Is never null.
+",public List<BibEntry> getSelectedEntries() {,no
+SR69,Javadoc,Set the query the user currently searches while this basepanel is active,public void setCurrentSearchQuery(Optional<SearchQuery> currentSearchQuery) {,no
+SR70,Javadoc,"Ensures that the search auto completer is up to date when entries are changed AKA Let the auto completer, if any, harvest words from the entry Actual methods for autocomplete indexingmust run in javafx thread",private class SearchAutoCompleteListener {,no
+SR71,Javadoc,Ensures that the results of the current search are updated when a new entry is inserted into the database Actual methods for performing search must run in javafx thread,private class SearchListener {,no
+SR73,Line,Keeps track of the string dialog if it is open.,"private final Map<Actions, BaseAction> actions = new HashMap<>();",no
+SR74,Line,"To contain instantiated entry editors. This is to save time As most enums, this must not be null",private BasePanelMode mode = BasePanelMode.SHOWING_NOTHING;,no
+SR75,Line,AutoCompleter used in the search bar,private PersonNameSuggestionProvider searchAutoCompleter;,yes
+SR76,Line,Used to track whether the base has changed since last save.,private BibEntry showing;,no
+SR77,Line,the query the user searches when this BasePanel is active,private Optional<SearchQuery> currentSearchQuery = Optional.empty();,no
+SR78,Line,"ensure that at each addition of a new entry, the entry is added to the groups interface",this.bibDatabaseContext.getDatabase().registerListener(new GroupTreeListener());,no
+SR79,Line,ensure that all entry changes mark the panel as changed,this.bibDatabaseContext.getDatabase().registerListener(this);,no
+SR80,Line,check if file is modified,"String changeFlag = isModified() && !isAutosaveEnabled ? ""*"" : """";",yes
+SR81,Line,"if the database is not empty and no file is assigned, the database came from an import and has to be treated somehow -> mark as changed This also happens internally at basepanel to ensure consistency line 224",title.append('*');,no
+SR84,Line,The action for copying selected entries.,"actions.put(Actions.COPY, this::copy);",yes
+SR85,Line,"The action for pasting entries or cell contents. - more robust detection of available content flavors (doesn't only look at first one offered) - support for parsing string-flavor clipboard contents which are bibtex entries. This allows you to (a) paste entire bibtex entries from a text editor, web browser, etc (b) copy and paste entries between multiple instances of JabRef (since only the text representation seems to get as far as the X clipboard, at least on my system)","actions.put(Actions.PASTE, this::paste);",no
+SR88,Line,The action for copying the selected entry's key.,"actions.put(Actions.COPY_KEY, this::copyKey);",yes
+SR89,Line,The action for copying the selected entry's title.,"actions.put(Actions.COPY_TITLE, this::copyTitle);",yes
+SR90,Line,The action for copying a cite for the selected entry.,"actions.put(Actions.COPY_CITE_KEY, this::copyCiteKey);",no
+SR92,Line,The action for copying the BibTeX keys as hyperlinks to the urls of the selected entries,"actions.put(Actions.COPY_KEY_AND_LINK, new CopyBibTeXKeyAndLinkAction(mainTable, Globals.clipboardManager));",no
+SR94,Line,Collect all non-null titles.,List<String> titles = selectedBibEntries.stream(),no
+SR95,Line,All entries had titles.,"output(Localization.lang(""Copied"") + "" '"" + JabRefDialogService.shortenDialogMessage(copiedTitles) + ""'."");",no
+SR96,Line,Collect all non-null keys.,for (BibEntry be : bes) {,yes
+SR98,Line,All entries had keys.,"output(Localization.lang(""Copied"") + "" '"" + JabRefDialogService.shortenDialogMessage(copiedCiteCommand) + ""'."");",no
+SR99,Line,Collect all non-null keys.,for (BibEntry be : bes) {,yes
+SR100,Line,All entries had keys.,"output(Localization.lang(""Copied"") + "" '"" + JabRefDialogService.shortenDialogMessage(copiedKeys) + ""'."");",no
+SR101,Line,"OK: in a future version, this string should be configurable to allow arbitrary exports","StringReader sr = new StringReader(""\\bibtexkey - \\begin{title}\\format[RemoveBrackets]{\\title}\\end{title}\n"");",no
+SR102,Line,Collect all non-null keys.,for (BibEntry be : bes) {,yes
+SR103,Line,All entries had keys.,"output(Localization.lang(""Copied"") + "" '"" + JabRefDialogService.shortenDialogMessage(copiedKeysAndTitles) + ""'."");",no
+SR106,Line,Set owner and timestamp,"UpdateField.setAutomaticFields(bibEntry, true, true, Globals.prefs.getUpdateFieldPreferences());",no
+SR107,Line,Create an UndoableInsertEntry object.,"getUndoManager().addEdit(new UndoableInsertEntry(bibDatabaseContext.getDatabase(), bibEntry));",yes
+SR108,Line,The database just changed.,markBaseChanged();,yes
+SR109,Line,Focus field and entry in main table (async to give entry editor time to load),entryEditor.setFocusToField(field);,no
+SR110,Line,Add the listener that binds selection to state manager (TODO: should be replaced by proper JavaFX binding as soon as table is implemented in JavaFX),mainTable.addSelectionListener(listEvent -> Globals.stateManager.setSelectedEntries(mainTable.getSelectedEntries()));,no
+SR111,Line,Update entry editor and preview according to selected entries,mainTable.addSelectionListener(event -> mainTable.getSelectedEntries(),no
+SR112,Line,TODO: Register these actions globally,/*,no
+SR113,Line,restore last splitting state (before mainTable is created as creation affects the stored size of the entryEditors),adjustSplitter();,no
+SR114,Line,Set up name autocompleter for search:,instantiateSearchAutoCompleter();,yes
+SR115,Line,"Saves the divider position as soon as it changes We need to keep a reference to the subscription, otherwise the binding gets garbage collected","dividerPositionSubscription = EasyBind.monadic(Bindings.valueAt(splitPane.getDividers(), 0))",no
+SR117,Line,create changeMonitor and changePane so we get notifications about outside changes to the file.,resetChangeMonitorAndChangePane();,no
+SR118,Line,"if the database is not empty and no file is assigned, the database came from an import and has to be treated somehow -> mark as changed",this.baseChanged = true;,no
+SR119,Line,Ensure that the suggestion providers are in sync with entries,CoarseChangeFilter changeFilter = new CoarseChangeFilter(bibDatabaseContext);,no
+SR120,Line,Create empty suggestion providers if auto completion is deactivated,suggestionProviders = new SuggestionProviders();,no
+SR121,Line,Put an asterisk behind the filename to indicate the database has changed.,frame.setWindowTitle();,no
+SR122,Line,Run the search operation:,FileFinder fileFinder = FileFinders.constructFromConfiguration(Globals.prefs.getAutoLinkPreferences());,no
+SR124,Line,Automatically add new entry to the selected group (or set of groups),if (Globals.prefs.getBoolean(JabRefPreferences.AUTO_ASSIGN_GROUP)) {,no
+SR125,Line,IMO only used to update the status (found X entries),DefaultTaskExecutor.runInJavaFXThread(() -> frame.getGlobalSearchBar().performSearch());,no
+SR126,Line,"No URL or DOI found in the ""url"" and ""doi"" fields. Look for web links in the ""file"" field as a fallback:",,no
+SR127,Javadoc,Useful for checking out new algorithm improvements and thresholds. Not used inside the JabRef code itself.,public class CrossrefFetcherEvaluator {,no
+SR128,Javadoc,"This method takes care of creating dependencies. By default, it just creates a new instance of the class. Dependencies without default constructor are constructed by hand.",private static Object createDependency(Class<?> clazz) {,no
+SR129,Line,Use our own method to construct dependencies,Injector.setInstanceSupplier(DefaultInjector::createDependency);,no
+SR131,Javadoc,This interface provides methods to create dialogs and show them to the user.,public interface DialogService {,no
+SR132,Javadoc,"This will create and display new {@link ChoiceDialog} of type T with a default choice and a collection of possible choices  @implNote The implementation should accept {@code null} for {@code defaultChoice}, but callers should use {@link #showChoiceDialogAndWait(String, String, String, Collection)}.
+","<T> Optional<T> showChoiceDialogAndWait(String title, String content, String okButtonLabel, T defaultChoice, Collection<T> choices);",no
+SR134,Javadoc,This will create and display new {@link TextInputDialog} with a text fields to enter data,"Optional<String> showInputDialogAndWait(String title, String content);",no
+SR135,Javadoc,This will create and display new {@link TextInputDialog} with a text field with a default value to enter data,"Optional<String> showInputDialogWithDefaultAndWait(String title, String content, String defaultValue);",yes
+SR136,Javadoc,"This will create and display a new information dialog. It will include a blue information icon on the left and a single OK Button. To create an information dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}","void showInformationDialogAndWait(String title, String content);",no
+SR137,Javadoc,"This will create and display a new information dialog. It will include a yellow warning icon on the left and a single OK Button. To create a warning dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}","void showWarningDialogAndWait(String title, String content);",no
+SR138,Javadoc,"This will create and display a new error dialog. It will include a red error icon on the left and a single OK Button. To create a error dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}","void showErrorDialogAndWait(String title, String content);",no
+SR139,Javadoc,"Create and display error dialog displaying the given exception. @param message   the error message @param exception the exception causing the error
+","void showErrorDialogAndWait(String message, Throwable exception);",yes
+SR141,Javadoc," Create and display error dialog displaying the given exception. @param exception the exception causing the error
+","void showErrorDialogAndWait(String title, String content, Throwable exception);",yes
+SR142,Javadoc,Create and display error dialog displaying the given message.,void showErrorDialogAndWait(String message);,yes
+SR143,Javadoc,"This will create and display a new confirmation dialog. It will include a blue question icon on the left and a OK and Cancel button. To create a confirmation dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}","boolean showConfirmationDialogAndWait(String title, String content);",no
+SR144,Javadoc,"Create and display a new confirmation dialog. It will include a blue question icon on the left and a OK (with given label) and Cancel button. To create a confirmation dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}.","boolean showConfirmationDialogAndWait(String title, String content, String okButtonLabel);",no
+SR145,Javadoc,"Create and display a new confirmation dialog. It will include a blue question icon on the left and a OK (with given label) and Cancel (also with given label) button. To create a confirmation dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}. @return true if the use clicked ""OK"" otherwise false
+","boolean showConfirmationDialogAndWait(String title, String content, String okButtonLabel, String cancelButtonLabel);",no
+SR146,Javadoc,"Create and display a new confirmation dialog. It will include a blue question icon on the left and a YES (with given label) and Cancel (also with given label) button. To create a confirmation dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}. Moreover, the dialog contains a opt-out checkbox with the given text to support ""Do not ask again""-behaviour.","boolean showConfirmationDialogWithOptOutAndWait(String title, String content,",no
+SR147,Javadoc,"Create and display a new confirmation dialog. It will include a blue question icon on the left and a YES (with given label) and Cancel (also with given label) button. To create a confirmation dialog with custom buttons see also {@link #showCustomButtonDialogAndWait(Alert.AlertType, String, String, ButtonType...)}. Moreover, the dialog contains a opt-out checkbox with the given text to support ""Do not ask again""-behaviour.","boolean showConfirmationDialogWithOptOutAndWait(String title, String content,",no
+SR150,Javadoc,"Shows a custom dialog and returns the result. @param dialog dialog to show @param <R>    type of result
+",<R> Optional<R> showCustomDialogAndWait(Dialog<R> dialog);,yes
+SR151,Javadoc,"Constructs and shows a canceable {@link ProgressDialog}. Clicking cancel will cancel the underlying service and close the dialog @param title title of the dialog @param content message to show above the progress bar
+@param task The {@link Task} which executes the work and for which to show the dialog
+","<V> void showProgressDialogAndWait(String title, String content, Task<V> task);",no
+SR152,Javadoc,,void notify(String message);,no
+SR153,Javadoc,"Shows a new file save dialog. The method doesn't return until the displayed file save dialog is dismissed. The return value specifies the file chosen by the user or an empty {@link Optional} if no selection has been made. After a file was selected, the given file dialog configuration is updated with the selected extension type (if any).",Optional<Path> showFileSaveDialog(FileDialogConfiguration fileDialogConfiguration);,no
+SR154,Javadoc," Shows a new file open dialog. The method doesn't return until the displayed open dialog is dismissed. The return value specifies the file chosen by the user or an empty {@link Optional} if no selection has been made. After a file was selected, the given file dialog configuration is updated with the selected extension type (if any). @return the selected file or an empty {@link Optional} if no file has been selected
+",Optional<Path> showFileOpenDialog(FileDialogConfiguration fileDialogConfiguration);,no
+SR155,Javadoc,"Shows a new file open dialog. The method doesn't return until the displayed open dialog is dismissed. The return value specifies the files chosen by the user or an empty {@link List} if no selection has been made. @return the selected files or an empty {@link List} if no file has been selected
+",List<Path> showFileOpenDialogAndGetMultipleFiles(FileDialogConfiguration fileDialogConfiguration);,no
+SR156,Javadoc,"Shows a new directory selection dialog. The method doesn't return until the displayed open dialog is dismissed. The return value specifies the file chosen by the user or an empty {@link Optional} if no selection has been made. @return the selected directory or an empty {@link Optional} if no directory has been selected
+",Optional<Path> showDirectorySelectionDialog(DirectoryDialogConfiguration directoryDialogConfiguration);,no
+SR157,Javadoc,Displays a Print Dialog. Allow the user to update job state such as printer and settings. These changes will be available in the appropriate properties after the print dialog has returned. The print dialog is also used to confirm the user wants to proceed with printing.,boolean showPrintDialog(PrinterJob job);,no
+SR158,Javadoc,Shows a new dialog that list all files contained in the given archive and which lets the user select one of these files. The method doesn't return until the displayed open dialog is dismissed. The return value specifies the file chosen by the user or an empty {@link Optional} if no selection has been made. @return the selected file or an empty {@link Optional} if no file has been selected,Optional<Path> showFileOpenFromArchiveDialog(Path archivePath) throws IOException;,no
+SR159,Javadoc,Contains all the different {@link DataFormat}s that may occur in JabRef.,public class DragAndDropDataFormats {,no
+SR160,Javadoc,Dialog that prompts the user to choose a type for an entry. Returns null if canceled.,public class EntryTypeView extends BaseDialog<EntryType> {,no
+SR161,Line,"The buttonType will always be cancel, even if we pressed one of the entry type buttons",return type;,no
+SR162,Line,we set the managed property so that they will only be rendered when they are visble so that the Nodes only take the space when visible avoids removing and adding from the scence graph,bibTexTitlePane.managedProperty().bind(bibTexTitlePane.visibleProperty());,no
+SR163,Line,Do nothing,break;,yes
+SR166,Javadoc,This class provides a super class for all dialogs implemented in JavaFX. To create a custom JavaFX dialog one should create an instance of this class and set a dialog pane through the inherited {@link Dialog#setDialogPane(DialogPane)} method. The dialog can be shown via {@link Dialog#show()} or {@link Dialog#showAndWait()}. The layout of the pane should be defined in an external fxml file and loaded it via the {@link FXMLLoader}.,public class FXDialog extends Alert {,no
+SR167,Javadoc,"This field is initialized upon startup. Only GUI code is allowed to access it, logic code should use dependency injection.",public static JournalAbbreviationLoader journalAbbreviationLoader;,no
+SR168,Javadoc,"This field is initialized upon startup. Only GUI code is allowed to access it, logic code should use dependency injection.",public static ProtectedTermsLoader protectedTermsLoader;,no
+SR169,Javadoc,Manager for the state of the GUI.,,no
+SR171,Line,Remote listener,public static final RemoteListenerServerLifecycle REMOTE_LISTENER = new RemoteListenerServerLifecycle();,yes
+SR172,Line,"In the main program, this field is initialized in JabRef.java Each test case initializes this field if required",public static JabRefPreferences prefs;,no
+SR173,Line,Key binding preferences,private static KeyBindingRepository keyBindingRepository;,no
+SR174,Line,Key binding preferences,public static synchronized KeyBindingRepository getKeyPrefs() {,yes
+SR175,Line,Background tasks,public static void startBackgroundTasks() throws JabRefException {,yes
+SR176,Line,FIXME: Workaround for bug https://github.com/Microsoft/ApplicationInsights-Java/issues/662,SDKShutdownActivity.INSTANCE.stopAll();,no
+SR177,Javadoc,Static variables for graphics files and keyboard shortcuts.,public class GUIGlobals {,no
+SR178,Javadoc,"Perform initializations that are only used in graphical mode. This is to prevent the ""Xlib: connection to "":0.0"" refused by server"" error when access to the X server on Un*x is unavailable.",public static void init() {,no
+SR179,Line,add some additional space to improve appearance,public static final int WIDTH_ICON_COL = 16 + 12;,no
+SR180,Line,Width of Ranking Icon Column,public static final int WIDTH_ICON_COL_RANKING = 5 * 16;,yes
+SR181,Line,"Set up entry editor colors, first time:",GUIGlobals.updateEntryEditorColors();,no
+SR182,Line,update preferences,"Globals.prefs.putInt(JabRefPreferences.FONT_SIZE, size);",yes
+SR183,Line,Number of characters per line,private static final int WIDTH = 100;,no
+SR184,Line,boolean options,"options.addOption(""h"", ""help"", false, Localization.lang(""Display help on command line options""));",no
+SR186,Javadoc,This class provides methods to create default JavaFX dialogs which will also work on top of Swing windows. The created dialogs are instances of the {@link FXDialog} class. The available dialogs in this class are useful for displaying small information graphic dialogs rather than complex windows. For more complex dialogs it is advised to rather create a new sub class of {@link FXDialog}.,public class JabRefDialogService implements DialogService {,no
+SR188,Line,Need to force the alert to layout in order to grab the graphic as we are replacing the dialog pane with a custom pane,alert.getDialogPane().applyCss();,no
+SR189,Line,Create a new dialog pane that has a checkbox instead of the hide/show details button Use the supplied callback for the action of the checkbox,alert.setDialogPane(new DialogPane() {,no
+SR190,Line,Fool the dialog into thinking there is some expandable content; a group won't take up any space if it has no children,alert.getDialogPane().setExpandableContent(new Group());,no
+SR192,Javadoc,JabRef Launcher,public class JabRefLauncher {,yes
+SR193,Javadoc,The side pane is displayed at the left side of JabRef and shows instances of {@link SidePaneComponent}.,public class SidePane extends BorderPane {,no
+SR195,Javadoc,Override this method if the component needs to make any changes before it can close.,public void beforeClosing() {,no
+SR196,Javadoc,Override this method if the component needs to do any actions after it is shown.,public void afterOpening() {,no
+SR200,Line,Nothing to do by default,},yes
+SR201,Line,Auto-generated method stub,return null;,yes
+SR202,Line,Auto-generated method stub,return false;,yes
+SR203,Line,Auto-generated method stub,return null;,yes
+SR204,Line,Auto-generated method stub,return null;,yes
+SR205,Line,Auto-generated method stub,return null;,yes
+SR206,Line,Auto-generated method stub,return null;,yes
+SR207,Line,Auto-generated method stub,,yes
+SR208,Line,Auto-generated method stub,return false;,yes
+SR209,Line,Auto-generated method stub,,yes
+SR210,Line,Auto-generated method stub,,yes
+SR211,Line,Auto-generated method stub,,yes
+SR212,Line,Auto-generated method stub,return false;,yes
+SR213,Line,Auto-generated method stub,return null;,yes
+SR214,Line,Auto-generated method stub,,yes
+SR215,Line,Auto-generated method stub,return false;,yes
+SR216,Line,Auto-generated method stub,,yes
+SR217,Line,Auto-generated method stub,return null;,yes
+SR218,Line,Auto-generated method stub,,yes
+SR219,Line,Auto-generated method stub,return 0;,yes
+SR220,Line,Auto-generated method stub,return null;,yes
+SR221,Line,Auto-generated method stub,,yes
+SR222,Line,Auto-generated method stub,return null;,yes
+SR223,Line,Auto-generated method stub,return null;,yes
+SR224,Line,Auto-generated method stub,return null;,yes
+SR225,Line,Auto-generated method stub,return null;,yes
+SR226,Line,Auto-generated method stub,,yes
+SR227,Line,Auto-generated method stub,,yes
+SR228,Line,Auto-generated method stub,return 0;,yes
+SR229,Line,Auto-generated method stub,return null;,yes
+SR230,Line,Auto-generated method stub,return null;,yes
+SR231,Line,Auto-generated method stub,,yes
+SR232,Line,Auto-generated method stub,,yes
+SR233,Line,Auto-generated method stub,return null;,yes
+SR234,Line,Auto-generated method stub,return null;,yes
+SR235,Line,Auto-generated method stub,return null;,yes
+SR236,Line,Auto-generated method stub,return null;,yes
+SR237,Line,Auto-generated method stub,return null;,yes
+SR238,Line,Auto-generated method stub,return null;,yes
+SR239,Line,Auto-generated method stub,return null;,yes
+SR240,Line,Auto-generated method stub,return null;,yes
+SR241,Line,Auto-generated method stub,return null;,yes
+SR242,Line,Auto-generated method stub,return null;,yes
+SR243,Line,Auto-generated method stub,return false;,yes
+SR244,Line,Auto-generated method stub,,yes
+SR245,Line,Auto-generated method stub,,yes
+SR246,Line,Auto-generated method stub,return null;,yes
+SR247,Line,Auto-generated method stub,return null;,yes
+SR248,Line,Auto-generated method stub,return null;,yes
+SR249,Line,Auto-generated method stub,return null;,yes
+SR250,Line,Auto-generated method stub,,yes
+SR251,Line,Auto-generated method stub,return null;,yes
+SR252,Line,Auto-generated method stub,,yes
+SR253,Line,Auto-generated method stub,,yes
+SR254,Line,Auto-generated method stub,return 0;,yes
