@@ -28,10 +28,10 @@ F
 w
 L
 T
-
-
 S
 ;
+
+
 the
 {
 E
@@ -39,7 +39,6 @@ A
 k
 1
 C
-I
 x
 O
 D
@@ -232,7 +231,6 @@ thread
 task
 after
 To
-OR
 fields
 true
 Remove
@@ -326,7 +324,6 @@ throws
 ::
 style
 left
-Or
 For
 GUI
 custom
@@ -405,13 +402,11 @@ instead
 Update
 ParserResult
 Model
-And
 available
 Office
 where
 external
 IN
-AND
 background
 character
 placeholder
