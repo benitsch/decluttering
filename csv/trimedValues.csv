@@ -1,0 +1,1051 @@
+comment,code,non-information
+@impl note taken from @link com sun javafx scene control behavior text area behavior context menu requested javafx scene input context menu event,public static void show context menu text area text area context menu context menu context menu event,yes
+icon set tool tip text printed view model get localization,table icons put special field printed icon,yes
+synchronize changes of underlying date value with temporal accessor value,bindings helper bind bidirectional value property temporal accessor value,no
+ask if user really wants to close given database,private boolean confirm close base panel panel,yes
+css information,integrity info material design icon information,no
+check if there is default type with same name if so is modification of type so remove default one,external file type to remove null,no
+entry type,for map entry entry type text field entry text fields entry set,yes
+todo username domain and identity should be included as in net version todo should check seems that it is not included in log4j2,,no
+already parsed via command line parameter jabref jar somefile bib,if is loaded db file or db file exists,no
+finally add things to currently opened tab,for parser result pr to open tab,yes
+to simplify exporter api we simply do normal export to temporary file and read contents afterwards,tmp files create temp file jabref cb tmp,no
+class monitors set of files for changes upon detecting change it notifies registered file update listener implementation based on,public class default file update monitor implements runnable file update monitor,no
+for auto group,private final radio button auto group keywords option new radio button localization lang generate groups from keywords in bib te field,no
+creates new list in element is converted using provided mapping changes to underlying list are propagated to converted list in contrast to @link org fxmisc easybind easy bind map observable list function items are converted when are inserted and at initialization instead of when they are accessed thus initial cpu overhead and memory consumption is higher but access to list items is quicker,public static mapped list map backed observable list source function mapper,no
+sets @link consumer is invoked after task has failed with exception consumer always runs on java fx thread,public background task on failure consumer exception on exception,no
+todo add undo final undoable modify subtree undo new undoable modify subtree get group tree root node remove subgroups panel get undo manager add edit undo,group get group node remove all children,no
+db file exists,if base panel get bib database context get database file is present,yes
+unlikely possibility is that both disk and mem version has been modified in same way check for too,boolean modifications agree duplicate check compare entries strictly mem entry disk entry,no
+should only occur when preferences are set directly via preferences put and not via set firstname mode,return auto complete first name mode,no
+dir must be folder not file,else,yes
+method is called when user presses ok in preferences dialog calls appropriate method in view model,void store settings,no
+todo does not work for citations in footnotes tables,list string names,no
+save,save,yes
+constructor with optional column captions for two entries,public entry left bib entry entry right string heading left string heading right bib database mode type,no
+if content selector values are present then we want to show auto complete suggestions immediately on focus,auto completer set show on focus true,no
+is called when user drops preview layouts on cell in chosen list view to sort them,,no
+helper methods for javafx binding methods are taken from browse jdk 8134679,public class bindings helper,no
+formats string to multiple texts by replacing parts and adding font characteristics,public static list text format to texts string original text replacement replacements,no
+copies given list of @link log event to clipboard,public void log event view model messages,no
+entries had keys,jab ref gui get main frame get dialog service notify localization lang copied jab ref dialog service shorten dialog message key and link,no
+add radio buttons if two entries do not have identical fields,if identical fields contains field,no
+delivers possible completions as list of @link bib entry based on cite key,public class bib entry suggestion provider extends suggestion provider bib entry implements bib entry,no
+css eye,read status material design icon eye,no
+method to add new abbreviation to abbreviations list property it also sets current abbreviation property to new abbreviation,public void add abbreviation string name string abbreviation,no
+class for handling general actions cut copy and paste focused component is kept track of by globals focus listener and we call action stored under relevant name in action map,private class edit action extends simple command,no
+returns new observable value holds value held by observable value or other when observable value is empty,public object binding other,no
+command is only executable if database is open deprecated use instead,@deprecated,no
+define focused tab,if pr get file filter path path get absolute path equals focused file is present,no
+single tab displayed in entry editor holding several field editors,abstract class fields editor tab extends entry editor tab,no
+poll with timeout in case library is not analyzed completely but contains more duplicates,dups this duplicates poll 100 time unit milliseconds,no
+clears current log,public void clear log,yes
+sets new key bind to objects key binding object if given key event is valid combination of keys,public boolean set new binding key event evt,no
+revert change,base set preamble old value,yes
+fade new page in for smoother transition,fade transition fade in new fade transition duration millis 100 image view,no
+css rss,rss,no
+get search describer for given search query,public static search describer get search describer for search query search query,yes
+does actual operation on bibtex entry based on settings specified in same dialog returns number of occurrences replaced,private int replace item bib entry entry named compound compound,no
+should be opened in browser,field standard field url,no
+returns hash map containing key bindings,public sorted map key binding string get key bindings,yes
+add menu for fetching bibliographic information,context menu fetcher menu new context menu,no
+ctrl on win,copy,no
+adds specified node as child of current root group contained in new groups must not be of type all entries group since tree has exactly one all entries group root new groups are inserted directly they are not deep copy,private static void add groups group tree node new groups compound edit ce,no
+adds given entries to node group,public list field change add entries to group list bib entry entries,yes
+no we canceled or there is panel to get database from highly unlikely,return false,no
+default,return group hierarchy type independent,yes
+bug report body,string issue body system info \n\n how to reproduce \n\n paste log details here,yes
+do nothing by default,,yes
+text after citation,if end line length,no
+only instance of class,private static external file types singleton,yes
+placeholder class for custom generic type safe dragboard to be used in drag and drop does not depend on serialization do not use class directly use instance provided in @link gui globals local dragboard,public class custom local dragboard,no
+search and import unknown references from associated bib files,public void import button clicked,no
+wizard dialog for generating new sub database from existing te aux file,public class from aux dialog extends base dialog void,no
+shows dialog with warnings from import or open of file,public static void show parser result warning dialog final parser result parser result final jab ref frame jab ref frame,no
+get permutation array,int permutation new int to from,no
+set pseudo classes to indicate if row is root or sub item deep,pseudo class root pseudo class pseudo class get pseudo class root,no
+do not report error since getting suffix is non critical operation and error will be triggered and reported elsewhere,,no
+selected entries,entries frame get current base panel get selected entries,yes
+for fields in joint add row and possibly radio buttons,int row,no
+puts list of preview layout in map previous content is cleared,public void put preview layouts list preview layout preview layouts,no
+remove entry from import inspection dialog,entries remove entry,yes
+second check if duplicate is of entry in import,other find internal duplicate entry,no
+todo remove old entry or add it to list of entries to be deleted we only delete it after ok is clicked entries to delete add other get,else if result duplicate resolver dialog duplicate resolver result keep right,no
+taken from,public image width int height,no
+check if looks like remote link,if remote link pattern matcher link matches,yes
+get list of exporters and sort before adding to file dialog,list exporter exporters globals export factory get exporters stream,yes
+save properties dependent on id makes it possible to restore them,new shared database preferences context get database generate shared database id,no
+initialize protected terms loader,globals protected terms loader new protected terms loader globals prefs get protected terms preferences,yes
+returns menu item container node associated with menu item can contain label node of type label for displaying menu item text right node of type label for displaying accelerator text or arrow if it menu graphic node for displaying menu item icon and left node for displaying either radio button or check box is basically rewritten impl styleable get node should not be used since it marked as deprecated,private static label get associated node menu item menu item,no
+set content type content type style sheet sheet html editor kit get editor kit get style sheet sheet add rule body style sheet add rule addition style sheet add rule removal style sheet add rule change style set editable false,,yes
+sets name and abbreviation of @code current abbreviation property to values of @code abbreviations name and @code abbreviations abbreviation properties,private void set current abbreviation name and abbreviation if valid string name string abbreviation,no
+finally go through citation markers and update referring to entries in current list,int max authors first style get int cit property oo bib style max authors first,no
+describe advanced search expression,search contains entries in tooltip text util text type normal,no
+if we re going to override cite keys warn user about it,else if entries parallel stream any match bib entry::has cite key,no
+method is called after new database has been added to gui if is action necessary method returned true note if several such methods need to be called sequentially it is important that implementations of method do not return until operation is finished,void perform action base panel panel parser result pr,no
+searches recursively files in specified directory br br files matched by given @link unlinked pdf file filter are taken into resulting tree br br result will be tree structure of nodes of type @link check box tree item br br user objects are attached to nodes is @link file node wrapper wraps @link file object br br for ensuring capability to cancel work of recursive method first position in integer array state must be set to to keep recursion running when states value changes method will resolve recursion and return what it has saved so far,private check box tree item file node wrapper directory unlinked pdf file filter ff,no
+method attaches linked file from url if not already linked to entry using key and value pair from find full texts map and then downloads file into given target directory,private void add linked file from url url url bib entry entry path target directory,no
+init paste handler for url editor to format pasted url link in text area,text area set paste action handler text area set text new trim whitespace formatter format text area get text,no
+create new suggestion provider string,public suggestion provider string callback string string converter,yes
+set new sections name to child section, child named set name oo bib base bib section name,yes
+ok done then try to gather in we have found since we might have found one or more bibtex results it best to gather them in bib database,parser result bibtex result merge import results imports,no
+todo can we find out whether save was actually done or not,,no
+method shall be used to add new journal abbreviation file to set of journal abbreviation files it basically just calls @link open file path method,public void add new file,no
+undoable add or remove group undo new undoable add or remove group groups root new group tree node view model new groups undoable add or remove group add node ce add edit undo,,yes
+new version could be found only respect ignored version on automated version checks,if newer version is present or newer version get equals to be ignored manual execution,no
+compare deleted entry in memory with one in tmpfile entry could have been removed in memory,double match with tmp duplicate check compare entries strictly mem entry tmp entry,no
+retrieve bookmark by name,if named bookmarks has by name name,yes
+run validation checks,if valid settings,yes
+be happy with first found bib entry and move on to next key,break,yes
+css open in app,connect open office material design icon open in app,yes
+fills current values to text fields,public void set values abstract bibtex key pattern key pattern,no
+create default suggestion provider based on to string method of generic objects,public static suggestion provider create collection possible suggestions,no
+lines above work also if dir does not exist at all null is accepted by filechooser as inital path,,no
+css paperclip,attach file material design icon paperclip,yes
+converts citations into rtf format,protected static clipboard content process rtf list string citations,no
+push to application,final push to application action push to application action push to applications manager get push to application action,yes
+returns default context menu items except undo redo,public static list menu item get default context menu items text input control text input control,no
+use preferences value if db is open,mode globals prefs get default bib database mode,no
+we have to use supplier for localized text so that language changes are correctly reflected,search display mode supplier string display name supplier string,no
+todo switch icon color search icon set icon icon theme jab ref icon advanced search get icon,else,no
+we have overwritten marker for start of reference list we need to add it again,cursor collapse to end,no
+create and run cleaner,cleanup worker cleaner new cleanup worker panel get bib database context preferences get cleanup preferences,yes
+if we found it remove it from type list,if to remove null,yes
+work around for different input methods,private class input method requests object implements input method requests,no
+class represents change in field value relevant information is bib entry field name old and new value old new values can be null,public class undoable preamble change extends abstract undoable jab ref edit,no
+parse temporary file,import format preferences import format preferences globals prefs get import format preferences,no
+show progress indicator,progress indicator progress new progress indicator,yes
+fail on unsupported java versions,ensure correct java version,no
+get string associated with file type icon,public string get icon name,no
+things to be appended to opened tab should be done after opening tabs add them to list,to open tab add pr,no
+set title frame title,return,no
+we do not trim value at assignment to enable users to have spaces at beginning and at end of pattern,if,no
+jni convenience easier to iterate over array than calling hashtable,string pairs null,no
+create menu items one for case changer,list formatter case changers new array list,no
+we import files and collect results,list import format reader unknown format import imports new array list,no
+constructs list cell based on view model of row and bunch of specified converter methods,public class view model list cell factory implements callback list view list cell,no
+todo store undo if undo is empty group selector conclude assignment undoable change entries of group get undoable edit target undo target get node assigned entries,,no
+todo means duplicate string name exists so it not very exceptional situation we should maybe give warning,,no
+dialog shown when closing of application needs to wait for save operation to finish,public class wait for save finished dialog,no
+todo find better way to update preview,base panel close bottom pane,no
+we are alone so we start server,globals remote listener open and start new jab ref message handler remote preferences get port,no
+keep track of changes made to columns like reordering or resizing,public class persistence visual state table,no
+encoding of shared database is always utf,encoding disable property set value is shared,no
+replace placeholder if used,command command replace %dir absolute path,no
+if file is ordinary file not resource part of jar bundle we watch it for changes and turn on live reloading,if css uri to string contains jar,no
+shift on windows or modifier,link,no
+show tooltips,if command instanceof simple command,no
+class provides editable text field is used as table cell it handles editing of name column,public class journal abbreviations name table editing cell extends table cell abbreviation view model string,no
+return first one we found anyway,return optional of suffix,no
+regex is correct otherwise ok would have been disabled therefore do not catch anything here,if keyword group reg exp is selected,no
+returns int representing selected hierarchical group context,private group hierarchy type get context,yes
+todo warn if assignment has undesired side effects modifies field keywords if warn assignment side effects warn assignment side effects node get node get group panel frame return user aborted operation,,no
+bidirectional binding does not work so use listeners instead,flow estimated scroll property add listener observable old value new value scroll set value new value,no
+main function for building merge entry panel,private void initialize,no
+prefs tab is component displayed in preference dialog it needs to extend from component,interface preferences tab,no
+actual operation method will not be called on event dispatch thread so it should not do gui operations without utilizing invoke later,void push entries bib database context database list bib entry entries string key string,no
+create dummy group,try,no
+action for launching mass field functionality defaults to selected entries or entries if none are selected input field name either set field or clear field,public class mass set fields action extends simple command,no
+need to toggle twice to make sure nothing is selected,root set selected false,no
+ctrl on win no modifier on xubuntu,copy,no
+if we are supposed to set character format for citations must run test before we delete old citation markers otherwise if specified character format does not exist we end up deleting markers before process crashes due to missing format with catastrophic consequences for user need to do only once,must test char format false need to do only once,no
+get center of focused cell,bounds anchor bounds row get bounds in parent,no
+opens new console starting on given file location if command is specified in globals default system console will be executed,public static void file throws io exception,no
+ think setting root to null is not possible,root set group default groups factory get all entries group,no
+general info dialog mac adapter calls method when quit is selected from application menu cmd is pressed or quit is selected from dock function returns boolean indicating if quitting is ok or not non osx jab ref calls when choosing quit from menu side effect tears down jab ref,public boolean quit,no
+fits standard found entries message thus hinders searchbar to jump around while searching if frame width is too small,current results set pref width 150,no
+view model for field editor shows various options backed by map,public abstract class map based editor view model extends option editor view model,no
+hide horizontal scrollbar and always wrap text,set wrap text true,no
+delivers possible completions as list of @link author,public class person name suggestion provider extends suggestion provider author implements author,no
+xml syntax highlighting for rich text fx codearea created by carlos martins github @cemartins license bsd clause see and,public style spans collection string compute highlighting string text,no
+inserts jab ref preferences values into properties of view model,public void set values,no
+alt on windows,move,no
+for column get actual width or if it does not exist default value,map string double column widths new hash map,no
+opens import inspection dialog to let user decide of given entries to import,private void add imported entries final base panel panel final list bib entry entries,no
+update journal abbreviation loader,journal abbreviation loader update abbreviations preferences,yes
+generate dialog title,string dialog title,yes
+wrapper around one of actions from @link action to convert them to controlsfx @link org controlsfx control action action,class jab ref action extends org controlsfx control action action,no
+open file browser,,no
+flipped around,resolve strings all property set value preferences get boolean jab ref preferences resolve strings all fields,no
+css file multiple,file multiple material design icon file multiple,yes
+find office executable relative to class class loader,string office system get property os name starts with windows soffice exe soffice,no
+add entries to open tab,base panel panel get current base panel,no
+css star circle,star circle,yes
+set empty background and create proper rendering in background for smoother loading,background new rectangle get desired width get desired height,no
+function to initialize parameters currently it is expected that command path preference key is set to path of application,protected abstract void init parameters,no
+root of global groups tree,private final group tree node view model groups root handle,no
+gets invoked if entry in current database changes,private void on database changed list change listener change extends bib entry change,yes
+wait until office is started,for int,no
+check if we are supposed to set character format for citations,boolean must test char format style is format citations,no
+css arrow up bold,move tab arrow material design icon arrow up bold,yes
+todo reflective access should be removed,field private string field table view class get declared field content width,no
+creates column for do is or ur ls @code first field is preferred to be shown over second field,private table column bib entry table view model field create url or doi column jab ref icon icon field first field field second field,no
+get comparator to order suggestions,protected abstract comparator get comparator,no
+check if there are empty keys,boolean empty keys false,yes
+repeat for individual file dir reuse text and dir vars,text view model user specific file directory property get value,no
+alt on win,logger debug node link,no
+represents view model for page in document viewer,public abstract class document page view model,yes
+menu to show up on right click in text field for converting text formats,class conversion menu extends menu,no
+is ugly but we have proper update mechanism in place to propagate changes so redraw everything,refresh,no
+todo print error message localization lang pdf does not exist,else,no
+prints parsing statistics,public string get information boolean include missing entries,no
+calls abbreviations file view model write or create method for file in journal files property will overwrite existing files with content of abbreviations property of abbriviations file non existing files will be created,public void save journal abbreviation files,no
+sets @link consumer is invoked after task is successfully finished consumer always runs on java fx thread,public background task on success consumer on success,no
+copyright 2014 2016 controls fx rights reserved redistribution and use in source and binary forms with or without modification are permitted provided that following conditions are met redistributions of source code must retain above copyright notice list of conditions and following disclaimer redistributions in binary form must reproduce above copyright notice list of conditions and following disclaimer in documentation and or other materials provided with distribution neither name of controls fx associated website nor names of contributors may be used to endorse or promote products derived from software without specific prior written permission software is provided by copyright holders and contributors as is and express or implied warranties including but not limited to implied warranties of merchantability and fitness for particular purpose are disclaimed in event shall controlsfx be liable for direct indirect incidental special exemplary or consequential damages including but not limited to procurement of substitute goods or services loss of use data or profits or business interruption however caused and on theory of liability whether in contract strict liability or tort including negligence or otherwise arising in way out of use of software even if advised of possibility of such damage,package org jabref gui autocompleter,no
+extract destination url,try,no
+updates view to reflect changes to visible components,private void update view,yes
+class represents change in field value relevant information is bib entry field name old and new value old new values can be null,public class undoable field change extends abstract undoable jab ref edit,no
+abstract class for pushing entries into different editors,public abstract class abstract push to application implements push to application,no
+put warning into as exception text it will be displayed to user,,no
+wraps old swing commands so that they fit into new infrastructure in long term class should be removed,@deprecated,no
+default context menu with specific menu item to cleanup url,public static supplier list menu item get cleanup url menu text area text area,no
+icon is chosen based on field name in cell so map fields to names,column set cell value factory cell data easy bind monadic cell data get value get field first field map first field or else easy bind monadic cell data get value get field second field map second field,no
+execute command,try,no
+ignored,return collections empty list,no
+returns true if there is external file type registered for extension,public boolean is external file type by ext string extension,no
+unknown can not un abbreviate anything,return false,yes
+vim set shiftwidth softtabstop expandtab,,no
+redo change,try,no
+we need to get tab header following is ugly workaround,node tab header area tab pane skin this tabbed pane get skin,no
+reset fields,for text field field text fields values,yes
+similar to @link org fxmisc easybind monadic monadic observable value,public class optional object property extends simple object property optional,no
+,public static void show context menu text field text field context menu context menu context menu event,no
+css clipboard arrow left,export to clipboard material design icon clipboard arrow left,yes
+todo replace by,public class jab ref desktop,no
+executes callable task provides return value after calculation is done @param command task to execute future object provides returning value,public future execute callable command,yes
+need to run on java fx thread,jab ref gui get main frame add parser result pr focus panel,no
+set original filename again,tabbed pane get tabs get set text get base panel at get tab title,no
+if required check that entries have bib te keys defined,if application requires bibtex keys,no
+check if value returned by get column value is same as simple check of entry field would give reasons for being different are combinations may also happen entry has crossref where field content is obtained from field has string in it get column value resolves there are alias fields for example if entry has date field but year field bib entry get resolved field or alias string bib database will return year value from date field when queried for year,public boolean is resolved bib entry entry,no
+imlement default,,no
+use default key bindings,for key binding key binding key binding values,yes
+store shown columns and width in preferences,private void update column preferences,no
+todo add undo final undoable add or remove group undo new undoable add or remove group groups root node undoable add or remove group remove node keep children panel get undo manager add edit undo,group tree node group node group get group node,no
+read saved file paths and read abbreviations,public void create file objects,no
+on linux java fx fonts look blurry per default can be improved by using non default rendering setting see,if globals prefs get boolean jab ref preferences fx font rendering tweak,no
+runs specified runnable on java fx application thread and waits for completion,public static void run and wait in java fx thread runnable action,yes
+jab ref main class,public class jab ref main extends application,yes
+bootstraps component context from uno installation,public static final component context arg array url class loader loader throws bootstrap exception,no
+if globals prefs is keyword sync enabled return final bib entry entry event get bib entry named compount code similar to special field update listener named compound nc new named compound localization lang synchronized special fields based on keywords list field change changes special fields utils sync special fields from keywords entry globals prefs get keyword delimiter for field change change changes nc add edit new undoable field change change do not insert compound into undo manager it would be added before component undoes insertion of entry and creates heavy problems prohibits undo deleting multiple entries,,no
+get target folder,optional path file dir database context get first existing file dir file preferences,no
+ctrl on windows no modifier on xubuntu,copy,no
+default command,string cmd xdg open file path to absolute path get parent to string,no
+reloads jab ref preferences into ui,private void update after preference changes,no
+we define two file type objects as equal if name extension open with and icon name are equal,@override,no
+create buttons,button type replace entries new button type localization lang merge entries button bar button data ok done,yes
+time stamp,,no
+class can be used to wrap @see observable list inside it when wrapped listener listening for updates to wrapped observable list for example because of binding to it is ensured to be notified on java fx application thread it should be used to implement bindings where updates come in from background thread but should be reflected in ui where it is necessary that changes to ui are performed on java fx application thread,public class ui thread observable list implements observable list,no
+executes collection of callable tasks and returns list of resulting future objects after calculation is done @param tasks tasks to execute @return list of future objects provide returning values,public list future execute all collection callable tasks,yes
+will set @code current file property to @link abbreviations file view model object was added to @code journal files list property lastly if there are files in list property methode will do nothing as @code current file property is already @code null,public void select last journal file,no
+method to delete abbreviation set in current abbreviation property current abbreviation property will be set to previous or next abbreviation in abbreviations property if applicable else it will be set to @code null if there are abbreviations left,public void delete abbreviation,no
+we need to sort reference marks according to order of appearance,names sorted reference marks,no
+returns wrapper around given list posts changes on java fx thread,public static observable list for ui observable list list,no
+kill remote thread,stop remote thread,yes
+first try xmp import if empty try pdf import otherwise create empty entry,if xmp entries in file is empty,no
+revert change,base remove string string get id,no
+go through unchanged types remove them from ones should be stored and from list of defaults since we do not need to mention in prefs,for external file type type unchanged,no
+checks if tabs are valid to do after conversion of tabs use mvvmfx validator to do should be observable for binding of ok button in view,,no
+next add visible tabs if not already present at right position,for int visible tabs size i++,no
+update tab titles,update all tab titles,yes
+helper class to create and style controls according to @link action,public class action factory,no
+class for fetching and merging bibliographic information,public class fetch and merge entry,yes
+paranoia ensure that there are never two instances of all entries group,if new groups get group instanceof all entries group,no
+create button triggers search,button search new button localization lang search,yes
+activate context menu if user presses context menu key,table view add event handler key event key released event,no
+,public static run in java fx thread callable callable,yes
+add edit field for bibtex key,fields add internal field key field,no
+remove reference marks do not look like jab ref citations,list string tmp new array list,no
+although entries are redefined without use also updates link source base,map bib entry bib database entries find cited entries databases cited link source base,no
+for remaining entries intersection has to be used approach ensures that one empty keyword list leads to empty set of common keywords,for bib entry entry entries,no
+very simple implementation of @link task executor interface submitted task is invoked in separate thread,public class default task executor implements task executor,no
+buttons in base dialogs react on enter,if event get code key code enter,no
+but not for entry,ref keys get marker add current key,no
+if we found it remove it from type list,if to remove null,yes
+main window of application,public class jab ref frame extends border pane,no
+redo change,try,no
+tools for automatically detecting open office or libre office installations,public class detect open office installation,no
+heuristic missed so try to get page number from first shown page,current page set,no
+assuming current page is a4 or has same aspect ratio,set page width desired page dimension get width math sqrt delta,no
+check if there are two entries selected,list bib entry selected entries base panel get selected entries,yes
+class controls user interface of journal abbreviations dialog ui elements and layout are defined in fxml file,public class manage journal abbreviations view extends base dialog void,no
+only add tab if db is not already open,optional base panel panel get base panel list stream,no
+class represents change of type for entry,public class undoable change type extends,no
+general,,no
+sets title of main window,public void set window title,no
+check mode of currently used db,if panel null,no
+parent root just add,this move to target,no
+write entries using sw is used later to form email content,bib entry writer bibtex entry writer new bib entry writer,no
+opens given files if one of it is null or 404 nothing happens,public void path files to open boolean raise panel,no
+ask for consent to send data to mr lib on first time to tab,if preferences is mrdlib accepted,no
+only first of extensions gotten from file type is saved into class using get,string extension string exporter get file type get extensions get,no
+path to edited subtree root node,private final list integer path to node,no
+up to version 4b mime type is not included,mime type,no
+application insights java copyright microsoft corporation rights reserved mit license permission is hereby granted free of charge to person obtaining copy of software and associated documentation files software to deal in software without restriction including without limitation rights to use copy modify merge publish distribute sublicense and or sell copies of software and to permit persons to whom software is furnished to do so subject to following conditions above copyright notice and permission notice shall be included in copies or substantial portions of software software is provided as is without warranty of kind express or implied including but not limited to warranties of merchantability fitness for particular purpose and noninfringement in event shall authors or copyright holders be liable for claim damages or other liability whether in action of contract tort or otherwise arising from out of or in connection with software or use or other dealings in software,,no
+on windows store application as empty if default option is selected or if application name is empty,if default application selected property get value,no
+creates list of files leaf nodes in tree structure have been selected,private list path file node wrapper node,no
+css server plus,add row material design icon server plus,yes
+method returns enum constant value,public string get constant,yes
+copies doi url to clipboard,public class copy doi url action extends simple command,no
+update type label,typed bib entry typed entry new typed bib entry entry database context get mode,no
+update key list to match new sorting,for int entries length j++,no
+runs given task and returns future representing task, future execute background task task,yes
+alt on windows,link,no
+runs cleanup on entry and records change,private void do cleanup cleanup preset preset bib entry entry named compound ce,no
+action can be invoked without open database so we have to check if we have one before trying to invoke methods to execute changes in preferences,,no
+set up list of external file types either from default values or from values recorded in preferences,private void update external file types,no
+notifies tab it got focus and should display given entry,public void notify about focus bib entry entry,no
+handled by fx in text input control paste,break,no
+file does not exist so we ca not move it,dialog service show error dialog and wait localization lang file not found localization lang could not find file linked file get link,yes
+opens edit group dialog and changes given group to edited one,public void edit group group node view model old group,no
+we ca not watch files directly so monitor parent directory for updates,path directory file to absolute path get parent,no
+extract list of bibtex keys from reference mark name,public list string parse ref mark name string name,no
+leave expansion state of tree item as it is,this dragged item set expanded this dragged item is expanded,no
+display link to expand text,if this get children contains more link,no
+start looking at changes,bib database diff differences bib database diff compare reference database database on disk,no
+change root group even though it will be all entries anyway,root set group changed groups get group,no
+when mime type is included array length should be,mime type val,no
+loop through available databases,for bib database loop database databases,yes
+replace entries by merged entry,entries add diag get merged entry,no
+if value null and then call null field has been omitted as updatefield also handles value null,list field change changes special fields utils update field special field value be null field if value is the same globals prefs is keyword sync enabled globals prefs get keyword delimiter,no
+storing backup of whole subtree is not required when children are kept, subtree backup edit type undoable add or remove group remove node keep children edited node get node,no
+inserts citation into html body and copies it to clipboard,protected static clipboard content process html list string citations,no
+only one linked file open directly,linked file view model linked file view model new linked file view model linked files get entry get entry database globals task executor dialog service globals prefs get xmp preferences globals prefs get file preferences external file types,no
+if not start gui,new jab ref gui main stage argument processor get parser results argument processor is blank,yes
+empty,,yes
+after adding databases go through and see if post open actions need to be done for instance checking if we found new entry types can be imported or checking if database contents should be modified due to new features in version of jab ref note that we have to check whether does not go over get base panel count is because import to open might have been used adds to loaded databases but not to get base panel count,,no
+new zip file chooser,public zip file chooser file system zip file throws io exception,yes
+expand node and children on drag over,drag expansion handler expand group row get tree item,yes
+todo merge with import,factory create menu item standard actions merge database new old database command wrapper actions merge database state manager,no
+css code equal,find duplicates material design icon code equal,yes
+find entries in clipboard,list bib entry entries to add globals clipboard manager extract data,yes
+access child section text content interface and insert it into document, text content child section uno runtime query interface text content class child named,no
+set visibility of progress bar in right end of status line at bottom of frame,public void set progress bar visible final boolean visible,no
+converts path relative to base path into class name,private static string path to class string base path path path,no
+following is necesary to initiate drag and drop in javafx although we do not need contents it does not work without,clipboard content content new clipboard content,no
+mask text,boolean mask text text input control instanceof password field,no
+use correct viewer even if pdf and ps are mixed up,string split file get get file name to string split \\,no
+interface defines potential actions may need to be taken after opening bib file into jab ref can for instance be file upgrade actions should be offered due to new features in jab ref and may depend on jab ref version file was last written by interface is introduced in attempt to add such functionality in flexible manner,public interface gui post open action,no
+warning before overwriting is only relevant if overwriting can happen,warn before overwriting set disable dont overwrite is selected,no
+todo remove copy as soon as one included in ai is compatible with log4j,public final class application insights log event extends application insights event,no
+insert connector, set insert imp loader activate com sun star comp connections connector null null null,yes
+as there is concept like empty node icon we return simply other icon,return jab ref icons group intersection get graphic node,no
+add bib databases databases to frame,boolean first false,no
+is simple implementation of generic suggestion provider callback complexity of suggestion generation is where is number of possible suggestions,public abstract class suggestion provider implements callback suggestion request collection,no
+returns newer version excluding non stable versions except if installed one is unstable too if newer version was found then empty optional is returned,private optional version get new version throws io exception,no
+prints connection problem to status bar and shows dialog if it was executed manually,private void show connection error exception exception boolean manual execution,no
+css file powerpoint,file powerpoint material design icon file powerpoint,yes
+detect google search url,private static final string google search exp ^https?: ?:www\\ ?google\\ \\ +? url,yes
+update keywords,keywords remove all keywords to remove,yes
+css auto fix,auto group material design icon auto fix,yes
+bootstraps initial component context from native uno installation see also code cppuhelper default bootstrap initial component context code,public static final component context default bootstrap initial component context string ini file map string string bootstrap parameters throws exception,no
+css twitter,twitter material design icon twitter,yes
+drag and drop support,row set on drag detected event,no
+file on disk has changed thus look for notable changes and notify listeners in case there are such changes,change scanner scanner new change scanner database reference file,no
+append given value to given field for entries in collection method does not update undo manager but returns relevant compound edit should be registered by caller,private static undoable edit mass append field collection bib entry entries field field string text to append,no
+we have to use reflection to get associated label,try,no
+if so mark base changed prevent undo button from removing change marking,if changed,no
+passed file we take first one should be focused,string focused file bib databases stream,no
+decides if content stored in given dragboard can be droped on given target row currently following sources are allowed group will be added as subgroup on drop entries if group implements @link group entry changer will be assigned to group on drop,public boolean acceptable drop dragboard dragboard,no
+string was removed or renamed locally we guess that it was removed,bibtex string bs new bibtex string label disk,no
+returns consent dialog used to ask permission to send data to mr lib,private scroll pane get privacy dialog bib entry entry,no
+left text pane,if left string is present,no
+initializes components layout data structure and actions in dialog,private void initialize,no
+add type change menu,context menu type menu new change entry type menu get change entry type popup menu entry database context undo manager,no
+property is only needed to get proper ide support in fxml files validation parameter passed to icon is indeed of type @link icon theme jab ref icons,private object property icon theme jab ref icons glyph,no
+cloud upload,connect db material design icon cloud upload,yes
+removal of node and of children,public static final int remove node and children,yes
+worker checks if there is new version of jab ref available if there is it will display dialog to user offering him multiple options to proceed see changelog go to download page ignore version and remind later if versions check is executed manually and is latest version it will also display dialog to inform user,public class version worker,no
+if crossref entry is not already in database,if result database get entry by key crossref is present,yes
+insert it at current position,rebuild bib text section all bases style,no
+especially for track execute when action run same function but from different source,public jab ref action action action command command key binding repository key binding repository sources source,no
+action for save and save as operations called from base panel class is also used for save operations when closing database or quitting applications save operation is loaded off of gui thread using background task callers can query whether operation was canceled or whether it was successful,public class save database action,no
+default menu contains functions for changing case of text and doing several conversions,public static supplier list menu item get default menu final text input control text input,no
+set headings,for int i++,yes
+method should be called after storing preferences to collect properties require restart of jab ref to load,list string get restart warnings,no
+creates new auto completion binding between given text input control and given suggestion provider,private auto completion text input binding final text input control text input control,yes
+we accept kinds of dates not just in format specified,return date parse string map date::to temporal accessor or else null,no
+whole method is part of background task when autodecting instances so we need to show dialog in fx thread,optional document title view model selected document dialog service show choice dialog and wait localization lang select document localization lang found documents localization lang use selected document view model,no
+taken from,private static buffered image resize buffered image img int new width int new height,no
+we always want that first item is selected after change also automatically selects first file on initial load,file choice items property add listener,no
+function to get command to be executed for pushing keys to be cited,@suppress warnings unused,no
+for reason graphic is not set correctly by @link action utils class so we have to fix by hand,private static void set graphic menu item node action action,no
+entry type or bibtex key will never be resolved,if internal field type header equals field or internal field obsolete type header equals field,no
+removal of single node children if are kept,public static final int remove node keep children,yes
+copyright 2014 2015 controls fx rights reserved redistribution and use in source and binary forms with or without modification are permitted provided that following conditions are met redistributions of source code must retain above copyright notice list of conditions and following disclaimer redistributions in binary form must reproduce above copyright notice list of conditions and following disclaimer in documentation and or other materials provided with distribution neither name of controls fx associated website nor names of contributors may be used to endorse or promote products derived from software without specific prior written permission software is provided by copyright holders and contributors as is and express or implied warranties including but not limited to implied warranties of merchantability and fitness for particular purpose are disclaimed in event shall controlsfx be liable for direct indirect incidental special exemplary or consequential damages including but not limited to procurement of substitute goods or services loss of use data or profits or business interruption however caused and on theory of liability whether in contract strict liability or tort including negligence or otherwise arising in way out of use of software even if advised of possibility of such damage,package org jabref gui autocompleter,no
+use property as initial source,update accept property get value,no
+map containing registered external file types,private final set external file type external file types new tree set<> comparator comparing external file type::get name,yes
+workaround taken from,private void setup clear button field custom text field custom text field,no
+always overwrite keys by default,return true,no
+we are not alone there is already server out there send command line arguments to other instance,if remote client send command line arguments args,no
+process arguments,argument processor argument processor new argument processor arguments argument processor mode initial start,yes
+nothing set so we use default values,while preferences get jab ref preferences custom tab name def null,no
+run actual open in thread to prevent program locking until file is loaded,background task wrap open it file dialog import strings dialog import groups dialog import selector words,no
+it could be that somehow path is null for example if it got deleted in meantime,if directory null,no
+extract url parameter,string pairs query split,no
+collect callables to execute in one collection,for bib entry entry entries,no
+todo add undo store undo information abstract undoable edit undo add previous entries null undoable modify group undo new undoable modify group group selector this groups root node new group if undo add previous entries null panel get undo manager add edit undo else named compound nc new named compound modify group nc add edit undo nc add edit undo add previous entries nc end panel get undo manager add edit nc if add change is empty undo add previous entries undoable change entries of group get undoable edit null add change,,no
+adds filename to top of menu if it already is in menu it is merely moved to top,public void new file path file,no
+view model can be used for add exporter and modify exporter functionalities it takes optional exporter is empty for add exporter and takes selected exporter for modify exporter returns optional exporter empty if invalid or exporter is created and otherwise contains exporter to be added or is modified,,no
+we need to catch one here because open office panel class is loaded before connection and therefore can not directly reference or catch disposed exception is in oo jar file,throw new connection lost exception ex get message,no
+css label outline,label outline,yes
+resize policy is almost same as @link table view constrained resize policy we make sure that width of columns sums up to total width of table however in contrast to @link table view constrained resize policy we size columns initially by preferred width,public class smart constrained resize policy implements callback table view resize features boolean,no
+we have to cast bib entries from bib entry suggestion provider to parsed entry link,collection bib entry bib entries collection bib entry super complete request,no
+puts list of bib entry in map previous content is cleared,public void put bib entries list bib entry entries,no
+wraps old swing commands so that they fit into new infrastructure in long term class should be removed,@deprecated,no
+run in one minute,60000,no
+see if there are duplicate citations marks referring to different entries if so we need to use uniquefiers,map string list string ref keys new hash map,no
+todo,,no
+todo print error message localization lang error while writing file to string ex,,no
+parse modified file,result open database load database diskdb to absolute path to string import format preferences,no
+represents binding between text input control and auto completion popup class is slightly modified version of @link impl org controlsfx autocompletion auto completion text field binding works with general text input controls instead of just text fields,public class auto completion text input binding extends auto completion binding,no
+creates instance of @link linked file based on given file we try to guess file type and relativize path against given file directories todo move method to @link linked file as soon as @link custom external file type lives in model,public static linked file from file path file list path file directories external file types external file types file,no
+create default suggestion provider based on to string method of generic objects using provided string converter,public static suggestion provider create callback string string converter collection possible suggestions,no
+remove entry,entries remove entry,yes
+repaints table with most recent font configuration,public void update font,no
+updates timestamp of changed entries if feature is enabled,class update timestamp listener,no
+add new component,visible components add component,yes
+setting character format failed so we throw exception will result in error message for user,throw new undefined character format exception char style,no
+implementation of task executor runs task on current thread in sequential order class is not designed to be used in production but should make code involving asynchronous operations deterministic and testable,public class current thread task executor implements task executor,no
+file matched name try to open it directly using given app,open external file platform independent type link,no
+represents viewport for page note instances of @link document viewer page are reused not page is rendered in new instance but instead @link document viewer page update item object is called,private class document viewer page implements cell document page view model stack pane,no
+set given field to given value for entries in collection method does not update undo manager but returns relevant compound edit should be registered by caller,private static undoable edit mass set field collection bib entry entries field field string text to set,no
+go back to relevant position, view cursor goto range position false,no
+displays bib entry using given layout format,public class preview viewer extends scroll pane implements invalidation listener,no
+saved now exit,return true,no
+try to get as much information from temporal accessor,local date date date time query temporal queries local date,no
+there is apparently neat way to get page number from pd page thus old style for loop,for int pages get count i++,no
+read prefs information for file types,string vals string util,no
+start office process,process runtime get runtime exec cmd array,no
+make list of pd fs linked from entry,list path files entry get files stream,no
+method is called when dialog is opened or if it is made visible after being hidden calls appropriate method in view model,void set values,no
+perform migrations,preferences migrations run migrations,yes
+constructs @link table cell based on value of cell and bunch of specified converter methods,public class value table cell factory implements callback table column table cell,no
+store new patterns globally,prefs put key pattern keypatterns,no
+backup of groups before modification,private final group tree node group root,no
+mapped list implementation based on,public final class mapped list extends transformation list,no
+start of ugly hack we need to find out tabs will be shown and not and remove and re add appropriate tabs to editor we do not want to simply remove and re add complete list of visible tabs because tabs give ugly animation looks like tabs are shifting in from right hack is required since tabbed get tabs set all visible tabs changes order of tabs in editor,,no
+make sure layout is set according to checkbox,cleanup enabled selected property add listener new enablement status listener<> field formatter cleanups is enabled,no
+shift on win or modifier,link,no
+expand or collapse tree item and reset time,this drag started system current time millis,yes
+user wants to save,try,no
+open file,string file path file get to string,no
+returns path to system applications folder,path get application directory,yes
+opens shared database,public class connect to shared database command extends simple command,yes
+parameters,if query null,yes
+will wrap built in and ieee abbreviations in pseudo abbreviation files and add them to list of journal abbreviation files,void add built in lists,no
+url,if decode matches url exp,yes
+first remove tabs that we do not want to show,list entry editor tab to be removed tabs stream filter tab tab should show entry collect collectors to list,yes
+prevent right click to select group,event consume,no
+css close circle,integrity fail color red material design icon close circle,yes
+unknown external file type instance represents file type unknown to jab ref can happen for example when database is loaded contains links to files of type has not been defined on jab ref instance,public class unknown external file type implements external file type,no
+wait 500 ms then try to connect again but do not wait longer than min 600 500 ms total,if 600,no
+returns text formatter restricts input to integers,public static text formatter string get integer text formatter,no
+format name field for table according to user preferences,public static string format name final string name to format,yes
+css view list,toggle groups material design icon view list,yes
+ok we have seen exact marker before,if ref keys get marker contains current key,no
+execute callables and wait for results,list future boolean futures jab ref executor service,no
+stores user dialogs related to @link backup manager,public class backup ui manager,no
+nothing to do here,,yes
+minimum number of selected entries to ask user for confirmation,private static final int warning limit,no
+exception used to indicate that plugin attempted to set character format is not defined in current open office document,class no document exception extends exception,no
+create call with arguments we need socket pipe does not work,string cmd array new string arg array length,no
+writable image get desired width get desired height,background task image generate image background task,yes
+return boolean if selected entry have url or doi,private boolean is exist ur lor doi list bib entry select entry list,no
+class can be used to wrap @see string property inside it when wrapped listener listening for updates to wrapped string property for example because of binding to it is ensured to be notified on java fx application thread it should be used to implement bindings where updates come in from background thread but should be reflected in ui where it is necessary that changes to ui are performed on java fx application thread,public class ui thread string property extends string property,no
+prefs put boolean jab ref preferences window maximised get extended state frame maximized both,,yes
+dialog for managing term list files,public class manage protected terms dialog extends base dialog void,yes
+check if path to command has been specified,if command path null or command path trim is empty,no
+will only happen if field exists,merged entry set field field left entry get field field get,no
+we need to make copy as instances of log event are reused by log4j,mutable log event copy new mutable log event,no
+perform permutation,object permuted part new object to from,yes
+stream all match in contrast to stream any match returns true for empty streams so has to be checked explicitly,return bindings create boolean binding source is empty source stream all match predicate source,yes
+if there is value do nothing,if val to move is present or val to move get is empty,no
+set default value,globals prefs put jab ref preferences default bibtex key pattern default pat get text,no
+update citation list depending on selected reference,public void active reference changed reference view model reference,no
+enable actions depend on connect,select document set disable false,no
+deleted since it does not work anymore needs refactoring menu item previous preview layout new menu item localization lang previous preview layout ;previous preview layout set accelerator key binding repository get key combination key binding base panel previous preview style ;menu item next preview layout new menu item localization lang next preview layout ;next preview layout set accelerator key binding repository get key combination key binding base panel next preview style,,yes
+for types,private final text field name field new text field,no
+we only handle entry modify here so context is always path,@suppress warnings unchecked,no
+opens given url using system browser,public static void open browser string url throws io exception,yes
+constructor taking two entries,public entry left bib entry entry right bib database mode type,yes
+we create decoration pane ourselves for performance reasons otherwise it has to be injected later leading to complete redraw relayout of complete scene,decoration pane root new decoration pane,no
+css eye,read status read color rgb 111 204 117 material design icon eye,yes
+first check if valid entry is selected,if selected key binding is null get,yes
+return string for displaying node name and number of children if it is directory,public string get display text,no
+dir must be folder not file,if,yes
+set up key bindings specific for entry editor,private void setup key bindings,yes
+bootstraps servicemanager with jurt base components registered see also unoidl code com sun star lang service manager< code,public static multi service factory create simple service manager throws exception,no
+footnote anchor gives correct position in text,range footer get anchor,no
+see if it helps to append,lp new file command path,no
+remove annotations for current entry and reinitialize annotation cache,cache remove entry,no
+for reason graphic is not set correctly so let fix,button graphic property unbind,no
+set up groups tree,group tree get selection model set selection mode selection mode multiple,no
+store directory for next time,preferences set working dir path,no
+threads will be allowed to finish,this executor service shutdown,no
+fetches possibly saved data and configures control elements respectively,private void apply preferences,no
+exception used to indicate that plugin attempted to set character format is not defined in current open office document,class creation exception extends exception,no
+autosave,,no
+sets indeterminate status of progress bar,public void set progress bar indeterminate final boolean value,yes
+action was either canceled or unsuccessful,dialog service notify localization lang unable to save library,no
+remove fields are not in merged entry unless they are internal fields,for field field original fields,no
+text before citation,if start,no
+entry type,entry type old type original entry get type,yes
+display warnings if,int tab number,yes
+set string associated with file type icon,public void set icon name string name,yes
+added comparator for read status,if special field special field read status,yes
+constructor should only be called to create pseudo abbreviation file for built in lists means it is placeholder and it path will be null meaning it has place on filesystem it is pseudo file property will therefore be set to true,public abbreviations file view model list abbreviation view model abbreviations string name,no
+todo reflective access should be removed,method text fields class get declared method setup clear button field text field class object property class,no
+new or modified entry type construct it from string array,external file type type custom external file type build from args val,no
+to account for numbering and for uniqiefiers we must refresh cite markers,update sorted reference marks,no
+open http pdf ps viewer for given link string,public static void open external viewer bib database context database context string initial link field initial field,no
+general,,yes
+read keybindings from keybinding repository and create table keybinding models for them,private void populate table,no
+text leading up to s1 insert s2,string builder append txt piv ind,no
+migrations warning for migrating review into comment field,new merge review into comment action,no
+todo show detailed description of changes string builder sb new string builder html localization lang changes have been made to following metadata elements p><br>&nbsp;&nbsp sb append changes stream map unit unit key collect collectors joining <br>&nbsp;&nbsp sb append html info pane set text sb to string,return new label localization lang metadata change,no
+global string constants for gui actions,@deprecated,no
+put everything together, box container new box,no
+check if we should italicize et al string in citations,boolean italicize style get boolean cit property oo bib style italic et al,yes
+inform user to select entries first,dialog service show information dialog and wait,yes
+performs change method is responsible for adding proper undo edit to named compound so change can be undone,public abstract void make change bib database context database named compound undo edit,no
+set up bindings,bindings helper bind content bidirectional,no
+try to contact already running jab ref,remote client remote client new remote client remote preferences get port,no
+css file excel,file excel material design icon file excel,yes
+opens url with users standard browser if fails popup will be shown to instruct user to open link manually and link gets copied to clipboard,public static void open browser show popup string url,no
+sets runnable is invoked after task is finished irrespectively if it was successful or failed with error,public background task on finished runnable on finished,no
+field editor provides various pre defined options as drop down combobox,public class tag bar extends box,no
+method stores file paths of files in journal files property to global jab ref preferences pseudo abbreviation files will not be stored,private void save external files list,no
+icon set tool tip text localization lang open url,table icons put standard field url icon,yes
+empty search field should cause search to be cleared,if search field get text is empty,no
+priority icon used for menu,special field view model priority view model new special field view model special field priority undo manager,no
+checkbox marked circle outline,plain text import done material design icon checkbox marked circle outline,yes
+returns currently viewed base panel,public base panel get current base panel,yes
+generate keys,bibtex key pattern preferences prefs jab ref preferences get bibtex key pattern preferences,no
+class is similar to @link graphic validation decoration but with different style and font based icon,public class icon validation decorator extends graphic validation decoration,no
+method returns component detailing nature of change,public abstract node description,no
+only remove explicit groups from entries keyword groups should not be deleted,if group get group node get group instanceof explicit group,no
+are there children or children of children are matched if yes we also need to show node,return node children get source stream any match this::show node,no
+if there are entries to add,if,yes
+node should be generated for call as nodes can be added to scene graph only once,return icon get graphic node,no
+user does not want to override cite keys,if overwrite keys,no
+todo add undo panel get undo manager add edit new undoable field change entry editor get name text next abbreviation,,no
+shows dialog with warnings from import or open of file,public static void show parser result warning dialog final parser result parser result final jab ref frame jab ref frame,no
+popup has private access in @link auto completion binding so we use reflection to access it,@suppress warnings unchecked,no
+try to strip query string if to get correct suffix,url url new url link,no
+add chosen export type to last used pref to become default,globals prefs put jab ref preferences last used export exporter get name,no
+create new text section from document factory and access it named interface, named child named,no
+tag item in tag bar,public class tag extends box,no
+todo warn if warn assignment side effects warn assignment side effects node get node get group panel frame return user aborted operation,,no
+todo expand parent to make new group visible parent expand,,no
+class will copy selected entry bib te key as hyperlink to url to clipboard in case entry does not have bib te key it will not be copied in case entry does not have url will only copy bib te key,public class copy bib te key and link action implements base action,no
+check whether there is icon defined for file type,for external file type file type external file types get default external file types,no
+needs to fixed because it gives asdf when going prefs get lyxpipe,file lp new file command path,no
+concatenates formatted message of given log event by using new line separator,private string get log messages as string list log event view model messages,no
+creates background task that first runs task and based on result runs second task,public background task then function background task next task factory,no
+opens new group dialog and add resulting group to specified group,public void add new subgroup group node view model parent,no
+on ses there is generic application available to handle file opening so use one,return,no
+generate new cite keys for entry,final named compound compound new named compound localization lang autogenerate bib te keys,no
+default value,string text default pat get text,yes
+customization of appearance parameters,public appearance prefs tab dialog service dialog service jab ref preferences prefs,no
+remove node then insert children,group tree node removed node cursor,no
+remove current possible suggestions,public void clear suggestions,yes
+get entries and check if it makes sense to perform operation,entries base panel get selected entries,no
+method first saves external files to internal list then writes abbreviations to files and finally updates abbreviations auto complete it basically calls @link save external files list save journal abbreviation files and finally @link journal abbreviation loader update journal abbreviation preferences,public void save everything and update auto completer,no
+do not open original file,result get database context clear database file,no
+finds entry in list best fitting specified entry even if entries get score above zero entry is still returned,private static bib entry best fit bib entry target entry list bib entry entries,no
+more bps to check we found matching one,break,no
+default pattern,protected final text field default pat new text field,yes
+we try to find page is displayed in center of viewport,optional document viewer page in middle of viewport optional empty,no
+function to get command name in case it is different from application name,protected string get command name,no
+check if we are running acceptable version of java,final build info build info globals build info,yes
+@inherit doc,@override,yes
+alt on windows,link,no
+general information, box context panel new box 10,no
+compare normalized markers since actual markers can be different,string markers norm cit markers,no
+keywords from first entry have to be added,bib entry first entry entries get,no
+must be set here because in initialize button is still null,btn connect disable property bind view model form validation valid property not,no
+everything is ok,return null,yes
+see if we can find type with matching name in default type list,external file type found null,no
+we need to wait with setting divider since it gets reset few times during initial set up,change listener boolean,no
+we calculate new hit value we could be more intelligent and try to figure out new number of hits based on entry change for example previously matched entry gets removed hits hits,background task,no
+it was modified remove entry from defaults list since type has not been removed,def types remove found,no
+can not rename remote links,return,no
+remember modified children for redo, modified subtree clear,no
+if given component is visible it will be hidden and other way around,public void toggle side pane type type,yes
+interface presents user described paste behaviour applying to paste method,@functional interface,no
+icon set too localization lang open pdf,table icons put standard field pdf icon,yes
+first get list of default file types as starting point,list external file type types new array list<> get default external file types,no
+name to change to is already in database so we ca not comply,logger info cannot rename string mem to disk because name,no
+look up external file type registered with name if,public optional external file type get external file type by name string name,no
+todo add undo redo ce add edit new undoable insert entry panel get database entry,,no
+action concerned with generate new sub database from latex aux file,public class new sub library action extends simple command,no
+starts search of unlinked files according chosen directory and file type selection search will process in separate thread and progress indicator will be displayed,private void start search,no
+gets filename for current linked file and compares it to new suggested filename,public boolean is generated name same as original,no
+modified externally,field changes add new field change view model field mem entry tmp entry mem or else null tmp get disk get,no
+responsible for managing of threads except gui threads in jab ref,public class jab ref executor service,no
+logic is done in open it even raising existing panel,get open database action open file file true,no
+focuses given field,public void request focus field field name,yes
+set paste action handler variable to passed handler,public void set paste action handler paste action handler handler,yes
+gets invoked if user selects different group we need to notify @link state manager about change so that main table gets updated,private void group node view model new value,no
+merge entries,for bib entry entry pr get database get entries,no
+panel contains two comboboxes and add button,private grid pane get selector panel,no
+gets invoked if user changes active database we need to get new group tree and update view,private void on active database changed optional bib database context new database,no
+use application if app is specified and just open filename otherwise,string cmd application null application is empty new string bin open,no
+set default values overwritten if edited group null,keyword group search field set text prefs get jab ref preferences groups default field,no
+check if cloned entry has crossref field,cloned entry get field standard field crossref if present crossref,yes
+print icon used for menu,special field view model printed view model new special field view model special field printed undo manager,no
+return string array representing file type is used for storage into preferences and same array can be used to construct file type later using string constructor,private string get string array representation external file type type,no
+must be here,abbreviation abbreviation journal abbreviation repository get abbreviation text get,yes
+method will write abbreviations of abbreviation file to file on file system it essentially will check if current file is built in list and if not it will call @link abbreviation writer write or create,public void write or create throws io exception,no
+constructs @link image for image representing given function in resource file listing images @param name name of icon such as open save save as etc @link image for function,private static image get image fx string name,no
+need to toggle twice to make sure everything is selected,root set selected true,no
+fetch entries from gui,global bibtex key pattern keypatterns get key pattern as global bibtex key pattern,no
+icon set tool tip text localization lang open file file type get name,table icons put file type get field icon,yes
+default context menu with specific menu for normalizing person names regarding to bib tex rules,public static supplier list menu item get name menu final text input control text input,no
+update map of uniquefiers for benefit of both following generation of new citation markers and for method builds bibliography,uniquefiers put key string value of char uniq,no
+check if of files are already open,for iterator path iterator files to open iterator iterator has next,no
+automatically imports files given as arguments,public void string filenames,yes
+return null if directory is not valid,if directory null or directory exists or directory is directory,yes
+set bounds graphics environment get local graphics environment get maximum window bounds window location pw new window location this jab ref preferences pos jab ref preferences pos jab ref preferences size jab ref preferences size pw display window at stored location,,yes
+css file find,auto file link material design icon file find,no
+file,table icons put standard field file icon,yes
+here we store names of current files if there is current file we remove previously stored filename,if filenames is empty,no
+add to group,add to groups entries state manager get selected group database,yes
+subtree was added or removed,private final group tree node subtree backup,no
+run recursive search in background task,public void search button clicked,no
+read typical java property url into map currently does not support escaping of character it simply looks for first to determine where key ends both key and value is trimmed for whitespace at ends,fixme prefix can be removed,no
+asks user for confirmation that he really wants to delete file from disk or just remove link,public boolean delete,no
+different actions depending on where user releases drop in target row bottom top import entries center link files to entry,switch control helper get dropping mouse location row event,no
+empty tab without database,if panel null,yes
+exporter view model wraps template exporter from logic and is used in exporter customization dialog view and view model,,no
+preferences panel for key generation,class bibtex key pattern pref tab extends bibtex key pattern panel implements preferences tab,no
+insert factory of loader, set insert imp loader activate com sun star comp loader java loader null null null,yes
+we try to to prevent publishing changes in search field directly to search task takes time for larger group structures,final timer search task fx timer create duration of millis 400,no
+build individual layout cards for group, box explicit panel create options explicit group,no
+installs style file and provides live reloading live reloading has to be turned on by setting code> djabref theme css< code property there two possible modes when only code> djabref theme css< code is specified then standard code base css< code is found will be watched and on changes in file style sheet will be reloaded and changes are immediately visible when path to css file is passed to code> djabref theme css< code then given style is loaded in addition to base css file changes in specified css file lead to immediate redraw of interface when working from ide usually means that code base css< code is located in build folder to use css file is located in sources directly full path can be given as value for vm option code> djabref theme css path to src base css code,public class theme loader,no
+set entry number in case is included in preview layout,exporter factory entry number,no
+for reason graphic is not set correctly so let fix to do find way to reuse jab ref icon view,button graphic property unbind,no
+pass other keys to children,,no
+class is indirectly constructed by log4j,@suppress warnings unused,no
+different actions depending on where user releases drop in target row bottom top insert source row before after row center add as child,switch mouse location,no
+opens file browser of folder of given file if possible file is selected,public static void open folder and select file path file link throws io exception,no
+fixme prefix can be removed,private static map string string url string prefix,no
+class represents removal of entry constructor needs references to database entry and map of open entry editors latter to be able to close entry editor if it is opened after undo and removal is then undone,public class undoable remove entry extends,no
+we know that tmp entry is not equal to disk entry check if it has been modified locally as well since last tempfile was saved,boolean is modified locally duplicate check compare entries strictly mem entry tmp entry,no
+preferences might be not initialized in tests return immediately todo replace ugly workaround by proper injection propagation,if globals prefs null,no
+merged bib entry,public bib entry get merge entry,yes
+focuses search field if it is not focused,public void focus,yes
+decide whether to show tab for given entry,public abstract boolean should show bib entry entry,yes
+register undo redo listener,base panel get undo manager register listener new undo redo event manager,yes
+icon set tool tip text localization lang open ar xiv url,table icons put standard field eprint icon,yes
+reporting etc method is called on event dispatch thread after push entries returns,void operation completed,no
+creates object can undo redo edit event,public undoable add or remove group group tree node view model groups root,no
+we have to use reflection since table util is not visible to us,try,no
+insert acceptor, set insert imp loader activate com sun star comp connections acceptor null null null,yes
+todo font padding customization set font gui globals current font,,no
+we have sorted citation markers according to order of appearance so we simply count up for marker referring to new entry,list integer num new array list<> keys length,no
+specific importer,parser result pr importer get import database filename globals prefs get default encoding,yes
+get office component context, component context context bootstrap bootstrap loader,no
+type of editing add node remove node keep children remove node and children,private final int edit type,no
+font configuration, box font box new box,yes
+shift on windows or modifier,move,no
+gui component allows editing of fields of bib entry one shows up when you double click on entry in table it hosts tabs required general optional and buttons to left entry editor also registers itself to event bus receiving events whenever field of entry changes enabling text fields to update themselves if change is made from somewhere else,public class entry editor extends border pane,no
+todo float marked entries model update marking state globals prefs get boolean jab ref preferences float marked entries,,no
+ignore,return new read only string wrapper,yes
+find default choice if,exporter default choice exporters stream,yes
+marker appears for more than one unique entry,int uniq,no
+constructs @link tree table cell based on view model of row and bunch of specified converter methods,public class view model table row factory implements callback table view table row,no
+override used newline character with one stored in preferences preferences return system newline character sequence as default,os newline globals prefs get jab ref preferences newline,no
+for cited key,for string key cited,yes
+connection string,string connect uno socket host localhost port 2083 urp;star office component context,yes
+generates plain text string out of preview and copies it additionally to html to clipboard wysiwyg editors use html plain text editors text,protected static string process preview list string citations,no
+ieee tran,populate sub menu items ieee tran ieee tran entry type definitions entry undo manager,yes
+sort visible components by preferred position,visible components sort new preferred index sort,yes
+method should be called after storing preferences calls appropriate method in view model,list string get restart warnings,no
+should be done after we know it was successfully opened,parser result parser result open database load database file to file,no
+find default directory for field type,list string dir database context get file directories field globals prefs get file preferences,yes
+set up annotation list,annotation list get selection model set selection mode selection mode single,yes
+bootstraps initial component context with service manager and basic jurt components inserted,public static component context create initial component context map string object context entries throws exception,no
+redo,else,no
+generate keys for given entries,private void generate keys list bib entry entries,yes
+action keeps reference to url when activated it shows help dialog unless it is already visible and shows url in it,public class help action extends simple command,no
+only serialize linked files not ones are automatically found,list linked file files to serialize files stream,no
+puts value of concrete class in map previous content stored in map is removed,public void put value class type value,no
+create default local component context, component context local context create initial component context map string object null,yes
+update appearance of group,any selected entries matched invalidate,no
+checks if there are duplicates to given entry in list of entries to be imported,private optional bib entry entry,no
+if there are entries to remove,if to remove is empty,yes
+general fields from preferences,for map entry string set field tab entry editor preferences get entry editor tab list entry set,no
+class for creating information about customizable entry editor tabs,public final class entry editor tab list,no
+do not make class final as it otherwise ca not be mocked for tests,public class external file types,no
+refresh reference marks with citation markers we computed,boolean had bib section get bookmark range oo bib base bib section name null,no
+save database,boolean success save database target path false,yes
+class defines interaction with external application in form of pushing selected entries to it,public interface push to application,no
+hyperlink click listener for javafx web view to open links on click in browser code adapted from href https: stackoverflow com 33445383 >https: stackoverflow com 33445383,public class open hyperlinks in external browser implements change listener worker state event listener,no
+constructs @link tree table cell based on view model of row and bunch of specified converter methods,public class view model tree table cell factory implements callback tree table column tree table cell,no
+looks up url for image representing given function in resource file listing images,public static url get icon url string name,no
+quick hack to disable navigating,browser add event filter javafx scene input mouse event javafx scene input mouse event::consume,no
+use received map directly,correct entries entries,yes
+register for changes,for observable observable new entry get observables,yes
+empty,public suggestion providers,yes
+disables selection,public class no selection model extends multiple selection model,no
+moves given component down,public void move down side pane component comp,yes
+for case that password is already set,prefs clear password,no
+updated original entry with new fields,set field joint fields new tree set<> comparator comparing field::get name,no
+gui for tab displaying article recommendations based on currently selected bib entry,public class related articles tab extends entry editor tab,no
+todo null todo null todo null,group tree node new parent root get node get descendant path to new parent get,yes
+date picker with configurable datetime format where both date and time can be changed via text field and date can additionally be changed via java fx default date picker also supports incomplete dates first recall how date picker normally works user selects date in popup sets value property to selected date converter converter property is used to transform date to string representation and display it in text field idea is now to intercept process and add additional step user selects date in popup sets value property to selected date date is converted to @link temporal accessor enriched by time component using add current time local date string converter string converter property is used to transform temporal accessor to string representation and display it in text field inspiration taken from,public class temporal accessor picker extends date picker,no
+simple command does not track progress of action,public abstract class simple command extends command base,no
+create new entry and add it to undo stack remove other two entries and add them to undo stack is not working,named compound ce new named compound localization lang merge entries,no
+if we are not allowed to overwrite values check if there is non empty value already for entry for new field,optional string val in new field entry get field new field,no
+holds version in memory check if it has been modified,this in mem in mem,no
+class provides view model for abbreviation objects can also define placeholder objects of abbreviations is indicated by using @code pseudo abbreviation property,public class abbreviation view model,no
+todo implement jump to entry todo add toolitp for tag localization lang jump to entry feature was removed while converting linked entries editor to java fx right now there is nice way to re implement it as we have good interface to control focus of main table except directly using jab ref frame class as below parsed entry link get linked entry if present frame get current base panel highlight entry,,no
+base panel get preview panel update layout preferences get preview preferences,,yes
+mouse location within cell when dropping gesture occurs,public enum dropping mouse location,no
+store changes to table preferences method is called when user clicks ok,@override,no
+todo rework so that we do not rely on jab ref frame and not complete preferences,this frame frame,no
+util class for searching files on file system are not linked to provided bib database,public class unlinked files crawler extends background task check box tree item file node wrapper,no
+entry type unknown treat fields as required,fields add all entry get fields,no
+switch to currently selected entry if mode is changed to live,,no
+returns list of base panel,public list base panel get base panel list,yes
+we need to wrap list since otherwise sorting in table does not work,entries sorted new sorted list<> entries filtered,no
+creates box of related article information to be used in stack pane displayed in related articles tab,private scroll pane get related article info list bib entry list fetcher,no
+redo change,base remove string string get id,yes
+refresh cite markers in document,public list string refresh cite markers list bib database databases oo bib style style,yes
+todo swing utilities invoke later undo put value action short description event get undo description ;undo set enabled event is can undo ;redo put value action short description event get redo description ;redo set enabled event is can redo,,no
+move children to new node then add new node,group tree node new node subtree backup copy subtree,no
+checks whether file exists or if new file should be opened file will be added to set of journal abbreviation files if file also exists abbreviations will be read and written to abbreviations property,private void open file path file path,no
+todo reflective access should be removed,class clazz table util,no
+if user does not change anything with action we do not do anything either even output message,,no
+enriches suggestion provider by given set of content selector values,public class content selector suggestion provider implements string,no
+revert change,try,yes
+always fill out available space,set pref height double positive infinity,no
+good bye,tear down jab ref filenames,yes
+enrich auto completion by content selector values,try,no
+name reference, named named uno runtime query interface named class bookmark,yes
+log event will be forwarded to @link log messages archive,@override,no
+to do after conversion of tabs to mvvm rework interface and make valid settings bindable button btn save button this get dialog pane lookup button save button btn save disable property bind view model valid settings valid property not,,no
+frame titles,public static final string frame title jab ref,yes
+set to true in case command could not be executed if file is not found set to true in case tunnel to program if one is used does not operate set to true if corresponding path is not defined in preferences,protected boolean could not call,no
+add context menu only for non null items,row context menu property bind,no
+copies selected entries and formats them with selected citation style or preview then it is copied to clipboard worker can not be reused,public class,no
+class defines type of external files can be linked to from jab ref class contains enough information to provide icon standard extension and link to application handles files of type,public class custom external file type implements external file type,no
+error stream has been closed see if there were errors,if sb to string trim is empty,no
+in case it did not work,catch io exception excep,yes
+file filter implementation allows only files are not linked in of @link bib entry of specified @link bib database br br file filter sits on top of file filter implementation it first consults only if major filefilter has accepted file implementation will verify on file,public class unlinked pdf file filter implements file filter,no
+sort entries into current members and non members of group current members will be removed current non members will be added,list bib entry to remove new array list<> entries size,no
+for only full auto completer returns full name smith bob for only abbreviated auto completer returns first name abbreviated smith for both auto completer returns versions,public enum auto complete first name mode,no
+resolve bibtex key from citation reference marker name and look up index of key in list of keys,,no
+send event to trigger changes,post undo redo event,no
+class provides model for managing journal abbreviation lists it provides necessary methods to create modify or delete journal abbreviations and files to visualize model one can bind properties to ui elements,public class manage journal abbreviations view model extends abstract view model,no
+makes sure that given component is visible,public void show side pane type type,yes
+todo show parserwarnings if not here for import format reader unknown format import imports parser result warning dialog show parser result warning dialog parser result frame,if bibtex result null,no
+action concerned with opening existing database,public class open database action extends simple command,yes
+icon set tool tip text priority view model get localization,table icons put special field priority icon,yes
+check if type has changed,if identical types type radio buttons is empty type radio buttons get is selected,no
+in case string converter was provided use default strategy,if this string converter null,no
+installs base css file as stylesheet in given scene changes in css file lead to redraw of scene using new css file,public void install css scene scene jab ref preferences preferences,no
+todo add undo and display message move group change undo new move group change group tree node view model source get parent get node source get node get position in parent target get node target get child count,,no
+except file,return pathname true,yes
+current version of installed jab ref,private final version installed version,yes
+occurrence or at end check if there are path separators in suffix if so it is definitely not proper suffix so we should give up,if stripped link substring stripped link index index of,yes
+method causes open base panels to set up tables anew when called from prefs dialog3 updates to new settings,public void setup all tables,no
+pretend that we just switched to current file in order to refresh display,notify new selected file current file,no
+pass other keys to parent,,yes
+must be executed after initialization of view otherwise it does not work,platform run later,no
+remember type in case we need to uniquefy,types type,no
+steps to reproduce,string how to reproduce steps to reproduce:\n\n1 \n2 \n3,yes
+do not open original file,pr get database context clear database file,yes
+we have to put entry editor previous before because otherwise decrease font size is found first,entry editor previous panel entry editor previous panel localization lang entry editor previous panel ctrl+minus key binding category view,no
+update active search query when switching between databases,state manager active search query property set new base panel get current search query,no
+create help button for currently selected fetcher,stack pane help button container new stack pane,yes
+in case of removing node but keeping of children number of children has to be stored,private final int subtree root child count,no
+move contents from one field to for collection of entries,private static undoable edit mass rename field collection bib entry entries field field field new field,no
+adding of single node group,public static final int add node,yes
+is called when user drops preview layouts either in available list view or in empty space of chosen list view,,no
+todo use web search instead as soon as it is available todo use web search instead as soon as it is available,lookup identifier material design icon magnify,no
+executes task on current thread code is essentially taken from @link javafx concurrent task task callable call but adapted to run sequentially,@override,no
+method returns default key binding key are assigned,public string get default key binding,yes
+todo add undo undoable add or remove group undo new undoable add or remove group parent new group tree node view model new group node undoable add or remove group add node panel get undo manager add edit undo,,no
+test if field is legally set,new latex field formatter field formatter preferences format new value field name,no
+need to run async otherwise dialog does not work,controls fx visualizer visualizer new controls fx visualizer,no
+revert change,if name change,yes
+and adding merged entries,if result get to add is empty,yes
+remove newlines hyphens before linebreaks,marking content marking content replace all newline,yes
+creates background task that first runs task and based on result runs second task,public background task then run function next operation,no
+action checks whether new custom entry types were loaded from bib file if so offer to remember entry types is given,public class check for new entry types action implements gui post open action,no
+,private void open the file path file boolean raise panel,no
+other fields,other fields tab database context panel get suggestion providers undo manager,yes
+register listener wrapper created by fx collections will set weak listener on wrapped list weak listener gets garbage collected hence we need to maintain reference to list,entries list database context get database get entries,no
+try to download fulltext pdf for selected by following url or doi link,public class find full text action extends simple command,no
+editor for external file types,public class customize external file types dialog extends base dialog void,yes
+configure elements,toggle group new toggle group,yes
+class is essentially wrapper around task we can not use task directly since it runs certain update notifications on java fx thread and so makes testing harder we take opportunity and implement fluid interface,public abstract class background task,no
+updates view with contents of given entry,protected abstract void bind to entry bib entry entry,yes
+try to connect to office,object context url resolver resolve connect,no
+switch tab if asked to do so,if data base number,no
+store visual state,new persistence visual state table this,yes
+class has abstract ui role as it listens for @link autosave event and saves bib file associated with given @link base panel,public class autosave ui manager,no
+set owner timestamp,update field set automatic fields entries update field preferences,no
+submenu will behave dependent on style is currently selected citation preview,preview preferences preview preferences globals prefs get preview preferences,no
+find linking footnote marker, footnote footer uno runtime query interface footnote class range get text,no
+tests if we are running acceptable java and terminates jab ref when we are sure version is not supported test uses requirements for java version as specified in code gradle build< code it is possible to define minimum version including built number and to indicate whether java can be used it currently ca not it tries to compare version number to version of currently running jvm check is optimistic and will rather return true even if we could not exactly determine version note users with very old version like will not profit from since class versions are incompatible and jab ref wo not even start currently jab ref wo not start with java either but warning that it can not be used with version is helpful anyway to prevent users to update from old directly to version additionally we soon might have jab ref does start with java but is not perfectly compatible therefore we should leave java check alive,private static void ensure correct java version,no
+subscribe to type changes for rebuilding currently visible tab,type subscription easy bind subscribe this entry type property type,yes
+may happen during initialization just ignore,continue,no
+look for last in link and return following characters gives extension for most reasonably named links,public static optional string get suffix final string link,no
+selected group show entries,return optional empty,no
+headings,private final list string column headings arrays as list localization lang field,yes
+get text content interface, text content text content uno runtime query interface text content class bookmark,yes
+method to change current abbrevaition property to new abbreviation,public void edit abbreviation string name string abbreviation,yes
+update merged entry,private void update merged entry,yes
+release panel from save status,panel set saving false,yes
+set text of of boxes,if exporter null,yes
+do nothing,else if answer duplicate resolver dialog duplicate resolver result keep merge,yes
+class represents removal of entry constructor needs references to database entry and map of open entry editors latter to be able to close entry editor if it is opened before insert is undone,public class undoable insert entry extends abstract undoable jab ref edit,no
+method is called to indicate that settings panel returned from get settings panel method has been shown to user and that user has indicated that settings should be stored method must store state of widgets in settings panel to globals prefs,public void store settings,no
+check given possible suggestion is match is valid suggestion,protected abstract boolean is match suggestion suggestion request request,yes
+read name format options mk,final boolean names natbib globals prefs get boolean jab ref preferences names natbib,yes
+method inserts cite marker in text for given bib entry and may refresh bibliography,public void bib entry entries bib database database,no
+fixme move to view model until field formatter cleanups panel is property implemented,meta data meta data panel get bib database context get meta data,no
+since directory does not exist we can not move it to there so option is not checked regardless of presets stored in preferences,clean up move pdf set disable true,no
+todo reflective access should be removed,field private popup auto completion binding class get declared field auto completion popup,no
+ensure that there is always only one all entries group,if new groups get group instanceof all entries group,no
+class for manipulating bibliography of currently start document in open office,class oo bib base,no
+check for running jab ref,if handle multiple app instances arguments or argument processor should shut down,no
+mac adapter calls method when about is selected from application menu,public void about,no
+todo be bit smarter and try to infer correct icon for example using @link external file types get external file type by name string,public jab ref icon get type icon,no
+restore focus to field run async so editor is already initialized correctly,selected field name if present this::request focus,no
+get page number of current page in document,public abstract int get page number,yes
+first see if stripped link gives reasonable suffix,string suffix,no
+hide progress indicator if finished over 70 loaded,browser get engine get load worker progress property add listener observable old value new value,no
+fields,for field field joint fields,yes
+ask if keys should be generated,boolean cite pressed dialog service show confirmation dialog and wait localization lang cite,yes
+quote string so explorer handles url query strings correctly,string quote path file path,no
+class provides model for abbreviation files it actually does not save files as objects but rather saves paths also allows to specify pseudo files as placeholder objects,public class abbreviations file view model,no
+set language to none, cursor props set property value char locale new locale zxx,no
+to align with buttons below also have 5em padding,info set style fx padding 5em 5em,no
+todo switch icon color search icon set icon icon theme jab ref icon search get icon,,no
+entry currently shown,private optional bib entry entry optional empty,no
+setting multi value special field setted value is displayed too,string all params view model get localization params params,no
+first hide old page and show background instead recalculate size of background to make sure correct,background set width get desired width,no
+for reason graphic is not set correctly so let fix,set graphic menu action,no
+exception used to indicate that plugin attempted to set character format is not defined in current open office document,class undefined character format exception extends exception,no
+submits one shot task becomes enabled after given delay, future schedule background task task long delay time unit unit,no
+css folder,folder outline,no
+action may only be used in menu or button never in entry editor file list editor and entry editor have other ways to update file links,public class auto link files action extends simple command,no
+backwards compatibility stub,public static component context create initial component context hashtable string object context entries throws exception,no
+swing,requires java desktop,yes
+preferences and xml,requires java prefs,yes
+annotations @post construct,requires java annotation,yes
+libre office,requires org jabref thirdparty libreoffice,yes
+mocking class used as placeholder for real oracle jdbc drivers to prevent build errors,public class database change event,no
+data,,no
+mocking class used as placeholder for real oracle jdbc drivers to prevent build errors,public interface database change listener,no
+mocking class used as placeholder for real oracle jdbc drivers to prevent build errors,public class database change registration,no
+do nothing,,yes
+fixme reuse search worker here,search query search query new search query journal title 500 false false,no
+fixme reuse search worker here,search query search query new search query journal title 500 false false,no
+mocking class used as placeholder for real oracle jdbc drivers to prevent build errors,public class oracle connection implements connection,no
+mocking class used as placeholder for real oracle jdbc drivers to prevent build errors,public class oracle driver,no
+mocking class used as placeholder for real oracle jdbc drivers to prevent build errors,public class oracle statement,no
+package contains stubs for oracle jdbc to prevent build errors if non distributable oraclejdbdc6 jar is unavailable in classpath,package oracle jdbc,no
+empty,,yes
+annotation to indicate that usage of apache commons lang3 is explicitly allowed intention is to fully switch to google guava and only use apache commons lang3 if there is other possibility,public @interface apache commons lang3allowed,no
+rationale,string value,yes
+print statistics,system out println new aux parser result view model result get information true,no
+defines different modes that base panel can operate in,,no
+puts content onto clipboard,public void set content clipboard content content,yes
+get string residing on clipboard text found on clipboard if none found return empty string,public string get contents,yes
+will open file like import file but will also request jab ref to focus on database,private static optional parser result import to open base string argument,no
+run entry fetcher from command line,private optional parser result fetch command,no
+download web resource to temporary file,try,yes
+means guess format,system out println localization lang importing in unknown format file,no
+check if we should reset preferences to default values,if cli is preferences reset,no
+check if we should import preferences from file,if cli is preferences import,yes
+list to put imported loaded database in,list parser result loaded import and open files,yes
+enables blanks within search term stands for blank,string search term data replace \\$,no
+export matches,if matches is empty,no
+read in export format take default format if format entered,switch data length,no
+default exporter html table with abstract bib te,format name tablerefsabsbib,no
+export new database,optional exporter exporter globals export factory get exporter by name format name,no
+leftover arguments have bib extension are interpreted as bib files to open other files and files could not be opened as bib we try to import instead,boolean bib extension left over to lower case locale english ends with bib,no
+we will try to import file normally we will import it into new tab but if import has been initiated by instance through remote listener we will instead import it into current library will enable easy integration with web browsers can open reference file in jab ref,if startup mode mode initial start,no
+write output if something could be resolved,if new base null new base has entries,no
+show just warning message if encoding did not work for characters,if file writer has encoding problems,yes
+signals that latest import should be stored in bib te format to given file,if,no
+signals that latest import should be stored in given format to given file,parser result pr loaded get loaded size,no
+set global variable for database file directory before exporting so formatters can resolve linked files correctly is ugly hack,file the file pr get file get,no
+string clear search clear search main table get input map put globals get key prefs get key key binding clear search clear search main table get action map put clear search new abstract action @override public void action performed action event need to close here action overshadows responsible actions when main table is selected switch mode case showing nothing frame get global search bar end search break case showing preview get preview panel close break case showing editor case will show editor entry editor closing get entry editor break default logger warn unknown base panel mode mode doing nothing break main table get action map put actions cut new abstract action @override public void action performed action event try run command actions cut catch throwable ex logger warn could not cut ex main table get action map put actions copy new abstract action @override public void action performed action event try run command actions copy catch throwable ex logger warn could not copy ex main table get action map put actions paste new abstract action @override public void action performed action event try run command actions paste catch throwable ex logger warn could not paste ex,,no
+search can lead to unexpected 100 cpu usage is perceived as bug if search incidentally starts at directory with lots of stuff below it is now disabled by default,private class search auto complete listener,no
+returns collection of suggestion providers are populated from current library,public suggestion providers get suggestion providers,no
+generates and copies citations based on selected entries to clipboard @param output format desired @link citation style output format,private void copy citation to clipboard citation style output format output format,no
+removes selected entries from database @param cut if false user will get asked if he really wants to delete entries and it will be localized as deleted if true action will be localized as cut,public void delete boolean cut,no
+method is called from jab ref frame if database specific action is requested by user runs command if it is defined or prints error message to standard error stream,public void run command final actions command,no
+method is called from jab ref frame when user wants to create new entry bib entry new entry,public void insert entry final bib entry bib entry,no
+set up auto completion for database,private void setup auto completion,yes
+sets entry editor as bottom component in split pane if entry editor already was shown makes sure that divider does not move updates mode to showing editor then shows given entry @param entry entry to edit,public void show and edit bib entry entry,no
+method selects given entry and scrolls it into view in table if entry editor is shown it is given focus afterwards,public void clear and select final bib entry bib entry,no
+method is called from entry editor when it should be closed we relay to selection listener takes care of rest,public void entry editor closing,no
+closes entry editor if it is showing given entry,private void ensure not showing bottom panel bib entry entry,no
+depending on whether preview or entry editor is showing save current divider location in correct preference setting,private void save divider location number position,no
+get array containing currently selected entries array is stable and not changed if selection changes list containing selected entries is never null,public list bib entry,no
+set query user currently searches while basepanel is active,public void set current search query optional search query current search query,no
+ensures that search auto completer is up to date when entries are changed aka let auto completer if harvest words from entry actual methods for autocomplete indexingmust run in javafx thread,private class search auto complete listener,no
+ensures that results of current search are updated when new entry is inserted into database actual methods for performing search must run in javafx thread,private class search listener,no
+keeps track of string dialog if it is open,private final map actions base action actions new hash map,no
+to contain instantiated entry editors is to save time as most enums must not be null,private base panel mode mode base panel mode showing nothing,no
+auto completer used in search bar,private person name suggestion provider search auto completer,yes
+used to track whether base has changed since last save,private bib entry showing,no
+query user searches when base panel is active,private optional search query current search query optional empty,no
+ensure that at addition of new entry entry is added to groups interface,this bib database context get database register listener new group tree listener,no
+ensure that entry changes mark panel as changed,,no
+check if file is modified,string change flag is modified is autosave enabled,yes
+if database is not empty and file is assigned database came from import and has to be treated somehow mark as changed also happens internally at basepanel to ensure consistency line 224,title append,no
+action for copying selected entries,actions put actions copy this::copy,yes
+action for pasting entries or cell contents more robust detection of available content flavors does not only look at first one offered support for parsing string flavor clipboard contents are bibtex entries allows you to paste entire bibtex entries from text editor web browser etc copy and paste entries between multiple instances of jab ref since only text representation seems to get as far as clipboard at least on system,actions put actions paste this::paste,no
+action for copying selected entry key,actions put actions copy key this::copy key,yes
+action for copying selected entry title,actions put actions copy title this::copy title,yes
+action for copying cite for selected entry,actions put actions copy cite key this::copy cite key,no
+action for copying bib te keys as hyperlinks to urls of selected entries,actions put actions copy key and link new copy bib te key and link action main table globals clipboard manager,no
+collect non null titles,list string titles selected bib entries stream,no
+entries had titles,output localization lang copied jab ref dialog service shorten dialog message copied titles,no
+collect non null keys,for bib entry be bes,yes
+entries had keys,output localization lang copied jab ref dialog service shorten dialog message copied cite command,no
+collect non null keys,for bib entry be bes,yes
+entries had keys,output localization lang copied jab ref dialog service shorten dialog message copied keys,no
+ok in future version string should be configurable to allow arbitrary exports,string reader sr new string reader \\bibtexkey \\begin title \\format remove brackets \\title \\end title \n,no
+collect non null keys,for bib entry be bes,yes
+entries had keys,output localization lang copied jab ref dialog service shorten dialog message copied keys and titles,no
+set owner and timestamp,update field set automatic fields bib entry true true globals prefs get update field preferences,no
+create undoable insert entry object,get undo manager add edit new undoable insert entry bib database context get database bib entry,yes
+database just changed,mark base changed,yes
+focus field and entry in main table async to give entry editor time to load,entry editor set focus to field field,no
+add listener binds selection to state manager todo should be replaced by proper java fx binding as soon as table is implemented in java fx,main table add selection listener list event globals state manager set selected entries main table get selected entries,no
+update entry editor and preview according to selected entries,main table add selection listener event main table get selected entries,no
+todo register actions globally,,no
+restore last splitting state before main table is created as creation affects stored size of entry editors,adjust splitter,no
+set up name autocompleter for search,instantiate search auto completer,yes
+saves divider position as soon as it changes we need to keep reference to subscription otherwise binding gets garbage collected,divider position subscription easy bind monadic bindings value at split pane get dividers,no
+create change monitor and change pane so we get notifications about outside changes to file,reset change monitor and change pane,no
+if database is not empty and file is assigned database came from import and has to be treated somehow mark as changed,this base changed true,no
+ensure that suggestion providers are in sync with entries,coarse change filter change filter new coarse change filter bib database context,no
+create empty suggestion providers if auto completion is deactivated,suggestion providers new suggestion providers,no
+put asterisk behind filename to indicate database has changed,frame set window title,no
+run search operation,file finder file finder file finders construct from configuration globals prefs get auto link preferences,no
+automatically add new entry to selected group or set of groups,if globals prefs get boolean jab ref preferences auto assign group,no
+imo only used to update status found entries,default task executor run in java fx thread frame get global search bar perform search,no
+url or doi found in url and doi fields look for web links in file field as fallback,,no
+useful for checking out new algorithm improvements and thresholds not used inside jab ref code itself,public class crossref fetcher evaluator,no
+method takes care of creating dependencies by default it just creates new instance of class dependencies without default constructor are constructed by hand,private static object create dependency class clazz,no
+use own method to construct dependencies,injector set instance supplier default injector::create dependency,no
+interface provides methods to create dialogs and show them to user,public interface dialog service,no
+will create and display new @link choice dialog of type with default choice and collection of possible choices @impl note implementation should accept @code null for @code default choice but callers should use @link show choice dialog and wait string string string collection, optional show choice dialog and wait string title string content string ok button label default choice collection choices,no
+will create and display new @link text input dialog with text fields to enter data,optional string show input dialog and wait string title string content,no
+will create and display new @link text input dialog with text field with default value to enter data,optional string show input dialog with default and wait string title string content string default value,yes
+will create and display new information dialog it will include blue information icon on left and single ok button to create information dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type,void show information dialog and wait string title string content,no
+will create and display new information dialog it will include yellow warning icon on left and single ok button to create warning dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type,void show warning dialog and wait string title string content,no
+will create and display new error dialog it will include red error icon on left and single ok button to create error dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type,void show error dialog and wait string title string content,no
+create and display error dialog displaying given exception @param message error message @param exception exception causing error,void show error dialog and wait string message throwable exception,yes
+create and display error dialog displaying given exception @param exception exception causing error,void show error dialog and wait string title string content throwable exception,yes
+create and display error dialog displaying given message,void show error dialog and wait string message,yes
+will create and display new confirmation dialog it will include blue question icon on left and ok and cancel button to create confirmation dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type,boolean show confirmation dialog and wait string title string content,no
+create and display new confirmation dialog it will include blue question icon on left and ok with given label and cancel button to create confirmation dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type,boolean show confirmation dialog and wait string title string content string ok button label,no
+create and display new confirmation dialog it will include blue question icon on left and ok with given label and cancel also with given label button to create confirmation dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type true if use clicked ok otherwise false,boolean show confirmation dialog and wait string title string content string ok button label string cancel button label,no
+create and display new confirmation dialog it will include blue question icon on left and yes with given label and cancel also with given label button to create confirmation dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type moreover dialog contains opt out checkbox with given text to support do not ask again behaviour,boolean show confirmation dialog with opt out and wait string title string content,no
+create and display new confirmation dialog it will include blue question icon on left and yes with given label and cancel also with given label button to create confirmation dialog with custom buttons see also @link show custom button dialog and wait alert alert type string string button type moreover dialog contains opt out checkbox with given text to support do not ask again behaviour,boolean show confirmation dialog with opt out and wait string title string content,no
+shows custom dialog and returns result @param dialog dialog to show type of result, optional show custom dialog and wait dialog dialog,yes
+constructs and shows canceable progress dialog clicking cancel will cancel underlying service and close dialog @param title title of dialog @param content message to show above progress bar @param task task executes work and for to show dialog, void show progress dialog and wait string title string content task task,no
+,void notify string message,no
+shows new file save dialog method does not return until displayed file save dialog is dismissed return value specifies file chosen by user or empty optional if selection has been made after file was selected given file dialog configuration is updated with selected extension type if,optional path show file save dialog file dialog configuration file dialog configuration,no
+shows new file open dialog method does not return until displayed open dialog is dismissed return value specifies file chosen by user or empty optional if selection has been made after file was selected given file dialog configuration is updated with selected extension type if selected file or empty optional if file has been selected,optional path show file open dialog file dialog configuration file dialog configuration,no
+shows new file open dialog method does not return until displayed open dialog is dismissed return value specifies files chosen by user or empty list if selection has been made selected files or empty list if file has been selected,list path show file open dialog and get multiple files file dialog configuration file dialog configuration,no
+shows new directory selection dialog method does not return until displayed open dialog is dismissed return value specifies file chosen by user or empty optional if selection has been made selected directory or empty optional if directory has been selected,optional path show directory selection dialog directory dialog configuration directory dialog configuration,no
+displays print dialog allow user to update job state such as printer and settings changes will be available in appropriate properties after print dialog has returned print dialog is also used to confirm user wants to proceed with printing,boolean show print dialog printer job job,no
+shows new dialog list files contained in given archive and lets user select one of files method does not return until displayed open dialog is dismissed return value specifies file chosen by user or empty optional if selection has been made selected file or empty optional if file has been selected,optional path show file open from archive dialog path archive path throws io exception,no
+contains different @link data format may occur in jab ref,public class drag and drop data formats,no
+dialog prompts user to choose type for entry returns null if canceled,public class entry type view extends base dialog entry type,no
+button type will always be cancel even if we pressed one of entry type buttons,return type,no
+we set managed property so that they will only be rendered when they are visble so that nodes only take space when visible avoids removing and adding from scence graph,bib tex title pane managed property bind bib tex title pane visible property,no
+do nothing,break,yes
+class provides super class for dialogs implemented in java fx to create custom java fx dialog one should create instance of class and set dialog pane through inherited @link dialog set dialog pane dialog pane method dialog can be shown via @link dialog show or @link dialog show and wait layout of pane should be defined in external fxml file and loaded it via @link fxml loader,public class fx dialog extends alert,no
+field is initialized upon startup only gui code is allowed to access it logic code should use dependency injection,public static journal abbreviation loader journal abbreviation loader,no
+field is initialized upon startup only gui code is allowed to access it logic code should use dependency injection,public static protected terms loader protected terms loader,no
+manager for state of gui,,no
+remote listener,public static final remote listener server lifecycle remote listener new remote listener server lifecycle,yes
+in main program field is initialized in jab ref java test case initializes field if required,public static jab ref preferences prefs,no
+key binding preferences,private static key binding repository key binding repository,no
+key binding preferences,public static synchronized key binding repository get key prefs,yes
+background tasks,public static void start background tasks throws jab ref exception,yes
+fixme workaround for bug,sdk shutdown activity instance stop all,no
+static variables for graphics files and keyboard shortcuts,public class gui globals,no
+perform initializations are only used in graphical mode is to prevent xlib connection to refused by server error when access to server on un*x is unavailable,public static void init,no
+add additional space to improve appearance,public static final int width icon col 16 12,no
+width of ranking icon column,public static final int width icon col ranking 16,yes
+set up entry editor colors first time,gui globals update entry editor colors,no
+update preferences,globals prefs put int jab ref preferences font size size,yes
+number of characters per line,private static final int width 100,no
+boolean options,options add option help false localization lang display help on command line options,no
+class provides methods to create default java fx dialogs will also work on top of swing windows created dialogs are instances of @link fx dialog class available dialogs in class are useful for displaying small information graphic dialogs rather than complex windows for more complex dialogs it is advised to rather create new sub class of @link fx dialog,public class jab ref dialog service implements dialog service,no
+need to force alert to layout in order to grab graphic as we are replacing dialog pane with custom pane,alert get dialog pane apply css,no
+create new dialog pane has checkbox instead of hide show details button use supplied callback for action of checkbox,alert set dialog pane new dialog pane,no
+fool dialog into thinking there is expandable content group wo not take up space if it has children,alert get dialog pane set expandable content new group,no
+jab ref launcher,public class jab ref launcher,yes
+side pane is displayed at left side of jab ref and shows instances of @link side pane component,public class side pane extends border pane,no
+override method if component needs to make changes before it can close,public void before closing,no
+override method if component needs to do actions after it is shown,public void after opening,no
+nothing to do by default,,yes
+auto generated method stub,return null,yes
+auto generated method stub,return false,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,return false,yes
+auto generated method stub,,yes
+auto generated method stub,,yes
+auto generated method stub,,yes
+auto generated method stub,return false,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,return false,yes
+auto generated method stub,,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,return,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,,yes
+auto generated method stub,return,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return false,yes
+auto generated method stub,,yes
+auto generated method stub,,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,return null,yes
+auto generated method stub,,yes
+auto generated method stub,,yes
+auto generated method stub,return,yes
