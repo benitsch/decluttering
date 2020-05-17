@@ -9,11 +9,29 @@
 
 
 ## Code:
-### main.py
-The line number and the comment are printed. The syntax of the comment is also analyzed (via spaCy) and printed.
-Duration: ~10.7 Sec.
+### mian.ipynb
+- Filters the comments with spaCy (remove PUNCT, DET, AUX)
+- Split camelCase words
+- Replace symbols with ' '
+- Remove single char words
+- Remove duplicate spaces in the comment
+- Write all to lower case
+- Remove URLs from the comment
+- Replace defined words with defined words
 
-### get_code.py
+### DownloadCode.ipynb
+- Download the Java files from GitHub
+
+### get_code2.ipynb
+- Extract the comment and first code line and saves into new csv file
+
+### train.ipynb
+
+### Word2vecs.ipynb
+
+### data.ipynb
+
+### getCodeAsBlock.ipynb
 
 
 ## General:
