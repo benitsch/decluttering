@@ -2,11 +2,12 @@
 
 1. Install 64 Bit version of Python at https://www.python.org/downloads/
 2. Install pandas for csv file read 
-	- pip install pandas)
+	- pip install pandas
 3. Install spaCy and its EN langauge model (NLP tool). Only works for 64 Bit Python!
 	- pip install -U spaCy
 	- python -m spacy download en_core_web_sm
-
+4. Install javalang	
+	- pip install javalang
 
 ## Code:
 ### mian.ipynb
