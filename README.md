@@ -10,8 +10,8 @@
 	- pip install javalang
 
 ## Code:
-### mian.ipynb
-- Filters the comments with spaCy (remove PUNCT, DET, AUX)
+### preprocess_data.ipynb
+- Filters the comments with spaCy (remove PUNCT and DET)
 - Split camelCase words
 - Replace symbols with ' '
 - Remove single char words
@@ -23,8 +23,8 @@
 ### DownloadCode.ipynb
 - Download the Java files from GitHub
 
-### get_code2.ipynb
-- Extract the comment and first code line and saves into new csv file
+### extract_comment_and_code.ipynb
+- Extract the comment and first code line and saves into oneLineCode.csv (with columns: id, type, comment, code, non-information/Expected) ANd create a new csv file only with the columns comment, code and non-information/Expected to newFile.csv
 
 ### train.ipynb
 
