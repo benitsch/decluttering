@@ -1,0 +1,130 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[runningheads]{llncs}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{Decluttering Challenge Report}
+\subtitle{Current Topics in Software Engineering:\\Automating Software Engineering}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Lukas Pagitz, Bernhard Nitsch, Boda Wen}
+%
+\authorrunning{ }
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Universität Klagenfurt\\
+Department of Informatics Systems
+%\email{lncs@springer.com}\\
+%\url{http://www.springer.com/gp/computer-science/lncs}
+}
+%
+\maketitle              % typeset the header of the contribution
+%
+%\begin{abstract}
+%\keywords{First keyword  \and Second keyword \and Another keyword.}
+%\end{abstract}
+%
+%
+%
+
+% TODO START
+% Data used for model
+% Source repository
+% References
+% TODO END
+
+\section{Introduction}
+The Decluttering Challenge (DeClutter) is an international challenge with the goal to develop an automated tool to ``identify unnecessary software documentation at the class or file level''. \cite{ref_declutter}
+
+Comments are either considered as informative or non-informative. A non-informative comment is defined as: ``non-information is a comment that is completely uninformative and hence useless/should be removed (in the perspective of documentation decluttering)''.
+The exact descriptions can be found on the DeClutter GitHub page.
+
+For the challenge, a training data set was provided to allow the tool to learn which comments are informative and which not. The file ``declutter-gold\_DevelopmentSet.csv'' included 1050 rows and was later on replaced by by file ``train\_set\_0520.csv'' with 1311 rows. 
+These data sets contain links to code lines and their respective comments and the information if the comment is considered as informative or not (by the authors of the challenge).
+
+% Test data
+
+The team working on this tool implementation decided to use Python as programming language as it provides an easy way to iterate through .csv files and is fast at analysing code using existing libraries.
+
+\section{Development environment}
+Version 3.8 of python was used for development. Important! The 64-bit version is required. The tool does not work with the 32-bit version.
+
+Please follow the following steps to setup the environment for the tool.
+\begin{enumerate}
+\item Install 64-bit version of Python \cite{ref_python}
+\item Install pandas for reading csv files
+\begin{itemize}\item pip install pandas\end{itemize}
+\item Install spaCy (NLP tool) and its EN language model
+\begin{itemize}\item pip install -U spaCy
+\item python -m spacy download en\_core\_web\_sm
+\end{itemize}
+\item Install javalang to allow Python to understand Java language syntax
+\begin{itemize}\item pip install javalang\end{itemize}
+\end{enumerate}
+
+% Jupyter notebook
+
+% Check if more packages are required during first setup
+
+\section{Project Structure}
+\subsection{download\_code}
+\subsection{preprocess\_data}
+\subsection{extract\_comment\_and\_code}
+\subsection{train}
+
+\section{Approach and experiments}
+% TODO
+\subsection{Download of Java files}
+The very first step we took was to download the files used for the challenge so that they could be analyzed later on. 
+
+\subsection{Get Code}
+
+\subsection{Text To Number}
+
+\subsection{Tokenize}
+
+\subsection{Remove words from vocabulary set}
+% Approach with regex
+% Later on spaCy
+
+\subsection{Training data}
+
+\section{Techniques and resources used}
+% TODO
+
+\section{Result analysis}
+% TODO
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\begin{thebibliography}{8}
+\bibitem{ref_declutter}
+DeClutter on GitHub, \url{https://github.com/dysdoc/declutter}. Last accessed 30 May 2020
+
+\bibitem{ref_kaggle}
+DeClutter on Kaggle, \url{https://www.kaggle.com/c/declutter20v2/overview/}. Last accessed 30 May 2020
+
+\bibitem{ref_python}
+Python, \url{https://www.python.org/downloads/}. Last accessed 30 May 2020
+
+\end{thebibliography}
+\end{document}

@@ -1,5 +1,4 @@
-## Setup your environment to run the code:
-
+## Setup your environment to run the code
 1. Install 64 Bit version of Python at https://www.python.org/downloads/
 2. Install pandas for csv file read 
 	- pip install pandas
@@ -9,7 +8,10 @@
 4. Install javalang	
 	- pip install javalang
 
-## Code:
+## Code
+### download_code.ipynb
+- Download the Java files from GitHub
+
 ### preprocess_data.ipynb
 - Filters the comments with spaCy (remove PUNCT and DET)
 - Split camelCase words
@@ -20,22 +22,14 @@
 - Remove URLs from the comment
 - Replace defined words with defined words
 
-### DownloadCode.ipynb
-- Download the Java files from GitHub
-
 ### extract_comment_and_code.ipynb
-- Extract the comment and first code line and saves into oneLineCode.csv (with columns: id, type, comment, code, non-information/Expected) ANd create a new csv file only with the columns comment, code and non-information/Expected to newFile.csv
+- Extract the comment and first code line and saves into oneLineCode.csv (with columns: id, type, comment, code, non-information/Expected) and create a new csv file only with the columns comment, code and non-information/Expected to newFile.csv
 
 ### train.ipynb
-
-### Word2vecs.ipynb
-
-### data.ipynb
-
-### getCodeAsBlock.ipynb
+- ...
 
 
-## General:
+## General
 ### There are three different types of java comments:
 1. Inline comments
 2. Multi-line comments
