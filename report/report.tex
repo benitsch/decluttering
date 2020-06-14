@@ -1,62 +1,62 @@
 % !TEX encoding = UTF-8 Unicode
 \documentclass[runningheads]{llncs}
-\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
-\usepackage{graphicx}
-% Used for displaying a sample figure. If possible, figure files should
-% be included in EPS format.
-%
-% If you use the hyperref package, please uncomment the following line
-% to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
+\usepackage[utf8]{inputenc}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{breakcites}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 
 \begin{document}
+\sloppy
 %
 \title{Decluttering Challenge Report}
-\subtitle{Current Topics in Software Engineering:\\Automating Software Engineering}
+\subtitle{Current Topics in Software Engineering:\\
+Automating Software Engineering}
 %
 %\titlerunning{Abbreviated paper title}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
-\author{Lukas Pagitz, Bernhard Nitsch, Boda Wen}
+\author{Bernhard Nitsch, Lukas Pagitz, Boda Wen\\
+Team NPW}
 %
 \authorrunning{ }
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
 \institute{Universität Klagenfurt\\
-Department of Informatics Systems
-%\email{lncs@springer.com}\\
-%\url{http://www.springer.com/gp/computer-science/lncs}
-}
+Department of Informatics Systems\\
+Software Engineering Research Group}
 %
-\maketitle              % typeset the header of the contribution
+\maketitle
 %
 %\begin{abstract}
 %\keywords{First keyword  \and Second keyword \and Another keyword.}
 %\end{abstract}
 %
-%
-%
 
 % TODO START
 % Data used for model
-% Source repository
 % References
 % TODO END
 
 \section{Introduction}
-The Decluttering Challenge (DeClutter) is an international challenge with the goal to develop an automated tool to ``identify unnecessary software documentation at the class or file level''. \cite{ref_declutter}
+The Decluttering Challenge (DeClutter) is an international challenge with the goal to develop an automated tool to \textit{identify unnecessary software documentation at the class or file level}. \cite{ref_declutter}
 
-Comments are either considered as informative or non-informative. A non-informative comment is defined as: ``non-information is a comment that is completely uninformative and hence useless/should be removed (in the perspective of documentation decluttering)''.
+Comments are either considered as informative or non-informative. A non-informative comment is defined as: \textit{non-information is a comment that is completely uninformative and hence useless/should be removed (in the perspective of documentation decluttering)}.
 The exact descriptions can be found on the DeClutter GitHub page.
 
-For the challenge, a training data set was provided to allow the tool to learn which comments are informative and which not. The file ``declutter-gold\_DevelopmentSet.csv'' included 1050 rows and was later on replaced by by file ``train\_set\_0520.csv'' with 1311 rows. 
+For the challenge, a training data set was provided to allow the tool to learn which comments are informative and which not. The file \texttt{declutter-gold\_DevelopmentSet.csv}, which included 1050 rows, was later on replaced by the file \texttt{train\_set\_0520.csv} with 1311 rows. 
 These data sets contain links to code lines and their respective comments and the information if the comment is considered as informative or not (by the authors of the challenge).
 
 % Test data
 
 The team working on this tool implementation decided to use Python as programming language as it provides an easy way to iterate through .csv files and is fast at analysing code using existing libraries.
+
+
+\section{Source Repository}
+The project respository can be found at: \url{https://github.com/benitsch/decluttering}
+
 
 \section{Development environment}
 Version 3.8 of python was used for development. Important! The 64-bit version is required. The tool does not work with the 32-bit version.
@@ -75,34 +75,205 @@ Please follow the following steps to setup the environment for the tool.
 \end{enumerate}
 
 % Jupyter notebook
-
 % Check if more packages are required during first setup
 
-\section{Project Structure}
-\subsection{download\_code}
-\subsection{preprocess\_data}
-\subsection{extract\_comment\_and\_code}
-\subsection{train}
+
+\section{Project structure}
+Table~\ref{tab:structure} explains the structure of the project and the roles of all directories and files.
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Directory/File} & \textbf{Description} \\ \hline
+\texttt{assets/} & contains all provided files for the challenge \\ \hline
+\texttt{csv/} & contains generated csv files by our scripts \\ \hline
+\texttt{data/} & contains all downloaded Java files \\ \hline
+\texttt{report/} & contains this report \\ \hline
+\texttt{result/} & contains result files for the challenge \\ \hline
+\texttt{download\_code.ipynb} & downloads all Java files and puts them into \texttt{data/} \\ \hline
+\texttt{extract\_comment\_and\_code.ipynb} & extracts all relevant information from the code \\ \hline
+\texttt{preprocess\_data.ipynb} & prepares the data for machine learning \\ \hline
+\texttt{train.ipynb} & executes the machine learning algorithms \\ \hline
+\end{tabular}
+\caption{Directory and file structure of the project}
+\label{tab:structure}
+\end{table}
+
 
 \section{Approach and experiments}
-% TODO
-\subsection{Download of Java files}
-The very first step we took was to download the files used for the challenge so that they could be analyzed later on. 
-
-\subsection{Get Code}
-
-\subsection{Text To Number}
-
-\subsection{Tokenize}
-
-\subsection{Remove words from vocabulary set}
+% TODO Basic description
+% Get Code
+% Text To Number
+% Tokenize
+% Remove words from vocabluary set
 % Approach with regex
 % Later on spaCy
+% Training data
 
-\subsection{Training data}
 
 \section{Techniques and resources used}
 % TODO
+Chapter ... and ... describe ...
+% Particular techniques and resources
+
+
+\section{Preprocessing}
+
+\subsection{spaCy}
+spaCy \cite{ref_spacy} is an open-source software libaray for advanced natural language processing (NLP), written in the programming language Python.
+We decided to chose spaCy because it is the best way to prepare text for deep learning \cite{ref_spacy_facts} and several websites and studies \cite{ref_choi} have shown that spaCy is faster and has better accuracy when tokenizing than its competitors.
+
+Since only English is important for the challenge, only one of the 55 available language models of spaCy (en\_core\_web\_sm) is required to analyse the comments and code.
+
+Once spaCy is downloaded and installed, it can be loaded by using \texttt{spacy.load()}. This will return a language object containing all components and data needed to process text.
+When calling the NLP object on a string of text, it will return a processed Doc.
+
+During processing, spaCy first tokenizes the text, i.e. segments it into word, punctuation and so on. This is done by applying rules specific to each language. Each Doc consists of individual tokens which are iterateable.
+
+\subsection{Downloading Java files}
+The very first step we took was to download the files used in the challenge so that they could be analysed later on. The responsible script is called \texttt{download\_code.ipynb}.
+
+The link to each file was extracted from the training set (column `path\_to\_file') and then download and stored in the \texttt{data} directory.
+
+\subsection{Extracting comments and code}
+The file \texttt{extract\_comment\_and\_code.ipynb} is responsible for extracting the comment and code from the provided Java files which were downloaded before.
+
+We first loaded the csv file via pandas \cite{ref_pandas}, which is a software library written in Python for data manipulation and analysis.
+
+Then we looped over each entry and differed between the various comment types (Javadoc, Line, Block). Depending on the type, we extracted the comment and code differently.
+
+We took the first code line for which the comment was written for. In some cases only a comment without code existed, but there were a few exceptions. Furthermore, if only a comment without code was provided it was difficult to say whether a comment is useful or not.
+
+\subsection{Preprocessing data for learning networks}
+The class \texttt{preprocess\_data.ipynb} loads the csv file via pandas again and extracts the comment and code columns to loop over each row entry.
+
+We first removed words that are marked with ``PUNCT'' or ``DET'' (e.g.: . , ; ``be'' ``is''). These words had no meaning for the analysis of the comment or code.
+Then we passed the word through a few functions to get a clean sentence at the end. First we replaced static word parts like ``n't'' (which was tokenized from spaCy) to ``not'', or ``'ll'' to ``will'', or ``\textbar\textbar'' to ``or''.
+
+After that we checked if the word has been written in camel case and split it into several words. Since in some comments there was a url written, which did not provide a meaningful information, we passed the words through a function
+which removed a given url via a regex.
+
+Since not every symbol is tagged correct via spaCy, we passed the word through a function which removed predefined symbols from the word (e.g.: \# ( ) \{ \} [ ] / \textbackslash \_ - '' =).
+By doing so, several words which were not recognised as the same word before (e.g. ``or'' and ``or)'') were now considered as the same word.
+
+To finally use the sentence with the filtered words for machine learning, we put all words into lower case.
+At the end we saved all pre-processed comments and code to a new csv file, which then could be used for machine learning purposes.
+
+
+\section{Learning networks}
+After preprocessing, the next step was to build machine learning models. We have established three models which use different deep learning networks. The three types of neural networks are Word2vec \cite{ref_mikolov}, Convolutional Neural Networks (CNN) \cite{ref_yoon} and Recurrent Neural Networks (RNN) \cite{ref_rnn}. In this section, we first briefly introduce how these networks work and then demonstrate how they make up our models.
+
+\subsection{Word2vec -- Embedding layer}
+The basic idea of our model is applying the Word2vec method to transform the comment and code to vectors which machine learning models can understand. Therefore, the first layer of the three models must be Embedding Layer. As the first layer of the model, the embedding layer will receive the input data and map them to vectors. An embedding is a mapping of a discrete, categorical variable to a vector of continuous numbers. The purpose of Embedding Layer is that it embeds high-dimensional word vectors into a low-dimensional space. The vector space representation of words has two properties: (1) semantically similar words are very close in the resulting vector space, and (2) the direction of both grammatical, as well as semantic relations between words, remains stable for different pairs of words. 
+
+\subsection{Convolutional Neural Networks}
+We picked up the idea from Text-CNN \cite{ref_yoon} models for the project. There are two special layers in Text-CNN models: convolutional layer and pooling layer. The core function of them in the text classification model is the feature extraction. From the input fixed-length text sequence, the local word is used to extract the primary features, and the primary features are combined into advanced features. With convolution and pooling operations, the steps of feature engineering in traditional machine learning can be eliminated. But an obvious shortcoming of Text-CNN is that the convolution and pooling operations lose the order and position information of the words in the text sequence, and it is more difficult to capture the semantic information such as negation and antisense in the text sequence.
+
+\subsection{Recurrent Neural Networks}
+As we discussed above, Test-CNN can only take and process each input individually. The previous input and the next input are completely unrelated. However, some tasks need to be able to better process the sequence information, that is, the previous input and the subsequent input which are related. RNN can actually realize this as it is a neural network, but there is only one more hidden state to save historical information. In our project, we utilize the Gated Recurrent Units (GRU) layer and Attention mechanism.
+
+\subsubsection{Gated Recurrent Units layer}
+GRU is a variation on the RNN layer. The input of it is not the whole sentence anymore, but a single word. The GRU will remember its important information and forget the useless information on the hidden state. That information will merge with the information of the next word and do remembering and forgetting again. Old data is remembered which can influence the prediction result. This is the most important mechanism for manipulating streaming data (such as text or audio).
+
+\subsubsection{Attention layer}
+When we think about the English word ``Attention'', we know that it means directing focus at something and taking greater notice. The Attention mechanism in Deep Learning is based on this concept of directing focus, and it pays greater attention to certain factors when processing the data. What the Attention component of the network will do for each word in the output is map the important and relevant words from the input sentence and assign higher weights to these words, enhancing the accuracy of the output prediction.
+
+For example, if we want to predict whether the sentence ``What time is it?'' is an interrogative sentence, the word ``What'' is more important than the other three words. The attention layer will assign higher weights to word “What” and assign lower weights to others.
+
+
+\section{Model building and Experiments}
+According to previous discussions, we built three models applying different layers. For all models, the first layer should be embedding layer. The comments and corresponding code are merged together and converted to vectors by one-hot encoding. The length of all training sentences is padded to 50.
+
+All trainings were conducted on a computer (Intel i5, 8 GB RAM) with 1 GPU (NVIDIA GeForce GTX 1660).
+
+\subsection{Embedding model}
+The first model is a single embedding layer with an output layer. The model structure is shown in table~\ref{tab:embedding-table}.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Layer (type)} & \textbf{Output Shape} & \textbf{Param \#} \\ \hline
+embedding (Embedding) & (None, 50, 32) & 64000 \\ \hline
+flatten (Flatten) & (None, 1600) & 0 \\ \hline
+dense (Dense) & (None, 1) & 1601 \\ \hline
+\end{tabular}
+\caption{Model structure of embedding model}
+\label{tab:embedding-table}
+
+\begin{tabular}{ll}
+Total params & 65,601 \\
+Trainable params & 65,601 \\
+Non-trainable params & 0
+\end{tabular}
+\end{table}
+
+After embedding the layer, logistic regression was applied to predict the result.
+
+\subsection{CNN model}
+The second model is based on a Convolutional Neural Network which includes a convolutional layer and pooling layer. The model structure is shown in table~\ref{tab:cnn-table}.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Layer (type)} & \textbf{Output Shape} & \textbf{Param \#} \\ \hline
+x\_seq (InputLayer) & (None, 50) & 0 \\ \hline
+embedding (Embedding) & (None, 50, 32) & 64000 \\ \hline
+conv1d (Conv1D) & (None, 49, 10) & 650 \\ \hline
+conv1d (Conv1D) & (None, 48, 10) & 970 \\ \hline
+max\_pooling1d (MaxPooling1D) & (None, 1, 10) & 0 \\ \hline
+max\_pooling1d (MaxPooling1D) & (None, 1, 10) & 0 \\ \hline
+flatten (Flatten) & (None, 10) & 0 \\ \hline
+flatten (Flatten) & (None, 10) & 0 \\ \hline
+concatenate (Concatenate) & (None, 20) & 0 \\ \hline
+dropout (Dropout) & (None, 20) & 0 \\ \hline
+dense (Dense) & (None, 16) & 336 \\ \hline
+dense (Dense) & (None, 1) & 17 \\ \hline
+\end{tabular}
+\caption{Model structure of the CNN model}
+\label{tab:cnn-table}
+
+\begin{tabular}{ll}
+Total params & 65,973 \\
+Trainable params & 65,973 \\
+Non-trainable params & 0
+\end{tabular}
+\end{table}
+
+For the CNN model, two convolutional-pooling layers were set, and their results concatenated before the output layer.
+
+\subsection{RNN model}
+The third model is based on a Recurrent Neural Network which uses the Gated Recurrent Units layer and the Attention mechanism. The model structure is shown in table~\ref{tab:rnn-table}.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Layer (type)} & \textbf{Output Shape} & \textbf{Param \#} \\ \hline
+embedding (Embedding) & (None, 50, 32) & 64000 \\ \hline
+gru (GRU) & (None, 50, 16) & 2352 \\ \hline
+seq\_self\_attention & (None, 50, 16) & 1089 \\ \hline
+flatten (Flatten) & (None, 800) & 0 \\ \hline
+dense (Dense) & (None, 1) & 801 \\ \hline
+\end{tabular}
+\caption{Model structure of the RNN Table}
+\label{tab:rnn-table}
+
+\begin{tabular}{ll}
+Total params & 68,242 \\
+Trainable params & 68,242 \\
+Non-trainable params & 0
+\end{tabular}
+\end{table}
+
+The RNN model is similar to the embedding model, but between embedding and output layer the GRU and attention layer were added.
+
 
 \section{Result analysis}
 % TODO
@@ -110,21 +281,37 @@ The very first step we took was to download the files used for the challenge so 
 %
 % ---- Bibliography ----
 %
-% BibTeX users should specify bibliography style 'splncs04'.
-% References will then be sorted and formatted in the correct style.
-%
-% \bibliographystyle{splncs04}
-% \bibliography{mybibliography}
-%
+\newpage
 \begin{thebibliography}{8}
 \bibitem{ref_declutter}
-DeClutter on GitHub, \url{https://github.com/dysdoc/declutter}. Last accessed 30 May 2020
+DeClutter on GitHub, \url{https://github.com/dysdoc/declutter}. Last accessed 30 May 2020.
 
 \bibitem{ref_kaggle}
-DeClutter on Kaggle, \url{https://www.kaggle.com/c/declutter20v2/overview/}. Last accessed 30 May 2020
+DeClutter on Kaggle, \url{https://www.kaggle.com/c/declutter20v2/overview/}. Last accessed 30 May 2020.
 
 \bibitem{ref_python}
-Python, \url{https://www.python.org/downloads/}. Last accessed 30 May 2020
+Python, \url{https://www.python.org/downloads/}. Last accessed 30 May 2020.
+
+\bibitem{ref_spacy}
+spaCy, \url{https://spacy.io/}, Last accessed 3 June 2020.
+
+\bibitem{ref_spacy_facts}
+spaCy: Facts \&Figures, \url{https://spacy.io/usage/facts-figures}, Last accessed 3 June 2020. 
+
+\bibitem{ref_choi}
+Choi, J. D., Tetreault, J., Stent, A.: It Depends: Dependency Parser Comparison Using A Web-based Evaluation Tool. \url{https://doi.org/10.3115/v1/p15-1038}
+
+\bibitem{ref_pandas}
+pandas, \url{https://pandas.pydata.org/}, Last accessed 30 May 2020.
+
+\bibitem{ref_mikolov}
+Mikolov, T., Chen, K., Corrado, G., Dean, J.: Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 (2013)
+
+\bibitem{ref_yoon}
+Yoon Kim. York University. Convolutional Neural Networks for Sentence ClassificationNew. arXiv:1408.5882v2 [cs.CL] 3 Sep 2014
+
+\bibitem{ref_rnn}
+\url{https://karpathy.github.io/2015/05/21/rnn-effectiveness/}. Last accessed 14 May 2020.
 
 \end{thebibliography}
 \end{document}
