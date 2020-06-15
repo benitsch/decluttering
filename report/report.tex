@@ -54,13 +54,13 @@ The team working on this tool implementation decided to use Python as programmin
 The project source repository is available here: \url{https://github.com/benitsch/decluttering}
 
 
+\newpage
 \section{General overview}
 Chapter~\ref{chapter:env} and chapter~\ref{chapter:structure} provide some general information about the project.
 
 The steps for preprocessing are described in chapter~\ref{chapter:preprocessing}: The Java files of the challenge were first downloaded in order to use them for further analysis. After that, the code lines and comments to analyse were extracted and prepared for machine learning (splitting words, removing non necessary words/information, replacing similar phrases).
 
 Afterwards three different models (embedding, CNN and RNN) were used for machine learning. The learning models are described in chapter~\ref{chapter:learning} and the structures of the model in chapter~\ref{chapter:building}. 
-
 The results are discussed in chapter~\ref{chapter:results}.
 
 
@@ -84,8 +84,6 @@ As development environment we used Jupyter Notebook \cite{ref_jupyter} which all
 
 
 \section{Project structure}\label{chapter:structure}
-Table~\ref{tab:structure} explains the structure of the project and the roles of all directories and files.
-
 \begin{table}[]
 \centering
 \begin{tabular}{|l|l|}
@@ -106,9 +104,10 @@ Table~\ref{tab:structure} explains the structure of the project and the roles of
 \label{tab:structure}
 \end{table}
 
+Table~\ref{tab:structure} explains the structure of the project and the roles of all directories and files.
+
 
 \section{Preprocessing}\label{chapter:preprocessing}
-
 \subsection{spaCy}
 spaCy \cite{ref_spacy} is an open-source software library for advanced natural language processing (NLP), written in the programming language Python.
 We decided to chose spaCy because it is the best way to prepare text for deep learning \cite{ref_spacy_facts} and several websites and studies \cite{ref_choi} have shown that spaCy is faster and has better accuracy when tokenizing than its competitors.
@@ -134,10 +133,11 @@ Then we looped over each entry and differed between the various comment types (J
 
 We took the first code line for which the comment was written for. In some cases, only a comment without code existed, but there were a few exceptions. Furthermore, if only a comment without code was provided it was difficult to say whether a comment is useful or not.
 
+\newpage
 \subsection{Preprocessing data for learning networks}
 The class \texttt{preprocess\_data.ipynb} loads the csv file via pandas again and extracts the comment and code columns to loop over each row entry.
 
-We first removed words that are marked with ``PUNCT'' or ``DET'' (e.g.: . , ; ``be'' ``is''). These words had no meaning for the analysis of the comment or code.
+After we have tokenized a comment or code using spaCy, we first removed words that are marked with ``PUNCT'' or ``DET'' (e.g.: . , ; ``be'' ``is''). These words had no meaning for the analysis of the comment or code.
 Then we passed the word through a few functions to get a clean sentence at the end. First we replaced static word parts like ``n't'' (which was tokenized from spaCy) to ``not'', or ``'ll'' to ``will'', or ``\textbar\textbar'' to ``or''.
 
 After that we checked if the word has been written in camel case and split it into several words. Since in some comments there was a url written, which did not provide a meaningful information, we passed the words through a function
@@ -178,6 +178,7 @@ All trainings were conducted on a computer (Intel i5, 8 GB RAM) with 1 GPU (NVID
 
 \subsection{Embedding model}
 The first model is a single embedding layer with an output layer. The model structure is shown in table~\ref{tab:embedding-table}.
+After embedding the layer, logistic regression was applied to predict the result.
 
 \begin{table}
 \centering
@@ -199,11 +200,7 @@ Non-trainable params & 0
 \end{tabular}
 \end{table}
 
-After embedding the layer, logistic regression was applied to predict the result.
-
 \subsection{CNN model}
-The second model is based on a Convolutional Neural Network which includes a convolutional layer and pooling layer. The model structure is shown in table~\ref{tab:cnn-table}.
-
 \begin{table}
 \centering
 \begin{tabular}{|l|l|l|}
@@ -235,6 +232,8 @@ Trainable params & 65,973 \\
 Non-trainable params & 0
 \end{tabular}
 \end{table}
+
+The second model is based on a Convolutional Neural Network which includes a convolutional layer and pooling layer. The model structure is shown in table~\ref{tab:cnn-table}.
 
 For the CNN model, two convolutional-pooling layers were set, and their results concatenated before the output layer.
 
@@ -283,6 +282,7 @@ RNN & 0.786437 & 0.640187 & 0.532196 & 0.575061 \\ \hline
 \label{tab:model-results}
 \end{table}
 
+\newpage
 All three models have a high accuracy score with only minor differences compared to each other.
 The precision scores have a fairly acceptable value as well, however, CNN is a bit better than the two other models.
 A huge difference is visible in the recall results: While CNN is low with 0.31, the difference compared to RNN with 0.53 is high.
@@ -314,7 +314,7 @@ The results from the submissions do not really differ a lot, the only noticeable
 %
 % ---- Bibliography ----
 %
-%\newpage
+\newpage
 \begin{thebibliography}{8}
 \bibitem{ref_declutter}
 DeClutter on GitHub, \url{https://github.com/dysdoc/declutter}. Last accessed 30 May 2020.
