@@ -35,10 +35,6 @@ Software Engineering Research Group}
 %\end{abstract}
 %
 
-% TODO START
-% Data used for model
-% References
-% TODO END
 
 \section{Introduction}
 The Decluttering Challenge (DeClutter) is an international challenge with the goal to develop an automated tool to \textit{identify unnecessary software documentation at the class or file level}. \cite{ref_declutter}
@@ -46,39 +42,48 @@ The Decluttering Challenge (DeClutter) is an international challenge with the go
 Comments are either considered as informative or non-informative. A non-informative comment is defined as: \textit{non-information is a comment that is completely uninformative and hence useless/should be removed (in the perspective of documentation decluttering)}.
 The exact descriptions can be found on the DeClutter GitHub page.
 
-For the challenge, a training data set was provided to allow the tool to learn which comments are informative and which not. The file \texttt{declutter-gold\_DevelopmentSet.csv}, which included 1050 rows, was later on replaced by the file \texttt{train\_set\_0520.csv} with 1311 rows. 
+A training data set was provided to allow the tool to learn which comments are informative and which not. The file \texttt{declutter-gold\_DevelopmentSet.csv}, which included 1050 rows, was later on replaced by the file \texttt{train\_set\_0520.csv} with 1311 rows. 
 These data sets contain links to code lines and their respective comments and the information if the comment is considered as informative or not (by the authors of the challenge).
 
-% Test data
+For the challenge, another set (\texttt{test\_set\_0520.csv}) containing 261 rows was provided. After performing machine learning, our developed tool writes the calculated results (whether a comment is informative or not) into a file which could be submitted on Kaggle, where the challenge is held. \cite{ref_kaggle}
 
 The team working on this tool implementation decided to use Python as programming language as it provides an easy way to iterate through .csv files and is fast at analysing code using existing libraries.
 
 
 \section{Source Repository}
-The project respository can be found at: \url{https://github.com/benitsch/decluttering}
+The project source repository is available here: \url{https://github.com/benitsch/decluttering}
 
 
-\section{Development environment}
-Version 3.8 of python was used for development. Important! The 64-bit version is required. The tool does not work with the 32-bit version.
+\section{General overview}
+Chapter~\ref{chapter:env} and chapter~\ref{chapter:structure} provide some general information about the project.
 
-Please follow the following steps to setup the environment for the tool.
+The steps for preprocessing are described in chapter~\ref{chapter:preprocessing}: The Java files of the challenge were first downloaded in order to use them for further analysis. After that, the code lines and comments to analyse were extracted and prepared for machine learning (splitting words, removing non necessary words/information, replacing similar phrases).
+
+Afterwards three different models (embedding, CNN and RNN) were used for machine learning. The learning models are described in chapter~\ref{chapter:learning} and the structures of the model in chapter~\ref{chapter:building}. 
+
+The results are discussed in chapter~\ref{chapter:results}.
+
+
+\section{Development environment}\label{chapter:env}
+For this project, Python 3.8 was used. The 64-bit of python is required for this tool, it will not work with the 32-bit version.
+
+Please follow these steps to setup the environment for this tool.
 \begin{enumerate}
-\item Install 64-bit version of Python \cite{ref_python}
-\item Install pandas for reading csv files
+\item Install Python (64-bit version) \cite{ref_python}
+\item Install pandas (to read csv files) \cite{ref_pandas}
 \begin{itemize}\item pip install pandas\end{itemize}
-\item Install spaCy (NLP tool) and its EN language model
+\item Install spaCy (NLP tool) \cite{ref_spacy} and its EN language model \cite{ref_spacy_model}
 \begin{itemize}\item pip install -U spaCy
 \item python -m spacy download en\_core\_web\_sm
 \end{itemize}
-\item Install javalang to allow Python to understand Java language syntax
+\item Install javalang (to allow Python to understand Java language syntax) \cite{ref_javalang}
 \begin{itemize}\item pip install javalang\end{itemize}
 \end{enumerate}
 
-% Jupyter notebook
-% Check if more packages are required during first setup
+As development environment we used Jupyter Notebook \cite{ref_jupyter} which allows to write code and keep the outputs in the same file.
 
 
-\section{Project structure}
+\section{Project structure}\label{chapter:structure}
 Table~\ref{tab:structure} explains the structure of the project and the roles of all directories and files.
 
 \begin{table}[]
@@ -102,27 +107,10 @@ Table~\ref{tab:structure} explains the structure of the project and the roles of
 \end{table}
 
 
-\section{Approach and experiments}
-% TODO Basic description
-% Get Code
-% Text To Number
-% Tokenize
-% Remove words from vocabluary set
-% Approach with regex
-% Later on spaCy
-% Training data
-
-
-\section{Techniques and resources used}
-% TODO
-Chapter ... and ... describe ...
-% Particular techniques and resources
-
-
-\section{Preprocessing}
+\section{Preprocessing}\label{chapter:preprocessing}
 
 \subsection{spaCy}
-spaCy \cite{ref_spacy} is an open-source software libaray for advanced natural language processing (NLP), written in the programming language Python.
+spaCy \cite{ref_spacy} is an open-source software library for advanced natural language processing (NLP), written in the programming language Python.
 We decided to chose spaCy because it is the best way to prepare text for deep learning \cite{ref_spacy_facts} and several websites and studies \cite{ref_choi} have shown that spaCy is faster and has better accuracy when tokenizing than its competitors.
 
 Since only English is important for the challenge, only one of the 55 available language models of spaCy (en\_core\_web\_sm) is required to analyse the comments and code.
@@ -130,7 +118,7 @@ Since only English is important for the challenge, only one of the 55 available 
 Once spaCy is downloaded and installed, it can be loaded by using \texttt{spacy.load()}. This will return a language object containing all components and data needed to process text.
 When calling the NLP object on a string of text, it will return a processed Doc.
 
-During processing, spaCy first tokenizes the text, i.e. segments it into word, punctuation and so on. This is done by applying rules specific to each language. Each Doc consists of individual tokens which are iterateable.
+During processing, spaCy first tokenizes the text, i.e. segments it into word, punctuation and so on. This is done by applying rules specific to each language. Each Doc consists of individual tokens which are iterable.
 
 \subsection{Downloading Java files}
 The very first step we took was to download the files used in the challenge so that they could be analysed later on. The responsible script is called \texttt{download\_code.ipynb}.
@@ -144,7 +132,7 @@ We first loaded the csv file via pandas \cite{ref_pandas}, which is a software l
 
 Then we looped over each entry and differed between the various comment types (Javadoc, Line, Block). Depending on the type, we extracted the comment and code differently.
 
-We took the first code line for which the comment was written for. In some cases only a comment without code existed, but there were a few exceptions. Furthermore, if only a comment without code was provided it was difficult to say whether a comment is useful or not.
+We took the first code line for which the comment was written for. In some cases, only a comment without code existed, but there were a few exceptions. Furthermore, if only a comment without code was provided it was difficult to say whether a comment is useful or not.
 
 \subsection{Preprocessing data for learning networks}
 The class \texttt{preprocess\_data.ipynb} loads the csv file via pandas again and extracts the comment and code columns to loop over each row entry.
@@ -162,7 +150,7 @@ To finally use the sentence with the filtered words for machine learning, we put
 At the end we saved all pre-processed comments and code to a new csv file, which then could be used for machine learning purposes.
 
 
-\section{Learning networks}
+\section{Learning networks}\label{chapter:learning}
 After preprocessing, the next step was to build machine learning models. We have established three models which use different deep learning networks. The three types of neural networks are Word2vec \cite{ref_mikolov}, Convolutional Neural Networks (CNN) \cite{ref_yoon} and Recurrent Neural Networks (RNN) \cite{ref_rnn}. In this section, we first briefly introduce how these networks work and then demonstrate how they make up our models.
 
 \subsection{Word2vec -- Embedding layer}
@@ -172,7 +160,7 @@ The basic idea of our model is applying the Word2vec method to transform the com
 We picked up the idea from Text-CNN \cite{ref_yoon} models for the project. There are two special layers in Text-CNN models: convolutional layer and pooling layer. The core function of them in the text classification model is the feature extraction. From the input fixed-length text sequence, the local word is used to extract the primary features, and the primary features are combined into advanced features. With convolution and pooling operations, the steps of feature engineering in traditional machine learning can be eliminated. But an obvious shortcoming of Text-CNN is that the convolution and pooling operations lose the order and position information of the words in the text sequence, and it is more difficult to capture the semantic information such as negation and antisense in the text sequence.
 
 \subsection{Recurrent Neural Networks}
-As we discussed above, Test-CNN can only take and process each input individually. The previous input and the next input are completely unrelated. However, some tasks need to be able to better process the sequence information, that is, the previous input and the subsequent input which are related. RNN can actually realize this as it is a neural network, but there is only one more hidden state to save historical information. In our project, we utilize the Gated Recurrent Units (GRU) layer and Attention mechanism.
+As we discussed above, Test-CNN can only take and process each input individually. The previous input and the next input are completely unrelated. However, some tasks need to be able to better process the sequence information, that is, the previous input and the subsequent input which are related. RNN can actually realise this as it is a neural network, but there is only one more hidden state to save historical information. In our project, we utilize the Gated Recurrent Units (GRU) layer and Attention mechanism.
 
 \subsubsection{Gated Recurrent Units layer}
 GRU is a variation on the RNN layer. The input of it is not the whole sentence anymore, but a single word. The GRU will remember its important information and forget the useless information on the hidden state. That information will merge with the information of the next word and do remembering and forgetting again. Old data is remembered which can influence the prediction result. This is the most important mechanism for manipulating streaming data (such as text or audio).
@@ -180,10 +168,10 @@ GRU is a variation on the RNN layer. The input of it is not the whole sentence a
 \subsubsection{Attention layer}
 When we think about the English word ``Attention'', we know that it means directing focus at something and taking greater notice. The Attention mechanism in Deep Learning is based on this concept of directing focus, and it pays greater attention to certain factors when processing the data. What the Attention component of the network will do for each word in the output is map the important and relevant words from the input sentence and assign higher weights to these words, enhancing the accuracy of the output prediction.
 
-For example, if we want to predict whether the sentence ``What time is it?'' is an interrogative sentence, the word ``What'' is more important than the other three words. The attention layer will assign higher weights to word “What” and assign lower weights to others.
+For example, if we want to predict whether the sentence ``What time is it?'' is an interrogative sentence, the word ``What'' is more important than the other three words. The attention layer will assign higher weights to word ``What'' and assign lower weights to others.
 
 
-\section{Model building and Experiments}
+\section{Model building and experiments}\label{chapter:building}
 According to previous discussions, we built three models applying different layers. For all models, the first layer should be embedding layer. The comments and corresponding code are merged together and converted to vectors by one-hot encoding. The length of all training sentences is padded to 50.
 
 All trainings were conducted on a computer (Intel i5, 8 GB RAM) with 1 GPU (NVIDIA GeForce GTX 1660).
@@ -237,7 +225,10 @@ dense (Dense) & (None, 1) & 17 \\ \hline
 \end{tabular}
 \caption{Model structure of the CNN model}
 \label{tab:cnn-table}
+\end{table}
 
+\begin{table}
+\centering
 \begin{tabular}{ll}
 Total params & 65,973 \\
 Trainable params & 65,973 \\
@@ -262,7 +253,7 @@ seq\_self\_attention & (None, 50, 16) & 1089 \\ \hline
 flatten (Flatten) & (None, 800) & 0 \\ \hline
 dense (Dense) & (None, 1) & 801 \\ \hline
 \end{tabular}
-\caption{Model structure of the RNN Table}
+\caption{Model structure of the RNN model}
 \label{tab:rnn-table}
 
 \begin{tabular}{ll}
@@ -275,13 +266,55 @@ Non-trainable params & 0
 The RNN model is similar to the embedding model, but between embedding and output layer the GRU and attention layer were added.
 
 
-\section{Result analysis}
-% TODO
+\section{Result analysis}\label{chapter:results}
+For each machine learning model we received 4 values as a result: accuracy, precision, recall and the f1 score. The results are shown in table~\ref{tab:model-results}.
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 score} \\ \hline
+Embedding & 0.783383 & 0.657187 & 0.443275 & 0.520434 \\ \hline
+CNN & 0.775729 & 0.702343 & 0.312294 & 0.423238 \\ \hline
+RNN & 0.786437 & 0.640187 & 0.532196 & 0.575061 \\ \hline
+\end{tabular}
+\caption{Model performance measures}
+\label{tab:model-results}
+\end{table}
+
+All three models have a high accuracy score with only minor differences compared to each other.
+The precision scores have a fairly acceptable value as well, however, CNN is a bit better than the two other models.
+A huge difference is visible in the recall results: While CNN is low with 0.31, the difference compared to RNN with 0.53 is high.
+
+Taken all the results into consideration, the F1 score can be calculated. As the precision values do not show much difference, the calculation is mainly influenced by the recall values. In our case, RNN has the best F1 score with 0.58 while CNN has the lowest with 0.42.
+
+We uploaded the predictions of our models on Kaggle \cite{ref_kaggle} to check how well our models perform. The results are shown in table~\ref{tab:kaggle-table}.
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Model} & \textbf{Value} \\ \hline
+Embedding & 0.72307 \\ \hline
+CNN & 0.73846 \\ \hline
+RNN & 0.73076 \\ \hline
+All & 0.75384 \\ \hline
+\end{tabular}
+\caption{Results of the models on the Kaggle competition}
+\label{tab:kaggle-table}
+\end{table}
+
+``All'' means that the predictions of the three models were put into one prediction: Depending on the results of the models a value was chosen (either all three models had the same prediction or at least two of them).
+
+The results from the submissions do not really differ a lot, the only noticeable remark is that putting together all suggestions yielded a bit better result.
+
 
 %
 % ---- Bibliography ----
 %
-\newpage
+%\newpage
 \begin{thebibliography}{8}
 \bibitem{ref_declutter}
 DeClutter on GitHub, \url{https://github.com/dysdoc/declutter}. Last accessed 30 May 2020.
@@ -292,26 +325,35 @@ DeClutter on Kaggle, \url{https://www.kaggle.com/c/declutter20v2/overview/}. Las
 \bibitem{ref_python}
 Python, \url{https://www.python.org/downloads/}. Last accessed 30 May 2020.
 
-\bibitem{ref_spacy}
-spaCy, \url{https://spacy.io/}, Last accessed 3 June 2020.
-
-\bibitem{ref_spacy_facts}
-spaCy: Facts \&Figures, \url{https://spacy.io/usage/facts-figures}, Last accessed 3 June 2020. 
-
-\bibitem{ref_choi}
-Choi, J. D., Tetreault, J., Stent, A.: It Depends: Dependency Parser Comparison Using A Web-based Evaluation Tool. \url{https://doi.org/10.3115/v1/p15-1038}
-
 \bibitem{ref_pandas}
 pandas, \url{https://pandas.pydata.org/}, Last accessed 30 May 2020.
 
+\bibitem{ref_spacy}
+spaCy, \url{https://spacy.io/}, Last accessed 3 June 2020.
+
+\bibitem{ref_spacy_model}
+spaCy: English Model, \url{https://spacy.io/models/en}, Last accessed 3 June 2020.
+
+\bibitem{ref_javalang}
+Javalang, \url{https://github.com/c2nes/javalang}, Last accessed 3 June 2020.
+
+\bibitem{ref_jupyter}
+Juypter Notebook, \url{https://jupyter.org/}, Last accessed 3 June 2020.
+
+\bibitem{ref_spacy_facts}
+spaCy: Facts \& Figures, \url{https://spacy.io/usage/facts-figures}, Last accessed 3 June 2020.
+
+\bibitem{ref_choi}
+Choi, J. D., Tetreault, J., Stent, A.: It Depends: Dependency Parser Comparison Using A Web-based Evaluation Tool. (2015), \url{https://doi.org/10.3115/v1/p15-1038}.
+
 \bibitem{ref_mikolov}
-Mikolov, T., Chen, K., Corrado, G., Dean, J.: Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 (2013)
+Mikolov, T., Chen, K., Corrado, G., Dean, J.: Efficient estimation of word representations in vector space. (2013), arXiv:1301.3781 [cs.CL].
 
 \bibitem{ref_yoon}
-Yoon Kim. York University. Convolutional Neural Networks for Sentence ClassificationNew. arXiv:1408.5882v2 [cs.CL] 3 Sep 2014
+Kim, Y.: Convolutional Neural Networks for Sentence Classification. (2014), arXiv:1408.5882 [cs.CL].
 
 \bibitem{ref_rnn}
-\url{https://karpathy.github.io/2015/05/21/rnn-effectiveness/}. Last accessed 14 May 2020.
+Karpathy, A.: The Unreasonable Effectiveness of Recurrent Neural Networks, \url{https://karpathy.github.io/2015/05/21/rnn-effectiveness/}. Last accessed 14 June 2020.
 
 \end{thebibliography}
 \end{document}
